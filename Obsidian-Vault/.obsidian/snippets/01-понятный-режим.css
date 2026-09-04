@@ -1,0 +1,46 @@
+/*
+ * Пользовательский режим автономной картотеки.
+ *
+ * Данные не удаляются. Служебные папки скрыты только в проводнике Obsidian,
+ * чтобы обычное чтение начиналось с русских маршрутов и тем. Сниппет можно
+ * отключить в Настройки -> Оформление -> CSS-фрагменты.
+ */
+
+/* Не показывать машинные свойства над текстом: понятный статус есть в теле. */
+.markdown-reading-view .metadata-container,
+.markdown-source-view .metadata-container {
+  display: none !important;
+}
+
+/* Не смешивать служебный backend с пользовательской картотекой. */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="90_GENERATED_CATALOG"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="80_DATA_REGISTERS"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="90_ADMIN"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Templates"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Notes"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="MOCs"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-file[data-path="README.md"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="90_GENERATED_CATALOG"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="80_DATA_REGISTERS"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="90_ADMIN"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="Templates"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="Notes"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="MOCs"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path="README.md"] {
+  display: none !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="90_GENERATED_CATALOG"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="80_DATA_REGISTERS"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="90_ADMIN"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Templates"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Notes"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="MOCs"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-file:has(> .nav-file-title[data-path="README.md"]) {
+  display: none !important;
+}
+
+/* В пользовательских callout-блоках заголовок должен читаться первым. */
+.markdown-reading-view .callout-title {
+  font-weight: 700;
+}

@@ -1,0 +1,56 @@
+/*
+ * Понятный режим для vault autonomous-life-kit.
+ * Данные не удаляются: технический слой только скрывается в проводнике.
+ */
+
+.markdown-reading-view .metadata-container,
+.markdown-source-view .metadata-container {
+  display: none !important;
+}
+
+/* В корне остаётся только человеческая картотека. */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="offline-library"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="standards"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="offline-library"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="standards"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="offline-library"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="standards"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-file[data-path]:not([data-path*="/"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-file:has(> .nav-file-title[data-path]:not([data-path*="/"])),
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path]:not([data-path*="/"]) {
+  display: none !important;
+}
+
+/* Машинный backend внутри картотеки остаётся на диске, но не засоряет интерфейс. */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/90_GENERATED_CATALOG"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/80_DATA_REGISTERS"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/90_ADMIN"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/Templates"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/Notes"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder[data-path="Obsidian-Vault/MOCs"],
+.workspace-leaf-content[data-type="file-explorer"] .nav-file[data-path="Obsidian-Vault/README.md"] {
+  display: none !important;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/90_GENERATED_CATALOG"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/80_DATA_REGISTERS"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/90_ADMIN"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/Templates"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/Notes"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder:has(> .nav-folder-title[data-path="Obsidian-Vault/MOCs"]),
+.workspace-leaf-content[data-type="file-explorer"] .nav-file:has(> .nav-file-title[data-path="Obsidian-Vault/README.md"]) {
+  display: none !important;
+}
+
+/* Английское имя папки заменяется человеком читаемым заголовком. */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="Obsidian-Vault"] .nav-folder-title-content {
+  font-size: 0;
+}
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title[data-path="Obsidian-Vault"] .nav-folder-title-content::after {
+  content: "КАРТОТЕКА ЗНАНИЙ";
+  font-size: var(--font-ui-small);
+}
+
+.markdown-reading-view .callout-title {
+  font-weight: 700;
+}

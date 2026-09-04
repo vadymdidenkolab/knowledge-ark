@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Черновик забракован — открываю исправленный семенной фонд</title>
+  <meta http-equiv="refresh" content="0; url=SEED_BANK_ORDER_RU.html">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17352b;
+      --muted: #587067;
+      --paper: #f7f4ea;
+      --card: #fffdf7;
+      --line: #d8ddce;
+      --green: #245f46;
+      --green-soft: #e7f1e6;
+      --amber: #8a5a12;
+      --amber-soft: #fff0cf;
+      --red: #8b352c;
+      --red-soft: #fbe4df;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.48 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { width: min(1180px, calc(100% - 32px)); margin: 34px auto 70px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 48px); line-height: 1.04; letter-spacing: -0.035em; }
+    h2 { margin: 0 0 12px; font-size: 22px; }
+    p { margin: 0 0 10px; }
+    .subtitle { color: var(--muted); font-size: 18px; max-width: 900px; }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 18px;
+    }
+    .fact, section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 8px 26px rgba(30, 63, 49, .055);
+    }
+    .fact { padding: 17px; }
+    .fact strong { display: block; font-size: 25px; line-height: 1.1; margin-bottom: 5px; }
+    .fact span { color: var(--muted); font-size: 14px; }
+    section { padding: 20px; margin-top: 16px; }
+    .notice {
+      background: var(--amber-soft);
+      border-color: #e7c778;
+      color: #5d410f;
+    }
+    .danger { background: var(--red-soft); border-color: #e0a59b; color: #692a24; }
+    .good { background: var(--green-soft); border-color: #a9c9ad; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; min-width: 930px; background: white; }
+    th, td { padding: 11px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #e7eadf; }
+    th { position: sticky; top: 0; background: #edf2e9; color: #315344; font-size: 13px; text-transform: uppercase; letter-spacing: .035em; }
+    tr:last-child td { border-bottom: 0; }
+    td:nth-child(1), td:nth-child(5) { white-space: nowrap; }
+    .unknown { color: var(--red); font-weight: 650; }
+    .known { color: var(--green); font-weight: 650; }
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #edf2e9;
+      color: #315344;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    ul, ol { margin: 8px 0 0 21px; padding: 0; }
+    li { margin: 7px 0; }
+    a { color: #145f47; }
+    footer { margin: 18px 2px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 820px) {
+      .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { width: min(100% - 20px, 1180px); margin-top: 22px; }
+      section { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Список закупки семян</h1>
+    <p class="subtitle">Читаемая копия предварительной корзины Living Seeds / Sementes Vivas. Это список для проверки до оформления, а не подтверждённая покупка.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><strong>22</strong><span>упаковки / сорта, по 1 упаковке</span></div>
+    <div class="fact"><strong>€44,48</strong><span>товары без рассчитанной доставки</span></div>
+    <div class="fact"><strong>1 сезон</strong><span>разумный горизонт пилотного посева</span></div>
+    <div class="fact"><strong>0 заказов</strong><span>адрес и оплата не отправлялись</span></div>
+  </div>
+
+  <section class="notice">
+    <h2>Главный ответ: сколько именно семян?</h2>
+    <p><strong>Сейчас достоверно известно: 22 упаковки, а не 22 семени.</strong> Магазин не показывает количество семян или массу для 19 из 22 выбранных индивидуальных упаковок. Видимая масса есть только у трёх позиций: репа 4 г, лук 1 г и петрушка 50 г — вместе 55 г плюс 19 упаковок с нераскрытой фасовкой.</p>
+    <p>Поэтому точное число семян нельзя честно посчитать по корзине. Его нужно подтвердить на карточках/этикетках продавца до оплаты или пересчитать после получения.</p>
+  </section>
+
+  <section>
+    <h2>Все 22 позиции корзины</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Культура / сорт</th>
+            <th>Фасовка, видимая в корзине</th>
+            <th>Количество семян</th>
+            <th>Цена</th>
+            <th>Роль</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Бобы Super Aguadulce</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€1,99</td><td><span class="tag">белок</span></td></tr>
+          <tr><td>2</td><td>Горох Kelvedon Wonder</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€2,99</td><td><span class="tag">белок</span></td></tr>
+          <tr><td>3</td><td>Морковь Pau Roxo das Seis Marias</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€2,49</td><td><span class="tag">корнеплод</span></td></tr>
+          <tr><td>4</td><td>Свёкла Detroit 2</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">корнеплод</span></td></tr>
+          <tr><td>5</td><td>Репа 60 Days</td><td class="known">4 г</td><td class="unknown">не указано; известна масса</td><td>€1,59</td><td><span class="tag">корнеплод</span></td></tr>
+          <tr><td>6</td><td>Лук Lezíria White</td><td class="known">1 г</td><td class="unknown">не указано; известна масса</td><td>€1,59</td><td><span class="tag">лук</span></td></tr>
+          <tr><td>7</td><td>Лук-порей De Carentan 2</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">лук</span></td></tr>
+          <tr><td>8</td><td>Галисийская капуста, гладкий лист</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">листовая</span></td></tr>
+          <tr><td>9</td><td>Мангольд Glatter Silber 3</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">листовая</span></td></tr>
+          <tr><td>10</td><td>Салат Maravilla de Verano</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">листовая</span></td></tr>
+          <tr><td>11</td><td>Брокколи Calinaro</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">капустная</span></td></tr>
+          <tr><td>12</td><td>Тыква Butternut Waltham</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">хранение</span></td></tr>
+          <tr><td>13</td><td>Томат Campina</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€2,49</td><td><span class="tag">плодовая</span></td></tr>
+          <tr><td>14</td><td>Томат Winter Cherry</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€2,49</td><td><span class="tag">плодовая</span></td></tr>
+          <tr><td>15</td><td>Перец Sabugal</td><td>1 упаковка; масса не указана</td><td class="unknown">не указано</td><td>€2,49</td><td><span class="tag">плодовая</span></td></tr>
+          <tr><td>16</td><td>Огурец Marketmore</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">плодовая</span></td></tr>
+          <tr><td>17</td><td>Кабачок Black Beauty</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">плодовая</span></td></tr>
+          <tr><td>18</td><td>Сахарная кукуруза Golden Bantam</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,59</td><td><span class="tag">зерновая</span></td></tr>
+          <tr><td>19</td><td>Подсолнечник Sunspot</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,49</td><td><span class="tag">масличная</span></td></tr>
+          <tr><td>20</td><td>Кориандр</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,49</td><td><span class="tag">трава</span></td></tr>
+          <tr><td>21</td><td>Петрушка Gigante d’Italia</td><td class="known">50 г</td><td class="unknown">не указано; известна масса</td><td>€5,99</td><td><span class="tag">трава</span></td></tr>
+          <tr><td>22</td><td>Тимьян</td><td>индивидуальная упаковка</td><td class="unknown">не указано</td><td>€1,49</td><td><span class="tag">трава</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="4"><strong>Итого: 22 упаковки, по одной каждой</strong></td><td><strong>€44,48</strong></td><td>доставка ещё не рассчитана</td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="danger">
+    <h2>На какой срок этого хватит</h2>
+    <ul>
+      <li><strong>До доставки: ни на сколько</strong> — это пока только корзина, физического запаса ещё нет.</li>
+      <li><strong>Для посева: считать набором на один первый сезон</strong> и небольшую опытную площадь. Без точной фасовки, площади, воды и нормы высева больший срок обещать нельзя.</li>
+      <li><strong>Для питания: это не запас еды на год.</strong> Один пакет каждого сорта сам по себе не обеспечивает одного человека калориями, а группу 5–7 человек — тем более.</li>
+      <li><strong>Для хранения закрытых пакетиков: фиксированного срока нет.</strong> Всхожесть зависит от культуры, влажности, температуры и упаковки; её нужно проверять тестом каждый год.</li>
+      <li><strong>Для горизонта 100 лет:</strong> пакеты не лежат 100 лет в бытовых условиях. Нужен живой цикл: выращивание → отбор → сбор → сушка → герметичное хранение → ежегодный контроль всхожести → периодическое обновление, плюс резервная копия в другом месте.</li>
+    </ul>
+  </section>
+
+  <section class="good">
+    <h2>Что необходимо сделать до оплаты</h2>
+    <ol>
+      <li>Получить от продавца массу или число семян для всех 19 нераскрытых фасовок.</li>
+      <li>Подтвердить, что сорта открытоопыляемые и пригодны для воспроизводства семян; отдельно отметить любые F1.</li>
+      <li>Рассчитать количества под реальную площадь, воду и группу 1 или 5–7 человек.</li>
+      <li>Добавить отсутствующие базовые культуры: сухую фасоль, нут и лён; затем проверить картофель/батат, зерновые и дополнительные масличные по условиям участка в Португалии.</li>
+      <li>Для критических культур покупать минимум две независимые партии и хранить дубликат отдельно.</li>
+    </ol>
+  </section>
+
+  <footer>Статус на 29.08.2026: список проверен по предварительной корзине. Адрес, доставка, контактные данные и оплата не подтверждены.</footer>
+</main>
+</body>
+</html>

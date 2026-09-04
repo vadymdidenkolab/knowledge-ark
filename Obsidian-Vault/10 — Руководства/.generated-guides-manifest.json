@@ -1,0 +1,701 @@
+{
+  "data_register_links": [
+    {
+      "guide_target": "80_DATA_REGISTERS/accountability-log-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/accountability-log-template.md",
+      "source_csv": "accountability-log-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/action-card-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/action-card-register-template.md",
+      "source_csv": "action-card-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/animal-profile-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/animal-profile-template.md",
+      "source_csv": "animal-profile-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/archive-media-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/archive-media-register-template.md",
+      "source_csv": "archive-media-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/asset-component-lifecycle-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/asset-component-lifecycle-template.md",
+      "source_csv": "asset-component-lifecycle-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/buddy-assignment-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/buddy-assignment-template.md",
+      "source_csv": "buddy-assignment-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/capability-crosswalk.md",
+      "html_href_target": "../80_DATA_REGISTERS/capability-crosswalk.md",
+      "source_csv": "capability-crosswalk.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/card-gate-snapshot-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/card-gate-snapshot-template.md",
+      "source_csv": "card-gate-snapshot-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/cascade-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/cascade-register-template.md",
+      "source_csv": "cascade-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/century-capability-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/century-capability-register.md",
+      "source_csv": "century-capability-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/century-gate-snapshot-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/century-gate-snapshot-template.md",
+      "source_csv": "century-gate-snapshot-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/climate-pathway-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/climate-pathway-register-template.md",
+      "source_csv": "climate-pathway-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/competency-lineage-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/competency-lineage-template.md",
+      "source_csv": "competency-lineage-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/decision-class-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/decision-class-register.md",
+      "source_csv": "decision-class-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/dependent-care-authorization-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/dependent-care-authorization-template.md",
+      "source_csv": "dependent-care-authorization-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/external-contact-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/external-contact-template.md",
+      "source_csv": "external-contact-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/format-migration-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/format-migration-register-template.md",
+      "source_csv": "format-migration-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/governance-policy-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/governance-policy-register-template.md",
+      "source_csv": "governance-policy-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-composition-snapshot-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-composition-snapshot-template.md",
+      "source_csv": "group-composition-snapshot-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-function-assignment-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-function-assignment-template.md",
+      "source_csv": "group-function-assignment-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-operational-roster-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-operational-roster-template.md",
+      "source_csv": "group-operational-roster-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-profile-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-profile-template.md",
+      "source_csv": "group-profile-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-revision-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-revision-register-template.md",
+      "source_csv": "group-revision-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/group-roster-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/group-roster-template.md",
+      "source_csv": "group-roster-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/horizon-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/horizon-register.md",
+      "source_csv": "horizon-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/incident-log-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/incident-log-template.md",
+      "source_csv": "incident-log-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/institution-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/institution-register-template.md",
+      "source_csv": "institution-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/inventory-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/inventory-template.md",
+      "source_csv": "inventory-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/knowledge-succession-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/knowledge-succession-register-template.md",
+      "source_csv": "knowledge-succession-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/known-gap-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/known-gap-register.md",
+      "source_csv": "known-gap-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/land-parcel-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/land-parcel-register-template.md",
+      "source_csv": "land-parcel-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/legacy-scenario-map.md",
+      "html_href_target": "../80_DATA_REGISTERS/legacy-scenario-map.md",
+      "source_csv": "legacy-scenario-map.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/map-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/map-register-template.md",
+      "source_csv": "map-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/offline-corpus-manifest.md",
+      "html_href_target": "../80_DATA_REGISTERS/offline-corpus-manifest.md",
+      "source_csv": "offline-corpus-manifest.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/offline-library__offline-payload-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/offline-library__offline-payload-register.md",
+      "source_csv": "offline-library/offline-payload-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/offline-restore-test-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/offline-restore-test-template.md",
+      "source_csv": "offline-restore-test-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/offline-storage-plan-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/offline-storage-plan-template.md",
+      "source_csv": "offline-storage-plan-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/payload-source-crosswalk.md",
+      "html_href_target": "../80_DATA_REGISTERS/payload-source-crosswalk.md",
+      "source_csv": "payload-source-crosswalk.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/population-capacity-snapshot-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/population-capacity-snapshot-template.md",
+      "source_csv": "population-capacity-snapshot-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-domain-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-domain-register.md",
+      "source_csv": "practical-science-domain-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-instrument-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-instrument-register.md",
+      "source_csv": "practical-science-instrument-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-learning-paths.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-learning-paths.md",
+      "source_csv": "practical-science-learning-paths.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-package-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-package-register.md",
+      "source_csv": "practical-science-package-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-project-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-project-register.md",
+      "source_csv": "practical-science-project-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-protocol-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-protocol-template.md",
+      "source_csv": "practical-science-protocol-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-raw-log-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-raw-log-template.md",
+      "source_csv": "practical-science-raw-log-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/practical-science-safety-gates.md",
+      "html_href_target": "../80_DATA_REGISTERS/practical-science-safety-gates.md",
+      "source_csv": "practical-science-safety-gates.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/resource-scaling-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/resource-scaling-template.md",
+      "source_csv": "resource-scaling-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/resource-transaction-log-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/resource-transaction-log-template.md",
+      "source_csv": "resource-transaction-log-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/role-gate-record-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/role-gate-record-template.md",
+      "source_csv": "role-gate-record-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/route-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/route-register-template.md",
+      "source_csv": "route-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/scenario-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/scenario-register.md",
+      "source_csv": "scenario-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/seed-accession-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/seed-accession-template.md",
+      "source_csv": "seed-accession-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/site-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/site-register-template.md",
+      "source_csv": "site-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/soil-monitoring-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/soil-monitoring-template.md",
+      "source_csv": "soil-monitoring-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/source-manifest.md",
+      "html_href_target": "../80_DATA_REGISTERS/source-manifest.md",
+      "source_csv": "source-manifest.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/succession-register-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/succession-register-template.md",
+      "source_csv": "succession-register-template.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/technology-dependency-edges.md",
+      "html_href_target": "../80_DATA_REGISTERS/technology-dependency-edges.md",
+      "source_csv": "technology-dependency-edges.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/technology-dependency-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/technology-dependency-register.md",
+      "source_csv": "technology-dependency-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/technology-node-planning-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/technology-node-planning-register.md",
+      "source_csv": "technology-node-planning-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/technology-service-level-register.md",
+      "html_href_target": "../80_DATA_REGISTERS/technology-service-level-register.md",
+      "source_csv": "technology-service-level-register.csv"
+    },
+    {
+      "guide_target": "80_DATA_REGISTERS/water-source-capacity-template.md",
+      "html_href_target": "../80_DATA_REGISTERS/water-source-capacity-template.md",
+      "source_csv": "water-source-capacity-template.csv"
+    }
+  ],
+  "filename_migrations": [
+    {
+      "new": "10 — Руководства/00.1 — О комплекте.md",
+      "old": "10_GUIDES/README.md",
+      "source": "README.md"
+    },
+    {
+      "new": "10 — Руководства/01 — Мастер-каркас автономного кита.md",
+      "old": "10_GUIDES/01_MASTER_BLUEPRINT_RU.md",
+      "source": "01_MASTER_BLUEPRINT_RU.md"
+    },
+    {
+      "new": "10 — Руководства/02 — Персонализация под людей и площадку.md",
+      "old": "10_GUIDES/02_PERSONALIZATION_RU.md",
+      "source": "02_PERSONALIZATION_RU.md"
+    },
+    {
+      "new": "10 — Руководства/03 — Инвентарь предметов и запасов.md",
+      "old": "10_GUIDES/03_INVENTORY_SCHEMA_RU.md",
+      "source": "03_INVENTORY_SCHEMA_RU.md"
+    },
+    {
+      "new": "10 — Руководства/04 — Источники и проверка происхождения.md",
+      "old": "10_GUIDES/04_SOURCE_REGISTER_RU.md",
+      "source": "04_SOURCE_REGISTER_RU.md"
+    },
+    {
+      "new": "10 — Руководства/05 — Дорожная карта сборки.md",
+      "old": "10_GUIDES/05_BUILD_ROADMAP_RU.md",
+      "source": "05_BUILD_ROADMAP_RU.md"
+    },
+    {
+      "new": "10 — Руководства/06 — Матрица полноты системы.md",
+      "old": "10_GUIDES/06_COVERAGE_MATRIX_RU.md",
+      "source": "06_COVERAGE_MATRIX_RU.md"
+    },
+    {
+      "new": "10 — Руководства/07 — Материально-технический контур.md",
+      "old": "10_GUIDES/07_MATERIAL_TECHNICAL_CONTOUR_RU.md",
+      "source": "07_MATERIAL_TECHNICAL_CONTOUR_RU.md"
+    },
+    {
+      "new": "10 — Руководства/08 — Медицинский контур знаний.md",
+      "old": "10_GUIDES/08_MEDICAL_KNOWLEDGE_CONTOUR_RU.md",
+      "source": "08_MEDICAL_KNOWLEDGE_CONTOUR_RU.md"
+    },
+    {
+      "new": "10 — Руководства/09 — Медицинские источники.md",
+      "old": "10_GUIDES/09_MEDICAL_SOURCE_CATALOG_RU.md",
+      "source": "09_MEDICAL_SOURCE_CATALOG_RU.md"
+    },
+    {
+      "new": "10 — Руководства/10 — Информация и архив.md",
+      "old": "10_GUIDES/10_INFORMATION_AND_ARCHIVE_CONTOUR_RU.md",
+      "source": "10_INFORMATION_AND_ARCHIVE_CONTOUR_RU.md"
+    },
+    {
+      "new": "10 — Руководства/11 — Физические аптечки.md",
+      "old": "10_GUIDES/11_FIRST_AID_KIT_BASELINE_RU.md",
+      "source": "11_FIRST_AID_KIT_BASELINE_RU.md"
+    },
+    {
+      "new": "10 — Руководства/12 — Проверка качества и границы.md",
+      "old": "10_GUIDES/12_QA_AND_LIMITS_RU.md",
+      "source": "12_QA_AND_LIMITS_RU.md"
+    },
+    {
+      "new": "10 — Руководства/13 — Карты, геоданные и маршруты.md",
+      "old": "10_GUIDES/13_MAPS_GEODATA_NAVIGATION_RU.md",
+      "source": "13_MAPS_GEODATA_NAVIGATION_RU.md"
+    },
+    {
+      "new": "10 — Руководства/14 — Группа от одного до семи человек.md",
+      "old": "10_GUIDES/14_GROUP_1_TO_7_OPERATIONS_RU.md",
+      "source": "14_GROUP_1_TO_7_OPERATIONS_RU.md"
+    },
+    {
+      "new": "10 — Руководства/15 — Индекс нештатных ситуаций от А до Я.md",
+      "old": "10_GUIDES/15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md",
+      "source": "15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md"
+    },
+    {
+      "new": "10 — Руководства/16 — Непрерывность на 15–100 лет.md",
+      "old": "10_GUIDES/16_CENTURY_CONTINUITY_RU.md",
+      "source": "16_CENTURY_CONTINUITY_RU.md"
+    },
+    {
+      "new": "10 — Руководства/17 — Офлайн-библиотека на 100 лет.md",
+      "old": "10_GUIDES/17_OFFLINE_LIBRARY_100Y_RU.md",
+      "source": "17_OFFLINE_LIBRARY_100Y_RU.md"
+    },
+    {
+      "new": "10 — Руководства/18 — Реестры и допуски столетнего контура.md",
+      "old": "10_GUIDES/18_E5_REGISTERS_AND_GATES_RU.md",
+      "source": "18_E5_REGISTERS_AND_GATES_RU.md"
+    },
+    {
+      "new": "10 — Руководства/19 — Исследование офлайн-корпуса.md",
+      "old": "10_GUIDES/19_OFFLINE_CORPUS_RESEARCH_RU.md",
+      "source": "19_OFFLINE_CORPUS_RESEARCH_RU.md"
+    },
+    {
+      "new": "10 — Руководства/20 — Сохранение практической науки.md",
+      "old": "10_GUIDES/20_PRACTICAL_SCIENCE_PRESERVATION_RU.md",
+      "source": "20_PRACTICAL_SCIENCE_PRESERVATION_RU.md"
+    },
+    {
+      "new": "10 — Руководства/21 — Источники практической науки.md",
+      "old": "10_GUIDES/21_PRACTICAL_SCIENCE_SOURCE_RESEARCH_RU.md",
+      "source": "21_PRACTICAL_SCIENCE_SOURCE_RESEARCH_RU.md"
+    },
+    {
+      "new": "10 — Руководства/22 — Аудит готовности к полной изоляции.md",
+      "old": "10_GUIDES/22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md",
+      "source": "22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md"
+    },
+    {
+      "new": "10 — Руководства/23 — Дерево технологических зависимостей.md",
+      "old": "10_GUIDES/23_TECHNOLOGY_DEPENDENCY_TREE_RU.md",
+      "source": "23_TECHNOLOGY_DEPENDENCY_TREE_RU.md"
+    },
+    {
+      "new": "10 — Руководства/24 — Мастер-статус каталога.md",
+      "old": "10_GUIDES/24_MASTER_CATALOG_STATUS_RU.md",
+      "source": "24_MASTER_CATALOG_STATUS_RU.md"
+    },
+    {
+      "new": "10 — Руководства/20.1 — Проверка атласа практической науки.md",
+      "old": "10_GUIDES/PRACTICAL_SCIENCE_WORKBOOK_QA.md",
+      "source": "PRACTICAL_SCIENCE_WORKBOOK_QA.md"
+    },
+    {
+      "new": "10 — Руководства/06.1 — Проверка интерактивной схемы.md",
+      "old": "10_GUIDES/VISUALIZATION_QA.md",
+      "source": "VISUALIZATION_QA.md"
+    },
+    {
+      "new": "10 — Руководства/00.2 — Быстрый старт.md",
+      "old": "10_GUIDES/START_HERE.md",
+      "source": "START_HERE.html"
+    },
+    {
+      "new": "10 — Руководства/07.1 — Овощной семенной фонд.md",
+      "old": "10_GUIDES/SEED_BANK_ORDER_RU.md",
+      "source": "SEED_BANK_ORDER_RU.html"
+    },
+    {
+      "new": "10 — Руководства/07.2 — Калорийный семенной и посадочный слой.md",
+      "old": "10_GUIDES/SEED_CALORIE_LAYER_RU.md",
+      "source": "SEED_CALORIE_LAYER_RU.html"
+    },
+    {
+      "new": "10 — Руководства/07.3 — Список закупки семян.md",
+      "old": "10_GUIDES/SEED_PURCHASE_LIST_RU.md",
+      "source": "SEED_PURCHASE_LIST_RU.html"
+    },
+    {
+      "new": "10 — Руководства/00 — Путеводитель по руководствам.md",
+      "old": "10_GUIDES/INDEX.md",
+      "source": "MULTIPLE_ROOT_SOURCES"
+    }
+  ],
+  "generated_files": [
+    "00 — Путеводитель по руководствам.md",
+    "00.1 — О комплекте.md",
+    "00.2 — Быстрый старт.md",
+    "01 — Мастер-каркас автономного кита.md",
+    "02 — Персонализация под людей и площадку.md",
+    "03 — Инвентарь предметов и запасов.md",
+    "04 — Источники и проверка происхождения.md",
+    "05 — Дорожная карта сборки.md",
+    "06 — Матрица полноты системы.md",
+    "06.1 — Проверка интерактивной схемы.md",
+    "07 — Материально-технический контур.md",
+    "07.1 — Овощной семенной фонд.md",
+    "07.2 — Калорийный семенной и посадочный слой.md",
+    "07.3 — Список закупки семян.md",
+    "08 — Медицинский контур знаний.md",
+    "09 — Медицинские источники.md",
+    "10 — Информация и архив.md",
+    "11 — Физические аптечки.md",
+    "12 — Проверка качества и границы.md",
+    "13 — Карты, геоданные и маршруты.md",
+    "14 — Группа от одного до семи человек.md",
+    "15 — Индекс нештатных ситуаций от А до Я.md",
+    "16 — Непрерывность на 15–100 лет.md",
+    "17 — Офлайн-библиотека на 100 лет.md",
+    "18 — Реестры и допуски столетнего контура.md",
+    "19 — Исследование офлайн-корпуса.md",
+    "20 — Сохранение практической науки.md",
+    "20.1 — Проверка атласа практической науки.md",
+    "21 — Источники практической науки.md",
+    "22 — Аудит готовности к полной изоляции.md",
+    "23 — Дерево технологических зависимостей.md",
+    "24 — Мастер-статус каталога.md"
+  ],
+  "generator": "build_obsidian_guides.py",
+  "sources": [
+    {
+      "kind": "md",
+      "mirror": "00.1 — О комплекте.md",
+      "sha256": "66206a716b4b59ec418e28bacf58b9bb3a5e424133d05d41036eed05635a6dcc",
+      "source": "README.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "01 — Мастер-каркас автономного кита.md",
+      "sha256": "8e8075b2fdd38df1a6bfe82027cd45d136f535d6b1943550af320fa290b93244",
+      "source": "01_MASTER_BLUEPRINT_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "02 — Персонализация под людей и площадку.md",
+      "sha256": "289234eef3b7097b3398896c72c673e8b2df635d5043630de4bbc64d32854ab8",
+      "source": "02_PERSONALIZATION_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "03 — Инвентарь предметов и запасов.md",
+      "sha256": "047ad11cd5c2a58348db4372e58b014583051d79e036c3e43dda98e4cbf12cdc",
+      "source": "03_INVENTORY_SCHEMA_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "04 — Источники и проверка происхождения.md",
+      "sha256": "aafd011f705e8fd43f47c6a431cbf47a69c9b0e02ffdd9dfdc17a6dac2b67d3d",
+      "source": "04_SOURCE_REGISTER_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "05 — Дорожная карта сборки.md",
+      "sha256": "ae7c95093a6a2fed458b6c517a8ee012b9416d64007d6ca5910f488699d769c1",
+      "source": "05_BUILD_ROADMAP_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "06 — Матрица полноты системы.md",
+      "sha256": "cf1deeb521f2018dec7546f7506f4599cb7aea32e24c6104bea3999bf63b0714",
+      "source": "06_COVERAGE_MATRIX_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "07 — Материально-технический контур.md",
+      "sha256": "b29de1af016940558479901ee3d5b0f3465f1cba211bba62df04ec2753ae7597",
+      "source": "07_MATERIAL_TECHNICAL_CONTOUR_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "08 — Медицинский контур знаний.md",
+      "sha256": "a4a438d51001ba2f0354f54777436093c95ffc4c3820e2066b2bdabb58960129",
+      "source": "08_MEDICAL_KNOWLEDGE_CONTOUR_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "09 — Медицинские источники.md",
+      "sha256": "55b98d92f7084938ae245702ecb37b247340df01bce86633639f0221899a6770",
+      "source": "09_MEDICAL_SOURCE_CATALOG_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "10 — Информация и архив.md",
+      "sha256": "7aafdc79f780486d72a150a1977c426160e0b505e74ccb8c4b24ddb93ee39ede",
+      "source": "10_INFORMATION_AND_ARCHIVE_CONTOUR_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "11 — Физические аптечки.md",
+      "sha256": "baf32bf2ca203447e374af3a1d539d031469d43dd22d28566c2db4b8860e7cc6",
+      "source": "11_FIRST_AID_KIT_BASELINE_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "12 — Проверка качества и границы.md",
+      "sha256": "ef63a2df83d3258e9d39ef1e277bfc6de258d99c3b93e8e96c6be829be183618",
+      "source": "12_QA_AND_LIMITS_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "13 — Карты, геоданные и маршруты.md",
+      "sha256": "452ba78792b7870873d17789c5d6d1b04605db696c89f3874c1e4ccb40ed7c85",
+      "source": "13_MAPS_GEODATA_NAVIGATION_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "14 — Группа от одного до семи человек.md",
+      "sha256": "a20b0dffeed3e5f5968ae2e1b77dd21b6633d91061e5093b2b778d3fbae20cb6",
+      "source": "14_GROUP_1_TO_7_OPERATIONS_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "15 — Индекс нештатных ситуаций от А до Я.md",
+      "sha256": "0c020764b29469b1a46f0088487f6e3b13da274b68b3e32532b3acd9cc1dae81",
+      "source": "15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "16 — Непрерывность на 15–100 лет.md",
+      "sha256": "bd961ac9eae8d886c54f7817e9f862734f48692304379e496289a6cbe928ab1d",
+      "source": "16_CENTURY_CONTINUITY_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "17 — Офлайн-библиотека на 100 лет.md",
+      "sha256": "6a8d38abef233911145f60737749f6f51f6dc1b58b044e5571cce0c594d7e872",
+      "source": "17_OFFLINE_LIBRARY_100Y_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "18 — Реестры и допуски столетнего контура.md",
+      "sha256": "f2f4bfd97a621db7aeecbef55a363f7158e9b3a0df7e5798a362331f841a997d",
+      "source": "18_E5_REGISTERS_AND_GATES_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "19 — Исследование офлайн-корпуса.md",
+      "sha256": "80ee2aa14275d63a745be51e162a3c02ba1e78ba305650e7a2dee1f9e6f53a65",
+      "source": "19_OFFLINE_CORPUS_RESEARCH_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "20 — Сохранение практической науки.md",
+      "sha256": "2774843aff032a8f0be22905fcbe82682075ffea64dac66b8df8a8d43efe8b80",
+      "source": "20_PRACTICAL_SCIENCE_PRESERVATION_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "21 — Источники практической науки.md",
+      "sha256": "164f587d8d285873afe59796f54603687d65cc5dda123210bd1694dccfcad967",
+      "source": "21_PRACTICAL_SCIENCE_SOURCE_RESEARCH_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "22 — Аудит готовности к полной изоляции.md",
+      "sha256": "e4cd7262a8f34186252628c1f06ea8f62e106fa9ee42c980de2a03e3043483e6",
+      "source": "22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "23 — Дерево технологических зависимостей.md",
+      "sha256": "e1ace942a09c87c9ef453a9bd44e5b02c49d683b169c813f6cd7b994d0450ac2",
+      "source": "23_TECHNOLOGY_DEPENDENCY_TREE_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "24 — Мастер-статус каталога.md",
+      "sha256": "7180e255ce949e52a047ad6d114a15a85d9d740376f162c4b71a666e685fbbbf",
+      "source": "24_MASTER_CATALOG_STATUS_RU.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "20.1 — Проверка атласа практической науки.md",
+      "sha256": "14b60e62af12bfcefea257f284093f8d8962c09f4bde53e31acae605f76e433c",
+      "source": "PRACTICAL_SCIENCE_WORKBOOK_QA.md"
+    },
+    {
+      "kind": "md",
+      "mirror": "06.1 — Проверка интерактивной схемы.md",
+      "sha256": "11a2db416a72baff346bb29e8f4f41d049230b9738e76090d2703d3b8073e34c",
+      "source": "VISUALIZATION_QA.md"
+    },
+    {
+      "kind": "html",
+      "mirror": "00.2 — Быстрый старт.md",
+      "sha256": "cfcc13e26a8faf338839984fe6b8a8ad5c74d296ea0c6d11887962955618cb47",
+      "source": "START_HERE.html"
+    },
+    {
+      "kind": "html",
+      "mirror": "07.1 — Овощной семенной фонд.md",
+      "sha256": "55cec20f6099ee1a52665359b64957de105a00f75a705c3f9d9d295c9298a2b1",
+      "source": "SEED_BANK_ORDER_RU.html"
+    },
+    {
+      "kind": "html",
+      "mirror": "07.2 — Калорийный семенной и посадочный слой.md",
+      "sha256": "dd29d504c13de6941ab0fbdf2fe97fd09026af8c13f215a3fd99566b6a7266d6",
+      "source": "SEED_CALORIE_LAYER_RU.html"
+    },
+    {
+      "kind": "html",
+      "mirror": "07.3 — Список закупки семян.md",
+      "sha256": "48020acc13a02b66fabc0df718e8bf3a39d7fb55317ff02646e44a564b1090bf",
+      "source": "SEED_PURCHASE_LIST_RU.html"
+    }
+  ],
+  "vault_directory": "10 — Руководства",
+  "version": 4
+}

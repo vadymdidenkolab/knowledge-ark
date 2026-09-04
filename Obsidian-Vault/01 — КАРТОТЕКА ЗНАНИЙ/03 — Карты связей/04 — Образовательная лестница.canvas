@@ -1,0 +1,26 @@
+{
+	"edges":[
+		{"color":"#3A86FF","fromNode":"4cdd5f78258e0e29","fromSide":"right","id":"f444999d53525431","label":"открывает","toEnd":"arrow","toNode":"6b59f579cf0d73a8","toSide":"left"},
+		{"color":"#5B6472","fromNode":"4cdd5f78258e0e29","fromSide":"right","id":"f0fd57c36353aa91","label":"нужно сначала","toEnd":"arrow","toNode":"d1fbf65478024705","toSide":"left"},
+		{"color":"#5B6472","fromNode":"6b59f579cf0d73a8","fromSide":"right","id":"12727b141ccb9678","label":"нужно сначала","toEnd":"arrow","toNode":"d1fbf65478024705","toSide":"left"},
+		{"color":"#5B6472","fromNode":"e34c0e94cdbb2cdb","fromSide":"right","id":"5fb1d3de0a554557","label":"нужно сначала","toEnd":"arrow","toNode":"3c1a974b637f4b44","toSide":"left"},
+		{"color":"#5B6472","fromNode":"4cdd5f78258e0e29","fromSide":"right","id":"c1c0edc2573ffe7d","label":"нужно сначала","toEnd":"arrow","toNode":"3c1a974b637f4b44","toSide":"left"},
+		{"color":"#5B6472","fromNode":"3c1a974b637f4b44","fromSide":"right","id":"0941a783ac7c6bbb","label":"нужно сначала","toEnd":"arrow","toNode":"33e9b82a7d8380c3","toSide":"left"},
+		{"color":"#5B6472","fromNode":"e34c0e94cdbb2cdb","fromSide":"right","id":"f6ce2f619b818a7f","label":"нужно сначала","toEnd":"arrow","toNode":"33e9b82a7d8380c3","toSide":"left"},
+		{"color":"#5B6472","fromNode":"4cdd5f78258e0e29","fromSide":"right","id":"ed1d139fb67c4abe","label":"нужно сначала","toEnd":"arrow","toNode":"33e9b82a7d8380c3","toSide":"left"},
+		{"color":"#5B6472","fromNode":"33e9b82a7d8380c3","fromSide":"right","id":"7015af22e0a99531","label":"нужно сначала","toEnd":"arrow","toNode":"8eee8033728631cd","toSide":"left"},
+		{"color":"#5B6472","fromNode":"4cdd5f78258e0e29","fromSide":"right","id":"5457452196259350","label":"нужно сначала","toEnd":"arrow","toNode":"8eee8033728631cd","toSide":"left"},
+		{"color":"#5B6472","fromNode":"6b59f579cf0d73a8","fromSide":"right","id":"7c1f382d74d54ec5","label":"нужно сначала","toEnd":"arrow","toNode":"8eee8033728631cd","toSide":"left"},
+		{"color":"#3A86FF","fromNode":"8eee8033728631cd","fromSide":"right","id":"cde1edebe4deaf16","label":"открывает","toEnd":"arrow","toNode":"d1fbf65478024705","toSide":"left"}
+	],
+	"nodes":[
+		{"height":230,"id":"391eafee17c4c1d7","text":"# Образовательная лестница\n\nОт безопасной среды и офлайн-архива — к дошкольной, школьной, профессиональной и университетской ступени; далее — к межпоколенческому восстановлению технологий.","type":"text","width":1050,"x":0,"y":-330},
+		{"color":"#8D6E63","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/19 — Измерения, единицы и эталоны.md","height":170,"id":"6b59f579cf0d73a8","type":"file","width":420,"x":0,"y":240},
+		{"color":"#7B2CBF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/23 — Люди, роли, смены и решения.md","height":170,"id":"e34c0e94cdbb2cdb","type":"file","width":420,"x":0,"y":480},
+		{"color":"#3A86FF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/25 — Офлайн-знания, архив и обучение.md","height":170,"id":"4cdd5f78258e0e29","type":"file","width":420,"x":0,"y":0},
+		{"color":"#3A86FF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/27 — Цепочка восстановления технологий.md","height":170,"id":"d1fbf65478024705","type":"file","width":420,"x":620,"y":0},
+		{"color":"#3A86FF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/30 — Раннее развитие и дошкольное образование.md","height":170,"id":"3c1a974b637f4b44","type":"file","width":420,"x":620,"y":240},
+		{"color":"#3A86FF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/31 — Школьное образование 6–18 лет, оценивание и инклюзия.md","height":170,"id":"33e9b82a7d8380c3","type":"file","width":420,"x":1240,"y":0},
+		{"color":"#3A86FF","file":"01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/32 — Профессиональное и университетское образование.md","height":170,"id":"8eee8033728631cd","type":"file","width":420,"x":1860,"y":0}
+	]
+}

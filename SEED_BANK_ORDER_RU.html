@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Исправленный семенной фонд — 7 человек</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink:#17372c; --muted:#627269; --paper:#f3f0e5; --card:#fffdf7;
+      --line:#d8dccf; --green:#1f6547; --green2:#e3f1e6; --red:#9b3029;
+      --red2:#fee7e2; --amber:#7a5314; --amber2:#fff0cc; --blue:#23577a; --blue2:#e7f0f7;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.48 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{width:min(1240px,calc(100% - 30px));margin:30px auto 70px}
+    h1{font-size:clamp(30px,5vw,54px);line-height:1.02;letter-spacing:-.04em;margin:0 0 10px}
+    h2{font-size:23px;margin:0 0 11px} h3{margin:18px 0 7px} p{margin:0 0 10px}
+    .lead{font-size:19px;color:var(--muted);max-width:960px}
+    .status{display:inline-flex;gap:8px;align-items:center;background:var(--red2);color:var(--red);border:1px solid #eab3ab;border-radius:999px;padding:6px 11px;font-weight:750;margin-bottom:16px}
+    .facts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin:25px 0 16px}
+    .fact,section{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 28px rgba(30,55,44,.055)}
+    .fact{padding:16px}.fact strong{display:block;font-size:25px;line-height:1.08;margin-bottom:5px}.fact span{font-size:13px;color:var(--muted)}
+    section{padding:20px;margin-top:15px}.danger{background:var(--red2);border-color:#eab3ab}.good{background:var(--green2);border-color:#a9ccae}.notice{background:var(--amber2);border-color:#e2c277}.info{background:var(--blue2);border-color:#b2cadb}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:white}
+    table{width:100%;border-collapse:collapse;min-width:1190px;background:#fff}
+    th,td{padding:10px 11px;border-bottom:1px solid #e6e9df;text-align:left;vertical-align:top}
+    th{position:sticky;top:0;z-index:2;background:#eaf0e7;color:#315345;font-size:12px;text-transform:uppercase;letter-spacing:.035em}
+    tr:last-child td{border-bottom:0} td:first-child,td:nth-child(3),td:nth-child(4),td:nth-child(5){white-space:nowrap}
+    .op{display:inline-block;background:#dff1e3;color:#1d6544;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:750;white-space:nowrap}
+    .blocked{color:var(--red);font-weight:750}.ok{color:var(--green);font-weight:750}.small{font-size:13px;color:var(--muted)}
+    ul,ol{padding-left:22px;margin:8px 0 0}li{margin:7px 0}a{color:#135e48}
+    .formula{font:650 15px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:#153b2f;color:#f0f7ed;padding:13px 15px;border-radius:11px;overflow:auto}
+    footer{font-size:13px;color:var(--muted);margin:18px 2px}
+    @media(max-width:950px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}main{width:min(100% - 18px,1240px);margin-top:18px}section{padding:15px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="status">Модуль A · старая корзина из 22 маленьких пачек забракована</div>
+    <h1>Стартовый овощной модуль семенного фонда</h1>
+    <p class="lead">Эти 22 позиции — только первый овощной модуль, а не полный фонд автономного хозяйства. Количественная спецификация рассчитана для группы до 7 взрослых: два посевных сезона, 25% аварийного запаса и такой же полный дубликат в другой физической локации. Заказ и оплата не выполнены.</p>
+  </header>
+
+  <div class="facts">
+    <div class="fact"><strong>22 / 22 OP</strong><span>открытоопыляемые по официальному заявлению продавца</span></div>
+    <div class="fact"><strong>0 F1</strong><span>гибриды F1 среди выбранных позиций не обнаружены</span></div>
+    <div class="fact"><strong>6,199 кг</strong><span>основной двухсезонный фонд</span></div>
+    <div class="fact"><strong>6,199 кг</strong><span>полный offsite-дубликат</span></div>
+    <div class="fact"><strong>12,398 кг</strong><span>расчётный общий объём до округления фасовок</span></div>
+  </div>
+
+  <section class="danger">
+    <h2>Почему были выбраны именно эти 22 — и почему этого мало</h2>
+    <p>Первичный выбор был сделан как быстрый проход по одному португальскому поставщику: один доступный открытоопыляемый сорт на основную огородную функцию. В него вошли две бобовые, корнеплоды, луковые, листовые, капустные, тыквенные, томаты/перец, одна сладкая кукуруза, один садовый подсолнечник и четыре пряности. Приоритет получили несколько португальских местных сортов и ассортимент, который уже был в наличии.</p>
+    <p><strong>Это было слишком узкое ограничение.</strong> Один поставщик, один сорт на культуру и акцент на овощи не обеспечивают ни калории, ни генетическую диверсификацию, ни устойчивость к разным сезонам, болезням и режимам воды.</p>
+    <h3>Что должно заменить модель «22 сорта»</h3>
+    <ul>
+      <li><strong>По 2–4 открытоопыляемых сорта каждой критической культуры:</strong> ранний/поздний, влажно-прохладный/жарко-сухой, для свежего употребления/хранения.</li>
+      <li><strong>Калорийный слой:</strong> картофель, батат, зерновая кукуруза, пшеница, рожь, ячмень, овёс, сорго/просо или гречиха по пригодности участка.</li>
+      <li><strong>Белковый слой:</strong> сухая фасоль, нут, чечевица, люпин/вигна, дополнительные фава и горох.</li>
+      <li><strong>Жировой слой:</strong> настоящий масличный подсолнечник, лён и долгосрочно — размножаемые вегетативно олива/орехи по земле и климату.</li>
+      <li><strong>Почва и животные:</strong> клевер, люцерна, вика, сидеральный люпин, фацелия, кормовые злаки и корнеплоды.</li>
+      <li><strong>Многолетние и клоновые культуры:</strong> чеснок, картофель, батат, виноград, инжир, олива, цитрусовые, яблоня, груша, косточковые и орехи — они не сохраняются как обычная пачка сухих семян.</li>
+    </ul>
+    <p>Рабочий диапазон полной коллекции — не фиксированное магическое число, а портфель: ориентировочно 25–40 видов и по 2–4 линии ключевых культур, плюс сидераты, травы, опылители и клоновый материал. Это порядка <strong>100–180 отдельно учтённых образцов</strong>, которые регенерируются по графику, а не все одновременно.</p>
+  </section>
+
+  <section class="good">
+    <h2>Это семена, с которых можно снова получать семена</h2>
+    <p><strong>Да.</strong> Living Seeds / Sementes Vivas официально описывает свой каталог как биологические семена <em>открытого опыления</em>. В карточках Golden Bantam и Calinaro это указано отдельно; Campina, Cereja de Inverno, Sabugal и Pau Roxo дополнительно представлены как местные или традиционные сохраняемые сорта. Во всех 22 карточках отсутствуют обозначения F1 или híbrido.</p>
+    <p class="small">Граница доказательства: это подтверждение производителя, а не независимый генетический тест. При получении фиксируются SKU, номер lot, год урожая/упаковки и всхожесть; затем проверяется соответствие сорту в поле.</p>
+    <p><a href="https://sementesvivas.bio/pages/about-us">Официальное заявление производителя</a> · <a href="https://sementesvivas.bio/products/milho-doce-golden-bantam">Golden Bantam — явная маркировка открытого опыления</a> · <a href="https://sementesvivas.bio/products/brocolo-calinaro">Calinaro — явная маркировка открытого опыления</a></p>
+  </section>
+
+  <section class="notice">
+    <h2>Но «открытоопыляемый» не означает «можно собрать как угодно»</h2>
+    <ul>
+      <li><strong>Свёкла и мангольд</strong> — один вид Beta vulgaris; их семенные растения могут переопылиться.</li>
+      <li><strong>Брокколи и галисийская капуста</strong> — Brassica oleracea; без изоляции сортовая чистота теряется.</li>
+      <li><strong>Кукуруза</strong> переопыляется ветром с другой кукурузой; для устойчивого воспроизводства выращивается блоком большой популяции, а не несколькими растениями.</li>
+      <li><strong>Огурец, кабачок, тыква, подсолнечник, морковь, лук и порей</strong> требуют видоспецифичной изоляции, временного разнесения или контролируемого опыления.</li>
+      <li><strong>Томаты, горох и салат</strong> преимущественно самоопыляются, но происхождение и число материнских растений всё равно документируются.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Формула запаса</h2>
+    <div class="formula">основной фонд = годовая норма для 7 взрослых × 2 сезона × 1,25
+offsite-дубликат = ещё один полный основной фонд в другой локации
+всего = основной фонд + offsite-дубликат</div>
+    <p class="small" style="margin-top:10px">Дубликат не является «третьим и четвёртым сезоном». Он не расходуется, пока основной фонд цел, и служит восстановлением после пожара, затопления, плесени, кражи или отказа хранения.</p>
+  </section>
+
+  <section>
+    <h2>Полная количественная спецификация</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>№</th><th>Культура / сорт</th><th>Основной фонд</th><th>Offsite</th><th>Всего</th><th>Ориентир семян в основном фонде</th><th>Тип</th><th>Статус у Living Seeds</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><a href="https://sementesvivas.bio/products/fava-super-aguadulce">Фава Super Aguadulce</a></td><td>2 000 г</td><td>2 000 г</td><td><strong>4 000 г</strong></td><td>≈880–3 500, зависит от калибра</td><td><span class="op">OP · частично перекрёстная</span></td><td>Только 80 г; нужно 50 пачек либо bulk у двух поставщиков</td></tr>
+          <tr><td>2</td><td><a href="https://sementesvivas.bio/products/ervilha-kelvedon-wonder">Горох Kelvedon Wonder</a></td><td>2 000 г</td><td>2 000 г</td><td><strong>4 000 г</strong></td><td>≈6 000–14 000</td><td><span class="op">OP · самоопыление</span></td><td>Только 80 г; нужно 50 пачек либо bulk у двух поставщиков</td></tr>
+          <tr><td>3</td><td><a href="https://sementesvivas.bio/products/cenoura-pau-roxo-das-seis-marias">Морковь Pau Roxo</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈79 000–90 000</td><td><span class="op">OP · перекрёстная</span></td><td class="blocked">Вес пачки не раскрыт — заблокировано до ответа продавца / второго поставщика</td></tr>
+          <tr><td>4</td><td><a href="https://sementesvivas.bio/products/beterraba-detroit-2">Свёкла Detroit 2</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈5 000–7 000 соплодий</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 50 г и 200 г; нужны независимые lot</td></tr>
+          <tr><td>5</td><td><a href="https://sementesvivas.bio/products/nabo-60-dias">Репа 60 days</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈50 000</td><td><span class="op">OP · перекрёстная</span></td><td class="blocked">Доступно только 4 г; bulk 50/200 г отсутствует — нужен второй поставщик</td></tr>
+          <tr><td>6</td><td><a href="https://sementesvivas.bio/products/cebola-branca-da-leziria">Лук Lezíria</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈28 000–30 000</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 50 г; четыре пачки, но требуются два lot</td></tr>
+          <tr><td>7</td><td><a href="https://sementesvivas.bio/products/alho-frances-de-carentan-2">Порей De Carentan 2</a></td><td>10 г</td><td>10 г</td><td><strong>20 г</strong></td><td>≈3 500</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 50 г, но фасовка чрезмерна; лучше два независимых пакета 10 г</td></tr>
+          <tr><td>8</td><td><a href="https://sementesvivas.bio/products/couve-galega-folhas-lisas">Галисийская листовая капуста</a></td><td>2 г</td><td>2 г</td><td><strong>4 г</strong></td><td>≈720</td><td><span class="op">OP · перекрёстная</span></td><td class="blocked">Bulk 10/50 г отсутствует, retail count неизвестен — нужен второй поставщик</td></tr>
+          <tr><td>9</td><td><a href="https://sementesvivas.bio/products/acelga-glatter-silber-3">Мангольд Glatter Silber 3</a></td><td>250 г</td><td>250 г</td><td><strong>500 г</strong></td><td>≈12 500 соплодий</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 200 г; лучше подобрать точные независимые фасовки у двух поставщиков</td></tr>
+          <tr><td>10</td><td><a href="https://sementesvivas.bio/products/alface-maravilla-de-verano">Салат Maravilla de Verano</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈70 000–93 000</td><td><span class="op">OP · самоопыление</span></td><td class="blocked">Bulk 10/50 г отсутствует — нужен второй поставщик</td></tr>
+          <tr><td>11</td><td><a href="https://sementesvivas.bio/products/brocolo-calinaro">Брокколи Calinaro</a></td><td>2 г</td><td>2 г</td><td><strong>4 г</strong></td><td>≈580–640</td><td><span class="op">OP · перекрёстная</span></td><td class="blocked">Bulk 10/50 г отсутствует, retail count неизвестен — нужен второй поставщик</td></tr>
+          <tr><td>12</td><td><a href="https://sementesvivas.bio/products/abobora-butternut-waltham">Тыква Butternut Waltham</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈400–1 000</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 100 и 500 семян; итог уточняется по фактической массе/партии</td></tr>
+          <tr><td>13</td><td><a href="https://sementesvivas.bio/products/tomate-da-campina">Томат Campina</a></td><td>1 г</td><td>1 г</td><td><strong>2 г</strong></td><td>≈350–360</td><td><span class="op">OP · самоопыление</span></td><td class="blocked">Число семян не раскрыто — нужна письменная фасовка и два lot</td></tr>
+          <tr><td>14</td><td><a href="https://sementesvivas.bio/products/tomate-cereja-de-inverno">Томат Winter Cherry</a></td><td>1 г</td><td>1 г</td><td><strong>2 г</strong></td><td>≈350–360</td><td><span class="op">OP · самоопыление</span></td><td class="blocked">Число семян не раскрыто — нужна письменная фасовка и два lot</td></tr>
+          <tr><td>15</td><td><a href="https://sementesvivas.bio/products/pimento-de-sabugal">Перец Sabugal</a></td><td>2 г</td><td>2 г</td><td><strong>4 г</strong></td><td>≈300–320</td><td><span class="op">OP · частично перекрёстный</span></td><td class="blocked">Число семян не раскрыто — нужна письменная фасовка и два lot</td></tr>
+          <tr><td>16</td><td><a href="https://sementesvivas.bio/products/pepino-marketmore">Огурец Marketmore</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈4 000</td><td><span class="op">OP · перекрёстный</span></td><td class="ok">Есть 500 семян, но 100 семян отсутствуют; нужна калибровка массы</td></tr>
+          <tr><td>17</td><td><a href="https://sementesvivas.bio/products/curgete-black-beauty">Кабачок Black Beauty</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈1 000</td><td><span class="op">OP · перекрёстный</span></td><td class="ok">Есть 500 семян, но 100 семян отсутствуют; нужна калибровка массы</td></tr>
+          <tr><td>18</td><td><a href="https://sementesvivas.bio/products/milho-doce-golden-bantam">Кукуруза Golden Bantam</a></td><td>1 000 г</td><td>1 000 г</td><td><strong>2 000 г</strong></td><td>≈4 000–8 000</td><td><span class="op">OP · ветроопыление</span></td><td class="ok">Есть 1 кг; по одному независимому lot на каждое место</td></tr>
+          <tr><td>19</td><td><a href="https://sementesvivas.bio/products/girassol-sunspot">Подсолнечник Sunspot</a></td><td>100 г</td><td>100 г</td><td><strong>200 г</strong></td><td>≈830–1 840</td><td><span class="op">OP · перекрёстный</span></td><td class="blocked">Bulk 10/50 г отсутствует — нужен второй поставщик</td></tr>
+          <tr><td>20</td><td><a href="https://sementesvivas.bio/products/coentros">Кориандр</a></td><td>25 г</td><td>25 г</td><td><strong>50 г</strong></td><td>≈1 750–1 800</td><td><span class="op">OP · насекомоопыление</span></td><td class="ok">Есть 50 г; нужны независимые lot / поставщики</td></tr>
+          <tr><td>21</td><td><a href="https://sementesvivas.bio/products/salsa-gigante-ditalia">Петрушка Gigante d’Italia</a></td><td>5 г</td><td>5 г</td><td><strong>10 г</strong></td><td>≈2 750–3 200</td><td><span class="op">OP · перекрёстная</span></td><td class="ok">Есть 50 г; чрезмерно, лучше две независимые меньшие фасовки</td></tr>
+          <tr><td>22</td><td><a href="https://sementesvivas.bio/products/tomilho">Тимьян</a></td><td>1 г</td><td>1 г</td><td><strong>2 г</strong></td><td>проверить по фактической партии</td><td><span class="op">OP · контролировать опыление</span></td><td class="ok">Есть 50 г; чрезмерно, лучше два независимых пакета 10 г</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="2"><strong>Итого до округления магазинных фасовок</strong></td><td><strong>≈6,199 кг</strong></td><td><strong>≈6,199 кг</strong></td><td><strong>≈12,398 кг</strong></td><td colspan="3">Не включает калорийный фонд зерновых, картофеля, сухих бобовых и масличных.</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="danger">
+    <h2>Почему эта таблица ещё не является готовым заказом</h2>
+    <p><strong>У Living Seeds сейчас нельзя доказанно закрыть весь объём.</strong> Не раскрыта фасовка моркови, двух томатов и перца; отсутствуют нужные bulk-варианты репы, галисийской капусты, салата, брокколи и подсолнечника. Бобы и горох пришлось бы набирать десятками розничных пачек, которые могут быть одним lot.</p>
+    <p><strong>Страховой дубликат конкретного образца</strong> правильно делать из одного идентифицированного lot, разделённого между двумя местами: так сохраняется одна и та же генетическая партия. Дополнительно нужен другой lot или другой открытоопыляемый сорт как защита от исходного дефекта партии и как функциональное разнообразие, но его следует учитывать как отдельный образец, а не называть генетическим дубликатом.</p>
+  </section>
+
+  <section class="good">
+    <h2>Второй воспроизводимый поставщик найден</h2>
+    <p><strong>ReinSaat, Австрия, ЕС</strong> официально заявляет исключительно samenfest/open-pollinated и non-GMO ассортимент и доставляет в Португалию. Он может добавить независимые функциональные линии и закрыть часть отсутствующих фасовок. Точными совпадениями исходного сорта найдены Kelvedon Wonder и Maravilla de Verano; Rodelika, Nero di Toscana, Ramoso calabrese, Marmande, Pantelli, Neusiedler Ideal, Paccino и Eleonora — другие воспроизводимые сорта, а не копии португальских образцов.</p>
+    <p>Проверенный резервный набор из 10 позиций стоит ориентировочно €324,54 плюс около €27 доставки до 4 кг; налог и окончательная доставка подтверждаются только на checkout. В корзину он пока не добавлялся.</p>
+    <p><a href="https://www.reinsaat.at/EN/company">ReinSaat: официальный профиль</a> · <a href="https://www.reinsaat.at/shop/EN/mmcPage.ShippingCostsPage/">официальные тарифы доставки</a></p>
+  </section>
+
+  <section class="notice">
+    <h2>Португалия / ЕС: биологическая воспроизводимость — только один из четырёх фильтров</h2>
+    <ul>
+      <li><strong>Open-pollinated / F1</strong> отвечает за биологию потомства, но не за законность партии или отсутствие права селекционера.</li>
+      <li><strong>CNV / EU Common Catalogue и маркировка</strong> подтверждают допустимость коммерческой партии, но не дают автоматического права на коммерческое размножение.</li>
+      <li><strong>Plant passport</strong> подтверждает фитосанитарную прослеживаемость тех видов/партий, для которых он обязателен при дистанционной продаже.</li>
+      <li><strong>CPVO и португальское право селекционера</strong> проверяются по точной официальной деноминации. Для личного некоммерческого использования режим ЕС содержит исключение, но для активного национального португальского права нужна отдельная проверка.</li>
+    </ul>
+    <p>Покупки из физического склада вне ЕС ставятся на HOLD до фитосанитарной проверки DGAV. Seed potato покупается только как сертифицированный посадочный картофель в официальной упаковке с требуемой этикеткой/паспортом.</p>
+    <p><a href="https://www.dgav.pt/plantas/conteudo/sanidade-vegetal/inspecao-fitossanitaria/producao-e-comercializacao-de-vegetais/passaporte-fitossanitario/">DGAV: plant passport</a> · <a href="https://www.dgav.pt/plantas/conteudo/sementes-plantas-e-variedades/legislacao-sementes/">DGAV: правила семян</a> · <a href="https://eur-lex.europa.eu/eli/reg/2016/2031/2025-01-05/eng">Regulation (EU) 2016/2031</a></p>
+  </section>
+
+  <section class="info">
+    <h2>Это ещё не полная продовольственная автономность</h2>
+    <p>Эти 22 культуры дают овощи, зелень, часть белка, материал для консервирования и обучения семеноводству. Они не покрывают около 5,11 млн ккал в год, требуемых семи взрослым даже при условных 2 000 ккал в день.</p>
+    <p>Следующий отдельный слой: картофель и батат; сухая фасоль, нут, чечевица/люпин; зерновая кукуруза; пшеница, рожь, ячмень и овёс; настоящий масличный подсолнечник и лён; чеснок; сидераты, корма и посадочный материал многолетних культур. Sunspot — садовый подсолнечник, Golden Bantam — сладкая, а не зерновая кукуруза.</p>
+    <p><a href="SEED_CALORIE_LAYER_RU.html"><strong>Открыть полный калорийный расчёт: земля, вода, 119 кг сухих семян и живой посадочный фонд →</strong></a></p>
+  </section>
+
+  <section>
+    <h2>Срок: не «положить на 100 лет», а постоянно воспроизводить</h2>
+    <ul>
+      <li>При обычном прохладном сухом хранении разные овощные семена обычно сохраняют приемлемую всхожесть примерно 1–5 лет; самые короткие в этом наборе требуют особенно частого контроля.</li>
+      <li>Для серьёзного долгосрочного хранения: правильная сушка, влагобарьерная герметичная упаковка, около −18 °C, журнал температуры и тесты всхожести.</li>
+      <li>FAO приводит ориентиры порядка 1 500 семян для самоопыляющегося и 3 000 для перекрёстноопыляющегося образца, но видовые протоколы имеют приоритет.</li>
+      <li>Регенерация запускается до тяжёлой потери всхожести; исходный образец, фотографии, номер поколения и равный вклад материнских растений сохраняются.</li>
+      <li>База, рабочие пакеты и offsite-дубликат физически разделяются; холодный пакет вскрывается только после согревания в закрытом виде, чтобы избежать конденсата.</li>
+    </ul>
+    <p><a href="https://www.fao.org/4/i3704e/i3704e.pdf">FAO Genebank Standards</a> · <a href="https://www.iniav.pt/bpgv">Banco Português de Germoplasma Vegetal</a> · <a href="https://extension.usu.edu/yardandgarden/research/collecting-and-storing-seeds-from-your-garden">Utah State University: сбор и хранение семян</a></p>
+  </section>
+
+  <section>
+    <h2>Ориентировочный срок хранения текущих семян</h2>
+    <p>Ниже — планировочные сроки при обычном прохладном и сухом бытовом хранении. Это не гарантия конкретной партии: исходная влажность, зрелость, герметичность и температура могут изменить результат в разы.</p>
+    <div class="table-wrap">
+      <table style="min-width:850px">
+        <thead><tr><th>Плановый срок</th><th>Культуры из модуля A</th><th>Что делать</th></tr></thead>
+        <tbody>
+          <tr><td><strong>около 1 года</strong></td><td>петрушка</td><td>считать короткоживущей; проверять до каждого посева и рано регенерировать</td></tr>
+          <tr><td><strong>около 2 лет</strong></td><td>лук, порей, сладкая кукуруза</td><td>не откладывать первый цикл размножения; держать рабочие пакеты отдельно</td></tr>
+          <tr><td><strong>около 3 лет</strong></td><td>горох/фава, морковь, брокколи, капуста, репа</td><td>ежегодно проверять рабочий запас; регенерировать до резкого падения всхожести</td></tr>
+          <tr><td><strong>около 4 лет</strong></td><td>свёкла, мангольд, перец, томаты</td><td>контролировать фактическую всхожесть и не смешивать поколения</td></tr>
+          <tr><td><strong>около 5 лет</strong></td><td>салат, огурец, кабачок, тыква</td><td>это верхний бытовой ориентир, а не обещанный срок</td></tr>
+          <tr><td><strong>только по тесту партии</strong></td><td>подсолнечник, кориандр, тимьян</td><td>зафиксировать дату/lot и установить интервал после исходного теста</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Что меняется при холодном хранении</h3>
+    <ul>
+      <li><strong>Комнатная полка:</strong> использовать только для небольшого рабочего запаса на ближайший сезон.</li>
+      <li><strong>Холодильник 5–10 °C:</strong> рабочая коллекция хранится дольше, если семена сухие и герметично закрыты.</li>
+      <li><strong>Морозильник около −18 °C:</strong> подходит для долгосрочной базы большинства ортодоксальных овощных семян только после правильной сушки и во влагобарьерной упаковке; бытовая оценка «до 10 лет» не заменяет тесты, а профессиональные банки получают десятилетия за счёт строгого режима и мониторинга.</li>
+      <li><strong>100 лет:</strong> достигаются цепочкой хранения и контролируемых регенераций, а не сроком одной пачки.</li>
+    </ul>
+    <p>Базовый контроль: тест при получении; рабочие пакеты — перед каждым сезоном; долгосрочная база — видоспецифичный интервал, ориентировочно 5 лет для короткоживущих и до 10 лет для ожидаемо долговечных при стабильном −18 °C. Регенерация нужна, если всхожесть упала ниже 85% от исходной или запаса стало меньше трёх репрезентативных посевов.</p>
+  </section>
+
+  <footer>Статус на 29.08.2026: количественная спецификация исправлена; старая корзина забракована; покупка, передача адреса и оплата не выполнялись. До заказа нужны два поставщика, проверка lot и итоговое округление по реальным фасовкам.</footer>
+</main>
+</body>
+</html>

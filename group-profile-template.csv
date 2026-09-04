@@ -1,0 +1,8 @@
+"group_profile_id","human_count","active_person_ids","animal_entity_ids","care_load_summary","available_function_capacity","minimum_safe_mode_trigger","profile_status","owner","review_due","notes","profile_revision_id"
+"GP-N1","1","P01","TBD","TBD","ONE_PERSON_SEQUENTIAL_PLUS_EXTERNAL_ESCALATION","Любая функция вне способности/полномочия или потеря связи","PLANNED","","","N — люди; животные считаются отдельно","GP-N1-R0"
+"GP-N2","2","P01|P02","TBD","TBD","BUDDY_PAIR","Оба не способны вызвать помощь или критическая функция без владельца","PLANNED","","","","GP-N2-R0"
+"GP-N3","3","P01|P02|P03","TBD","TBD","COMPACT_CELL","Care load или одновременные задачи превышают фактическую способность","PLANNED","","","","GP-N3-R0"
+"GP-N4","4","P01|P02|P03|P04","TBD","TBD","TWO_PAIRS","Подгруппа остаётся без leadership/accountability/comms","PLANNED","","","","GP-N4-R0"
+"GP-N5","5","P01|P02|P03|P04|P05","TBD","TBD","FIVE_FUNCTION_CELL","Caregiver или critical function без backup","PLANNED","","","","GP-N5-R0"
+"GP-N6","6","P01|P02|P03|P04|P05|P06","TBD","TBD","SIX_FUNCTION_CELL","Усталость или разделение ломают succession","PLANNED","","","","GP-N6-R0"
+"GP-N7","7","P01|P02|P03|P04|P05|P06|P07","TBD","TBD","SEVEN_FUNCTION_CONTOUR","Любая critical function без пригодного primary/backup","PLANNED","","","","GP-N7-R0"

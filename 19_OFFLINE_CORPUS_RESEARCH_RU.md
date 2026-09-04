@@ -1,0 +1,1032 @@
+# Офлайн-корпус знаний на 100 лет: проект и источниковедческий аудит
+
+Дата исследования: 2026-08-29  
+Локализация: Portugal / EU  
+Языки доступа: RU / PT / EN  
+Масштаб: household / группа N=1–7  
+Статус: исследовательский проект; файлы в `outputs` не изменялись
+
+## 0. Вывод
+
+«Максимум информации офлайн на 100 лет» — это не один диск и не один гигантский поисковый индекс. Реально обслуживаемая система должна одновременно иметь:
+
+1. маленькое выпущенное оперативное ядро, где разрешено видеть только проверенные актуальные карточки;
+2. большую справочную библиотеку, которую можно читать и изучать, но нельзя автоматически трактовать как приказ к действию;
+3. холодный культурно-технический архив, где важны полнота, происхождение и сохранность, а не оперативная актуальность;
+4. независимый закрытый семейный архив;
+5. программный и восстановительный слой, позволяющий открыть остальные четыре слоя без облака;
+6. постоянный процесс обновления, миграции, проверки восстановления и передачи ответственности следующему хранителю.
+
+Нельзя обещать «носитель на 100 лет». Столетняя доступность достигается последовательностью проверенных миграций, нескольких независимых копий, открытых форматов, сохранённых программ чтения, документации и реальных смен хранителя.
+
+## 1. Что уже хорошо в текущем контуре
+
+Проверены:
+
+- `outputs/autonomous-life-kit/10_INFORMATION_AND_ARCHIVE_CONTOUR_RU.md` — 495 строк;
+- `outputs/autonomous-life-kit/source-manifest.csv` — 39 записей плюс заголовок.
+
+Сильные стороны `10_INFORMATION_AND_ARCHIVE_CONTOUR_RU.md`:
+
+- правильная пятислойная модель I0–I4;
+- признание, что скачанный файл ещё не является рабочим знанием;
+- разделение оперативной, справочной и профессиональной аудитории;
+- default-deny для устаревшего и неавторизованного медицинского материала;
+- 3-2-1 плюс отключённая/неизменяемая копия и обязательное восстановление;
+- открытые форматы, бумажное ядро, SHA-256, OCR, локальный поиск;
+- правильная граница между доступом к информации и разрешением выполнить действие;
+- начальные циклы ежеквартального, ежегодного и пятилетнего обслуживания;
+- связь с картографическим и медицинским контуром.
+
+Сильные стороны `source-manifest.csv`:
+
+- issuer, title, edition, audience и jurisdiction;
+- canonical/final URL и дата получения;
+- coverage extent;
+- transport/provenance flags;
+- предусмотренная проверка HTTPS→HTTP redirect для SIPE;
+- официальный стартовый набор Portugal/EU/WHO/CDC/CISA/IAEA.
+
+## 2. Главные пробелы текущей версии
+
+### 2.1. Горизонт пока фактически 15 лет, а не 100
+
+Нужны новые механизмы:
+
+- поколенческое наследование роли хранителя;
+- юридически и технически проверяемая передача ключей и прав доступа;
+- повторное лицензирование/перепроверка прав при смене юрисдикции;
+- десятилетний аудит форматов и программ чтения;
+- независимое восстановление преемником, который не участвовал в сборке;
+- сохранение оригиналов, нормализованных копий и истории миграций;
+- вывод из эксплуатации старых носителей без уничтожения единственного доказательства происхождения;
+- долгосрочная минимизация персональных данных.
+
+### 2.2. `source-manifest.csv` — каталог ссылок, не файловый manifest
+
+Это корректно признано в самом документе, но для реального корпуса нужен второй, файловый manifest. В текущем CSV отсутствуют как минимум:
+
+- 39/39 строк имеют `link_status=LINK_VERIFIED`, но 39/39 пусты по `local_filename`, `offline_tested_at` и `sha256`: ни один локальный объект этим CSV не доказан;
+- 22/39 строк не имеют `download_url`;
+- 30/39 имеют `transport_security_state=NOT_REVIEWED` и `provenance_review_state=NOT_REVIEWED`;
+- 8/39 имеют `HTTPS` + `PRIMARY_OFFICIAL_LINK_VERIFIED`, а одна SIPE-запись правильно остаётся `HTTPS_TO_HTTP_REDIRECT` + `REQUIRES_HTTPS_AUTHORITY_CROSSCHECK`;
+- поэтому `LINK_VERIFIED` нельзя использовать ни как `DOWNLOADED`, ни как `OFFLINE_OPENED`, ни как content review/release.
+
+Для файлового слоя далее нужны как минимум:
+
+- `asset_id`, `collection_id`, `object_id`;
+- локальный путь, имя файла, MIME и размер;
+- исходный publisher checksum и его алгоритм;
+- локальные SHA-256/SHA-512;
+- detached signature, signing key fingerprint и результат проверки;
+- лицензия, URL лицензии, attribution и third-party exclusions;
+- право на локальное хранение, печать, перевод и перераспределение;
+- статус скачивания и карантина;
+- проверка офлайн-открытия;
+- content review, localization review, professional review;
+- supersedes/superseded_by/errata;
+- статус выпуска в справочный и оперативный контур;
+- зависимость от reader/software version;
+- OCR и нормализация;
+- BagIt package и release digest;
+- retention class и privacy class.
+
+### 2.3. Нет полноценного большого open-knowledge каталога
+
+Сейчас хорошо покрыты первичные кризисные источники, но почти не представлены:
+
+- Kiwix/ZIM и Wikimedia RU/PT/EN;
+- языковые словари и энциклопедии;
+- школьное/вузовское образование;
+- культурный фонд;
+- агрономия и ремёсла;
+- инженерные и вычислительные материалы;
+- открытые карты и planet/extract data;
+- официальное право EU/PT в машиночитаемых форматах;
+- научная библиография и open-access full text;
+- офлайн-репозиторий программ, исходников и документации;
+- лицензии и ограничения перераспределения.
+
+### 2.4. Нужен двухмерный статус, а не одно поле `CURRENT`
+
+Минимум три независимые оси:
+
+| Ось | Пример значений |
+|---|---|
+| Биты/техника | `DISCOVERED`, `DOWNLOADED`, `HASHED`, `OFFLINE_OPENED`, `RESTORE_TESTED` |
+| Содержание | `UNREVIEWED`, `CONTENT_REVIEWED`, `LOCALIZED_REVIEWED`, `PROFESSIONALLY_REVIEWED` |
+| Выпуск | `QUARANTINE`, `REFERENCE_ONLY`, `RELEASED_REFERENCE`, `RELEASED_OPERATIONAL`, `SUPERSEDED`, `REVOKED` |
+
+Файл может быть технически цел, законно сохранён и всё равно быть опасным или устаревшим для оперативного применения.
+
+## 3. Целевая архитектура
+
+```text
+00_START_HERE/                 человекочитаемый вход без БД
+01_RELEASED_OPERATIONAL/       только выпущенные I0/I1 карточки
+02_REVIEWED_REFERENCE/         проверенные I2/I3 руководства
+03_GENERAL_KNOWLEDGE/          энциклопедия, языки, образование, культура
+04_DEEP_ARCHIVE/               большие дампы, наука, исторические версии
+05_LOCAL_PT_EU/                право, медицина, карты, учреждения Portugal/EU
+06_HOUSEHOLD_PRIVATE/          шифрованные документы и личные планы
+07_SOFTWARE_READERS/           программы чтения, исходники, лицензии, пакеты
+08_CATALOG_AND_MANIFESTS/      CSV/JSON/SQLite/BagIt/signatures
+09_QUARANTINE/                 новые, непроверенные или юридически неясные файлы
+10_SUPERSEDED/                 история, исключённая из оперативного поиска
+11_PRINT_MASTERS/              PDF/A и исходники печатного ядра
+12_RESTORE_KIT/                установщики, boot media, runbook, test fixtures
+```
+
+Принцип: публичные знания хранятся незашифрованными, если лицензия это допускает. Шифрование публичного корпуса создаёт лишний столетний риск утраты ключа. Шифровать надо отдельный приватный контур, а не Wikipedia, WHO или карты.
+
+## 4. Классы коллекции
+
+| Код | Категория | Что входит | Оперативность |
+|---|---|---|---|
+| C00 | Управление корпусом | START_HERE, каталог, права, manifests, restore runbook | критическая |
+| C01 | Экстренные действия | 112, планы, выпущенные карточки, маршруты, shutoff | только released |
+| C02 | Медицина и public health | первая помощь, WASH, IPC, непрерывность лечения | gated |
+| C03 | Лекарства | FI/RCM только фактических препаратов, recalls, cold chain | gated/current |
+| C04 | Вода и санитария | источники, обработка, испытания, отходы | reviewed |
+| C05 | Пища | безопасность, хранение, приготовление, питание | reviewed |
+| C06 | Сельское хозяйство | почва, семена, растения, вредители, животные | reference |
+| C07 | Жильё и пожар | конструкция, газ, CO, пожар, отключения | gated/local |
+| C08 | Энергия | батареи, PV, генератор, электрика, топливо | gated/model-specific |
+| C09 | Механика и ремонт | инструменты, транспорт, велосипед, шитьё | skill-gated |
+| C10 | Связь и радио | PACE, антенны, IT, правила ANACOM | local/current |
+| C11 | Вычисления и кибер | ОС, сети, backup, recovery, программирование | reference/current |
+| C12 | Карты и навигация | OSM, DGT, CAOP, hazards, routes, print maps | local/current |
+| C13 | Погода, климат, геология | IPMA, Copernicus, LNEG, гидрология | reference + event snapshots |
+| C14 | Право Portugal/EU | действующее право, процедуры, формы | current check required |
+| C15 | Документы и администрация | residence, налог, страхование, имущество | private/current |
+| C16 | Финансы и хозяйство | бюджет, бухгалтерия, договоры, обмен | reference/local law |
+| C17 | Математика и науки | K–12, university core, справочники | stable reference |
+| C18 | Языки RU/PT/EN | словари, грамматики, phrasebooks, corpus | stable reference |
+| C19 | Профессии и ремёсла | строительство, обработка, логистика, уход | skill-gated |
+| C20 | Образование детей | curriculum, books, exercises, teacher guides | reviewed by age |
+| C21 | Психология и общество | caregiving, conflict, governance, wellbeing | reference |
+| C22 | История и культура | литература, музыка, искусство, oral history | archive |
+| C23 | Локальная память | семейная история, фото, интервью, схемы места | private/archive |
+| C24 | Научная библиография | PubMed, Crossref, AGRIS, OA subset | discovery only |
+| C25 | Программы и исходники | readers, OS, packages, build docs, SBOM | restore critical |
+| C26 | Стандарты и спецификации | RFC, open standards, purchased ISO/EN | rights separated |
+| C27 | Manufacturer manuals | точные модели, схемы, parts, firmware | private/model-specific |
+| C28 | Биология/флора/фауна | identification, ecology, veterinary | reference; no edible inference |
+| C29 | Досуг | игры, музыка, книги, занятия без электричества | resilience |
+
+## 5. Рекомендуемые официальные и открытые источники
+
+Статус `DOWNLOAD_CANDIDATE` ниже означает только, что источник достоин постановки в очередь. Он не означает, что файл уже скачан, проверен по содержанию или выпущен.
+
+### 5.1. Офлайн-платформа и Wikimedia
+
+| Источник | Точные URL | Формат | Права/ограничения | Начальный статус |
+|---|---|---|---|---|
+| Kiwix Reader и Server | https://get.kiwix.org/en/solutions/applications/download-options/ | binaries, source | программы Kiwix/openZIM — open source; лицензия конкретной сборки должна храниться рядом | `DOWNLOAD_CANDIDATE` |
+| Kiwix catalog | https://library.kiwix.org/ ; https://library.kiwix.org/catalog/v2/root.xml ; https://library.kiwix.org/catalog/v2/entries | OPDS/Atom, ZIM, Meta4/torrent | Kiwix не переопределяет лицензию упакованного контента; проверять каждый ZIM; сохранять redirect/final URL и OPDS entry | `DOWNLOAD_CANDIDATE` |
+| Kiwix ZIM index | https://download.kiwix.org/zim/ | ZIM, Meta4, torrent | content-specific | `DOWNLOAD_CANDIDATE` |
+| openZIM/libzim | https://github.com/openzim/libzim | source, binaries | GPL-2.0-or-later; reference implementation | `DOWNLOAD_CANDIDATE` |
+| Wikimedia dumps | https://dumps.wikimedia.org/ ; https://dumps.wikimedia.org/backup-index.html | XML/BZ2/GZ/JSON/SQL subsets | текст обычно CC BY-SA + GFDL по условиям проекта; media имеют индивидуальные лицензии | `DOWNLOAD_CANDIDATE` |
+| Wikimedia terms | https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use | HTML | текст contributors — CC BY-SA 4.0 и GFDL по указанным условиям; media — per item; сохранять attribution/history route | `RIGHTS_REFERENCE` |
+| Wikipedia RU/PT/EN | Kiwix catalog query по `wikipedia_ru_all`, `wikipedia_pt_all`, `wikipedia_en_all` | ZIM | CC BY-SA/GFDL с attribution; контент не оперативный медицинский источник | `DOWNLOAD_CANDIDATE` |
+| Wiktionary RU/PT/EN | Kiwix catalog query по `wiktionary_*_all` | ZIM | Wikimedia terms; словарь, не официальный перевод правового/медицинского термина | `DOWNLOAD_CANDIDATE` |
+| Wikibooks | https://dumps.wikimedia.org/ ; Kiwix catalog | ZIM/XML | Wikimedia terms; качество по книге/версии | `DOWNLOAD_CANDIDATE` |
+| Wikisource | https://dumps.wikimedia.org/ ; Kiwix catalog | ZIM/XML | page text и исходное произведение могут иметь разные права; public-domain status проверять для Portugal/EU | `DOWNLOAD_CANDIDATE` |
+| Wikivoyage | Kiwix catalog | ZIM | CC BY-SA; адреса/границы/режимы быстро устаревают | `REFERENCE_ONLY_CANDIDATE` |
+| Wikiversity | https://dumps.wikimedia.org/ ; Kiwix catalog | ZIM/XML | Wikimedia terms | `DOWNLOAD_CANDIDATE` |
+| Wikidata | https://www.wikidata.org/wiki/Wikidata:Licensing ; https://dumps.wikimedia.org/wikidatawiki/entities/ | JSON/BZ2 | structured main/property/lexeme data CC0; очень большой объём | `DEEP_ARCHIVE_CANDIDATE` |
+| Wikimedia Commons | https://dumps.wikimedia.org/commonswiki/ ; https://commons.wikimedia.org/wiki/Special:MediaStatistics | XML/metadata/media | description pages follow Wikimedia terms, but every media object has its own license/attribution; full media mirror is far beyond normal household tier | metadata + selected per-item media candidate |
+
+Проверка размера Kiwix OPDS на 2026-08-29:
+
+- `wikipedia_en_all_maxi_2026-02`: 123,980,647,424 bytes;
+- `wikipedia_ru_all_maxi_2026-02`: 40,997,114,880 bytes;
+- `wikipedia_pt_all_maxi_2026-05`: 20,641,395,712 bytes;
+- вместе три полные Wikipedia с изображениями: примерно 185.6 GB decimal до репликации;
+- три `mini`-варианта: примерно 19.5 GB decimal;
+- Wiktionary EN/RU/PT без изображений: примерно 11.25 GB decimal.
+
+Размеры являются снимком каталога, а не вечной спецификацией. В manifest надо сохранить OPDS entry, release date, exact byte length, Meta4/torrent и локальные hashes.
+
+### 5.2. Книги, культура и образование
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| Project Gutenberg | https://www.gutenberg.org/ ; https://www.gutenberg.org/policy/permission ; https://www.gutenberg.org/policy/license | EPUB, HTML, TXT | преимущественно public domain **в США**; Portugal/EU статус каждого автора и перевода проверять; trademark terms сохранять | `RIGHTS_CHECK_REQUIRED` |
+| Standard Ebooks | https://standardebooks.org/ ; https://standardebooks.org/about | EPUB/AZW3/source | собственная работа CC0; произведения считаются PD в США, но не автоматически в Portugal/EU | `RIGHTS_CHECK_REQUIRED` |
+| LibriVox | https://librivox.org/ ; https://librivox.org/pages/public-domain/ | MP3/OGG | записи заявлены PD в США; право текста/перевода в Portugal проверять | `RIGHTS_CHECK_REQUIRED` |
+| Europeana | https://www.europeana.eu/ ; https://www.europeana.eu/en/rights/europeana-data-sources | JSON/API, images, media | metadata CC0; права цифрового объекта индивидуальны по `edm:rights` | `METADATA_CANDIDATE` |
+| Internet Archive | https://archive.org/about/terms ; https://archive.org/developers/index.html | item metadata, files, WARC/API | Internet Archive не заявляет новые права на item payload, но это не blanket license: copyright/borrow/access/automation rights каждого item проверяются отдельно; DRM/loan item не входит в автономный корпус | `METADATA + PER_ITEM_RIGHTS_REVIEW` |
+| Biblioteca Nacional Digital | https://bndigital.bnportugal.gov.pt/ | PDF/JPEG/metadata | права per item; сайт при исследовании отдавал 403 web-fetch, поэтому автоматическое массовое скачивание не подтверждено | `MANUAL_RIGHTS_REVIEW` |
+| BNP Open Data | https://opendata.bnportugal.gov.pt/ | bibliographic data | проверить текущие terms и лицензию конкретного набора | `METADATA_CANDIDATE` |
+| OpenStax | https://openstax.org/ ; https://help.openstax.org/s/article/Licensing-information-of-OpenStax-textbooks | PDF/EPUB/web | текущая общая политика CC BY-NC-SA 4.0; старые книги могут иметь CC BY; сохранять лицензию **каждого title/edition** и attribution | `DOWNLOAD_CANDIDATE` |
+| MIT OpenCourseWare | https://ocw.mit.edu/ ; https://ocw.mit.edu/pages/privacy-and-terms-of-use/ | HTML/PDF/video | CC BY-NC-SA 4.0, third-party exclusions и trademarks; некоммерческое использование | `DOWNLOAD_CANDIDATE` |
+| PhET regular HTML sims | https://phet.colorado.edu/ ; https://phet.colorado.edu/en/licensing | HTML5 | CC BY-NC 4.0 для обычных HTML simulations; PhET-iO/Studio отдельно лицензированы и не входят | `DOWNLOAD_CANDIDATE` |
+| Kolibri | https://learningequality.org/kolibri/about-kolibri/ ; https://kolibri.readthedocs.io/en/latest/manage/resources.html | offline server, channel DB/content | software open source; права каждого channel/resource индивидуальны; экспорт на USB поддержан | `DOWNLOAD_CANDIDATE` |
+
+Для школьной линии RU/PT/EN лучше хранить не «весь интернет для детей», а curriculum map: возраст → предмет → основной учебник → упражнения → teacher guide → проверка освоения. Kolibri полезен как контейнер, но `public channel` не означает одну общую лицензию или автоматическую педагогическую пригодность.
+
+### 5.3. Медицина и public health
+
+| Источник | URL | Формат | Права/ограничения | Выпуск |
+|---|---|---|---|---|
+| WHO publications | https://www.who.int/publications ; https://www.who.int/about/policies/publishing/copyright | PDF/HTML | публикации после 2016 обычно CC BY-NC-SA 3.0 IGO; third-party material требует отдельного разрешения; перевод/adaptation требуют disclaimer и same/similar license, причём обычный household не вправе применять IGO-вариант и выбирает допустимую сходную CC BY-NC-SA 3.0/4.0; проверить notice файла | reference после review |
+| WHO IRIS/repository route | https://iris.who.int/ | PDF/metadata | edition/license per item | candidate |
+| WHO Russian materials | https://www.who.int/europe/ru/publications | PDF/HTML | per publication; предпочтительнее официальный RU, чем собственный перевод | candidate |
+| CDC | https://www.cdc.gov/other/agencymaterials.html | HTML/PDF | большинство материалов US public domain, но есть contractor/third-party exceptions; attribution, no endorsement, no substantive change; международные права оговорены | reference после local adaptation review |
+| ECDC | https://www.ecdc.europa.eu/en/publications-data ; https://www.ecdc.europa.eu/en/ecdc-intellectual-property-notices | PDF/HTML/data | ECDC-owned public material обычно CC BY 4.0 unless otherwise stated; third-party exclusions; surveillance data имеют отдельные acknowledgement/privacy conditions | EU public-health candidate after item/local review |
+| DGS Portugal | https://www.dgs.pt/normas-orientacoes-e-informacoes/normas-e-circulares-normativas ; https://www.dgs.pt/normas-orientacoes-e-informacoes/orientacoes-e-circulares-informativas.aspx | PDF/HTML | сайт маркирован `Todos os Direitos Reservados`; до документированного разрешения/правового основания сохранять ссылку и metadata, а не копию | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| INFARMED/Infomed | https://www.infarmed.pt/ ; https://extranet.infarmed.pt/INFOMED-fo/ ; https://extranet.infarmed.pt/INFOMED-fo/guia-condicoes-utilizacao.xhtml | PDF/database | exact FI/RCM actual medication; Infomed terms запрещают без письменного разрешения полностью/частично воспроизводить и распространять информацию; bulk mirror запрещён; хранить live link/metadata или полученное разрешение | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| ERC Guidelines | https://www.erc.edu/science-research/guidelines/ | PDF | copyright/license конкретной редакции; не смешивать алгоритмы разных систем | trained/reviewed only |
+| IFRC Guidelines | https://www.ifrc.org/document/ifrc-international-first-aid-resuscitation-and-education-guidelines-2025 | PDF | проверить copyright notice в PDF; trainer/reference, не shortcut к квалификации | review only |
+| PubMed baseline | https://pubmed.ncbi.nlm.nih.gov/download/ ; https://www.nlm.nih.gov/databases/download.html | XML/GZ | citations downloadable; abstracts могут быть copyrighted; NLM acknowledgement и stale-data notice | discovery index only |
+| PMC OA subset | https://pmc.ncbi.nlm.nih.gov/about/userguide/ ; https://pmc.ncbi.nlm.nih.gov/tools/openftlist/ | JATS XML/PDF/TAR | per-article license; не все OA-subset articles имеют CC license | per-item licensed deep archive |
+| Europe PMC OA | https://europepmc.org/developers ; https://europepmc.org/downloads | XML/PDF/API/FTP | bulk только через разрешённые OA mechanisms; rights per article | per-item licensed deep archive |
+
+Ни Wikipedia Medicine, ни полный PubMed, ни PMC OA subset не должны появляться как «что делать сейчас». Они являются background/reference/discovery слоями. Action выдаётся только из отдельно рассмотренной карточки с локальной применимостью, версией, gate и release digest.
+
+### 5.4. Вода, пища и сельское хозяйство
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| FAO Knowledge Repository | https://openknowledge.fao.org/ ; https://www.fao.org/publications/about-fao-publishing/en | PDF/metadata | публикации защищены; многие новые items имеют CC BY-NC-SA 3.0 IGO, но проверять notice каждого файла | candidate per item |
+| FAO rights | https://www.fao.org/publications/about-fao-publishing/permissions/ | HTML | private study/research/teaching обычно разрешены с attribution; перевод/adaptation/redistribution зависит от item/license | rights reference |
+| FAO AGRIS | https://agris.fao.org/ ; https://www.fao.org/knowledge-sharing/en | metadata/full-text links | metadata discovery; full texts имеют собственные права | metadata candidate |
+| AGROVOC | https://www.fao.org/agrovoc/ | RDF/SKOS/download | проверить актуальную data license на странице release; полезен как multilingual vocabulary | candidate after license capture |
+| DGAV Portugal | https://www.dgav.pt/ | PDF/HTML | official PT; права сайта не считать открытой лицензией без явного notice | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+| DGAV phytosanitary | https://www.dgav.pt/plantas/conteudo/sanidade-vegetal/inspecao-fitossanitaria/planos-fitossanitarios/ | PDF/HTML | быстро меняется; регион/дата обязательны; local copy только после rights evidence | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+| DGAV food hygiene | https://www.dgav.pt/alimentos/conteudo/generos-alimenticios/iniciar-uma-empresa-alimentar/licenciamento/generos-alimenticios-de-origem-nao-animal/producao-primaria-higiene-dos-generos-alimenticios/ | HTML/PDF | official PT, local law controls; local copy только после rights evidence | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+| ASAE Portugal | https://www.asae.gov.pt/ | PDF/HTML | official; rights per item; link/metadata until rights evidence | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+
+Съедобность растения/гриба, ветеринарная процедура, применение пестицида и безопасность воды не должны выводиться из общего энциклопедического совпадения. Для них нужны локальные виды/продукты, компетентный review и явные no-go границы.
+
+### 5.5. Инженерия, безопасность и ремонт
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| HSE UK | https://www.hse.gov.uk/ ; https://www.hse.gov.uk/help/copyright.htm | HTML/PDF | Crown content обычно Open Government Licence; third-party media и отдельные products исключены; не Portugal law | safety reference |
+| NIST technical series | https://www.nist.gov/publications ; https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications | PDF/data | NIST employee works PD in US; NIST предоставляет указанное worldwide reuse право для technical series; third-party exceptions | technical reference |
+| USACE Engineer Manuals | https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/ | PDF | official US government technical material; applicability and edition review; не местный building code | specialist reference |
+| Manufacturer manuals | только официальный support/download URL конкретного производителя и модели | PDF/HTML/firmware | обычно copyright/all-rights; даже local reproduction проверять по terms/entitlement, а перераспределение отдельно; firmware не запускать автоматически | rights-reviewed private model-specific only |
+| ISO/IEC/EN standards | официально купленные/licensed copies | PDF/print | платные и copyright; не включать в redistributable bundle; хранить entitlement/invoice и access conditions | licensed private vault |
+| Open hardware projects | canonical project repository | source/CAD/PDF | per-project OSHW/software/documentation licenses; BOM и exact commit обязательны | per-project candidate |
+
+Не следует собирать случайные «prepper PDF» или ManualsLib-копии при наличии официального руководства производителя. Схема общего двигателя не заменяет service manual точной модели; service manual не создаёт квалификацию для работы с газом, mains voltage, structural load или pressure vessel.
+
+### 5.6. Карты и геоданные
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| OpenStreetMap data | https://www.openstreetmap.org/copyright ; https://planet.openstreetmap.org/ | PBF/XML/diffs | ODbL; attribution и share-alike для adapted database | base data candidate |
+| OSM service policy | https://operations.osmfoundation.org/policies/tiles/ | HTML | bulk/offline download с `tile.openstreetmap.org` запрещён; брать PBF/extract и рендерить самому либо лицензированного provider | prohibition record |
+| Geofabrik Portugal extract | https://download.geofabrik.de/europe/portugal.html | PBF/GeoPackage/SHP/diffs | производный extract данных OSM под ODbL 1.0; attribution OpenStreetMap contributors; страница даёт current и historical snapshots | practical local extract candidate |
+| QGIS | https://qgis.org/ ; https://qgis.org/license/ | desktop GIS/source/docs | GPL-2.0; сохранить immutable installer/source/docs/plugins и проверить открытие local layers без сети | desktop GIS reader candidate |
+| Organic Maps | https://github.com/organicmaps/organicmaps ; https://github.com/organicmaps/organicmaps/releases | mobile offline search/routing/source/maps | app code Apache-2.0; `.mwm` binary map data имеют отдельную лицензию; фиксировать обе и user-visible attribution | end-user navigation candidate |
+| Natural Earth | https://www.naturalearthdata.com/ ; https://www.naturalearthdata.com/about/terms-of-use/ | SHP/GeoPackage/raster | public domain; только глобальный обзор, не адресная навигация | stable base candidate |
+| dados.gov.pt | https://dados.gov.pt/ ; https://dados.gov.pt/pt/termos-de-utilizacao | CSV/JSON/API/files | государственные datasets по умолчанию CC BY 4.0, если не указано иное; per-dataset metadata controls | candidate per dataset |
+| DGT CAOP | https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop | GIS services/download | official administrative boundaries; фиксировать edition и dataset license | local base candidate |
+| SNIG | https://snig.dgterritorio.gov.pt/ | WMS/WFS/metadata/download | лицензия и coverage каждого dataset отдельно; WMS не является offline copy | metadata/source candidate |
+| ANEPC InfoRiscos | https://prociv.gov.pt/pt/prevencao-e-preparacao/avaliacao-de-riscos/inforiscos/ | web GIS/docs | official risk overview; не route proof | local risk candidate |
+| APA flood planning | https://apambiente.pt/agua/2o-ciclo-de-planeamento-2022-2027 | GIS/PDF | planning cycle, coverage and dataset rights record separately | local risk candidate |
+| ICNF GeoCATÁLOGO | https://geocatalogo.icnf.pt/catalogo_tema5.html | GIS/PDF | per-layer rights/currentness; structural risk ≠ active fire | local risk candidate |
+| LNEG GeoPortal | https://geoportal.lneg.pt/ | GIS/PDF | geology/hydrogeology; per-layer rights | planning reference |
+| Copernicus | https://www.copernicus.eu/en/terms-use/how-access-data ; https://dataspace.copernicus.eu/ | GeoTIFF/SAFE/netCDF | free/full/open as rule; product-specific notices and huge volume | selected product candidate |
+| IPMA | https://www.ipma.pt/ ; https://shakemap.ipma.pt/ | PDF/JSON/maps/snapshots | current/event-specific; snapshot expires; redistribution rights per product | event/local candidate |
+
+Офлайн-карта должна хранить vector/raster source, style, fonts, labels, CRS, address/POI index, routing graph/profile, build recipe, printed export и license attribution. Кэш веб-тайлов без разрешения — не запасной план. Нужны два независимо проверяемых пути доступа: desktop GIS для слоёв/анализа и конечное мобильное приложение с поиском и маршрутизацией. При каждом release тестируются известный адрес, POI, пеший и автомобильный маршрут в airplane mode; найденный маршрут остаётся планом, а не доказательством фактической проходимости.
+
+### 5.7. Право и государственные процедуры
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| EUR-Lex | https://eur-lex.europa.eu/ ; https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en | Formex XML, XHTML, HTML, PDF, CSV list | data reusable free subject to copyright conditions; EU-owned site content generally CC BY 4.0 unless indicated; only Official Journal authentic | current legal mirror candidate |
+| EU Cellar | https://op.europa.eu/en/web/about-us/legal-notices ; https://publications.europa.eu/webapi/rdf/sparql | RDF/SPARQL/REST | metadata/content terms per Publications Office | metadata candidate |
+| European Commission reuse | https://commission.europa.eu/legal-notice_en | HTML | EU-owned content generally CC BY 4.0 unless indicated; third-party, logos, names excluded | rights reference |
+| Diário da República | https://diariodarepublica.pt/ | HTML/PDF | official Portuguese law; exact local reproduction/reuse/bulk terms must be captured before ingest or redistribution | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| gov.pt | https://www.gov.pt/ | HTML/PDF | official procedures; currentness и local reproduction/reuse terms проверять per page | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+| ePortugal | https://eportugal.gov.pt/ | HTML/PDF | процедуры меняются; права на local reproduction проверять; offline copy всегда historical snapshot, не proof current eligibility | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` |
+
+Для права хранить `effective_from`, `effective_to`, amendments, consolidated/as-published distinction, jurisdiction и `checked_against_live_at`. Офлайн-копия закона полезна при отсутствии сети, но перед необратимым юридическим действием при наличии связи нужна актуальная проверка.
+
+### 5.8. Вычисления, стандарты и научный поиск
+
+| Источник | URL | Формат | Права/ограничения | Статус |
+|---|---|---|---|---|
+| RFC Editor corpus | https://www.rfc-editor.org/series/rfc-download/ | TXT/XML/PDF via rsync | IETF Trust legal provisions; хранить terms; статус RFC (obsolete/updates) индексировать | standards candidate |
+| Debian `main` | https://www.debian.org/distrib/packages ; https://www.debian.org/mirror/ | DEB/source/metadata/ISO | DFSG-free main; лицензия каждого package в `/usr/share/doc/PACKAGE/copyright`; non-free отдельно | restore software candidate |
+| Debian snapshots | https://snapshot.debian.org/ | apt repository | позволяет воспроизводить конкретные версии; не заменяет security updates | historical build candidate |
+| Apache Tika | https://tika.apache.org/ ; https://tika.apache.org/download.html | source/binary | Apache-2.0; official downloads имеют PGP/SHA512 | indexing tool candidate |
+| Tesseract | https://tesseract-ocr.github.io/tessdoc/ | source/binary/traineddata | Apache-2.0 engine; сохранить RU/PT/EN traineddata и их licenses/hashes | OCR tool candidate |
+| OCRmyPDF | https://ocrmypdf.readthedocs.io/ | source/binary/docs | MPL-2.0 project; dependencies имеют собственные licenses | OCR workflow candidate |
+| Crossref metadata | https://www.crossref.org/documentation/retrieve-metadata/ | JSON/XML/bulk | большая часть bibliographic facts unrestricted/CC0; abstracts могут быть copyrighted | discovery metadata candidate |
+| OpenAlex snapshot | https://help.openalex.org/access/snapshot/ ; https://help.openalex.org/data/how-its-built/ | JSONL/Parquet/GZIP + manifests | OpenAlex metadata CC0; linked/full-text PDFs сохраняют исходный copyright/license и не наследуют CC0 metadata | S3/S4 discovery graph candidate |
+| DOAJ dump | https://doaj.org/docs/public-data-dump/ | CSV/JSON metadata | article metadata CC0; full dump access выдаётся case-by-case, journal metadata export доступен отдельно; linked articles — per-item | metadata candidate after access/terms capture |
+| arXiv bulk | https://info.arxiv.org/help/bulk_data_s3.html | PDF/source TAR via requester-pays S3 + XML manifests | default arXiv license даёт право распространять arXiv, но не blanket redistribution right третьим лицам; license per submission; bulk terms обязательны | private research/deep candidate; redistribution denied unless item-cleared |
+| Software Heritage datasets | https://docs.softwareheritage.org/user/datasets/howto/use.html | compressed graph/ORC/CSV/S3 | фиксировать SPDX license конкретного dataset и bulk terms; graph может не содержать file content; исходный код сохраняет собственные project licenses | S4 candidate after rights/capacity review |
+
+Git-репозиторий без `git bundle`, exact commit/tag, submodules, LFS objects, release artifacts, build instructions, compiler/toolchain и licenses не считается автономной программной копией.
+
+### 5.9. Начальная очередь package candidates для manifest
+
+Эта таблица — seed queue, а не перечень уже выпущенных материалов. Для каждой строки ниже начальные значения должны быть `content_review_state=UNREVIEWED` и `operational_release_state=QUARANTINE`. Динамический `latest` при ingest обязательно разрешается в неизменяемые version, final URL, byte size и digest; в manifest нельзя оставлять только слово `latest`.
+
+| Seed ID | Package/object | Canonical route | Rights class до per-item review | Tier | Проверка обновления | Начальный статус |
+|---|---|---|---|---|---|---|
+| PKG-KIWIX-READER | Kiwix Reader/Server для двух поддерживаемых платформ | https://get.kiwix.org/en/solutions/applications/download-options/ | software license per artifact + dependencies | S0 | каждый upstream release / ежегодно | `DOWNLOAD_CANDIDATE` |
+| PKG-LIBZIM-SRC | libzim source/tag/build docs | https://github.com/openzim/libzim | GPL-2.0-or-later | S0 | ежегодно / при reader migration | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-EN-MINI | latest immutable `wikipedia_en_all_mini_*` OPDS entry | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S1 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-RU-MINI | latest immutable `wikipedia_ru_all_mini_*` OPDS entry | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S1 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-PT-MINI | latest immutable `wikipedia_pt_all_mini_*` OPDS entry | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S1 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-EN-MAXI | immutable `wikipedia_en_all_maxi_*`; current snapshot ≈124 GB | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S2 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-RU-MAXI | immutable `wikipedia_ru_all_maxi_*`; current snapshot ≈41 GB | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S2 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WP-PT-MAXI | immutable `wikipedia_pt_all_maxi_*`; current snapshot ≈20.6 GB | https://library.kiwix.org/catalog/v2/entries | Wikimedia text CC BY-SA/GFDL; media/per-item exceptions | S2 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-WKT-EN | immutable `wiktionary_en_all_*` | https://library.kiwix.org/catalog/v2/entries | Wikimedia terms; не официальный терминологический перевод | S1 | раз в полгода | `DOWNLOAD_CANDIDATE` |
+| PKG-WKT-RU | immutable `wiktionary_ru_all_*` | https://library.kiwix.org/catalog/v2/entries | Wikimedia terms; не официальный терминологический перевод | S1 | раз в полгода | `DOWNLOAD_CANDIDATE` |
+| PKG-WKT-PT | immutable `wiktionary_pt_all_*` | https://library.kiwix.org/catalog/v2/entries | Wikimedia terms; не официальный терминологический перевод | S1 | раз в полгода | `DOWNLOAD_CANDIDATE` |
+| PKG-WB-SELECTED | selected Wikibooks RU/PT/EN | https://dumps.wikimedia.org/ | Wikimedia terms; review по книге | S2 | ежегодно | `DOWNLOAD_CANDIDATE` |
+| PKG-WS-SELECTED | selected Wikisource RU/PT/EN | https://dumps.wikimedia.org/ | лицензия page text и PD исходного произведения/перевода проверяются отдельно в Portugal/EU | S2 | ежегодно | `RIGHTS_CHECK_REQUIRED` |
+| PKG-OSM-PT-PBF | Portugal PBF snapshot + `.poly` + replication state | https://download.geofabrik.de/europe/portugal.html | ODbL 1.0; attribution/share-alike; no contributor personal metadata in public extract | S1 | ежемесячно + перед route release | `DOWNLOAD_CANDIDATE` |
+| PKG-OSM-PT-RENDER | локально собранные vector tiles/style/fonts/legend/print exports | https://www.openstreetmap.org/copyright | ODbL database; style/font licenses отдельно | S1 | вместе с PBF/style | `BUILD_CANDIDATE` |
+| PKG-QGIS-READER | QGIS installer/source/docs + tested project | https://qgis.org/ | GPL-2.0; plugins/providers/licenses отдельно | S0–S1 | annual/LTR + security release | `DOWNLOAD_CANDIDATE` |
+| PKG-ORGANIC-MAPS | immutable mobile app/source + Portugal `.mwm` + search/routing test set | https://github.com/organicmaps/organicmaps | app Apache-2.0; binary map data separate license; attribution required | S0–S1 | monthly/quarterly | `RIGHTS_CHECK_REQUIRED` |
+| PKG-NATURAL-EARTH | vector/raster base layers | https://www.naturalearthdata.com/downloads/ | public domain | S1 | каждый release / ежегодно | `DOWNLOAD_CANDIDATE` |
+| PKG-CAOP | актуальная CAOP edition | https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop | per-edition dataset license capture | S1 | каждый release / ежегодно | `RIGHTS_CHECK_REQUIRED` |
+| PKG-PT-HAZARDS | выбранные ANEPC/APA/ICNF/LNEG layers + printable maps | https://prociv.gov.pt/pt/prevencao-e-preparacao/avaliacao-de-riscos/inforiscos/ | per-layer rights; planning only, not live incident truth | S1 | квартал/сезон/при release | `RIGHTS_CHECK_REQUIRED` |
+| PKG-EURLEX-PT-EN | in-force EU acts relevant household/site, Formex XML + PDF | https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en | EU reuse terms; only Official Journal authentic | S1–S2 | ежемесячно и перед legal action | `DOWNLOAD_CANDIDATE` |
+| PKG-DRE-SELECTED | selected consolidated/as-published Portuguese law | https://diariodarepublica.pt/ | exact local reproduction/bulk/reuse rights не подтверждены; keep URL/metadata until evidence | S1 | ежемесячно и перед legal action | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| PKG-WHO-CORE | selected emergency/public-health/WASH/IPC publications | https://www.who.int/publications | обычно CC BY-NC-SA 3.0 IGO после 2016, но notice/third-party rights каждого файла | S1 | ежеквартально | `RIGHTS_CHECK_REQUIRED` |
+| PKG-ECDC-CORE | selected EU/EEA preparedness, surveillance and communicable-disease outputs | https://www.ecdc.europa.eu/en/publications-data | ECDC-owned public material usually CC BY 4.0 unless stated; third-party/data conditions per item | S1–S2 | ежеквартально/outbreak release | `RIGHTS_CHECK_REQUIRED` |
+| PKG-DGS-CORE | selected current Portugal norms/orientations | https://www.dgs.pt/normas-orientacoes-e-informacoes/normas-e-circulares-normativas | all rights reserved; link/metadata only until local reproduction permission or legal basis is recorded | S0–S1 | ежемесячно | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| PKG-INFARMED-ACTUAL | FI/RCM только фактически используемых препаратов | https://extranet.infarmed.pt/INFOMED-fo/guia-condicoes-utilizacao.xhtml | terms explicitly prohibit reproduction without written permission; link/metadata or written authorization only | S0 | ежемесячно и при смене препарата | `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST` |
+| PKG-IFRC-FA-2025 | IFRC First Aid Guidelines 2025 exact PDF | https://www.ifrc.org/document/ifrc-international-first-aid-resuscitation-and-education-guidelines-2025 | copyright notice PDF; trainer/reference only | S1 | каждый edition | `RIGHTS_CHECK_REQUIRED` |
+| PKG-FAO-SELECTED | region/crop-relevant FAO works | https://openknowledge.fao.org/ | per-item; часто CC BY-NC-SA 3.0 IGO у новых работ | S2 | ежегодно | `RIGHTS_CHECK_REQUIRED` |
+| PKG-OPENSTAX-CORE | selected K–12/university core titles/editions | https://openstax.org/ | per-title; current general policy CC BY-NC-SA 4.0, older titles may differ | S2 | ежегодно/edition | `RIGHTS_CHECK_REQUIRED` |
+| PKG-MITOCW-SELECTED | selected foundational courses with downloadable assets | https://ocw.mit.edu/ | CC BY-NC-SA 4.0; third-party exclusions/trademarks | S2–S3 | ежегодно | `RIGHTS_CHECK_REQUIRED` |
+| PKG-PHET-HTML5 | selected regular HTML5 simulations + offline runtime | https://phet.colorado.edu/en/licensing | CC BY-NC 4.0 for regular sims; exclude PhET-iO/Studio | S1–S2 | ежегодно | `DOWNLOAD_CANDIDATE` |
+| PKG-GUTENBERG-EU-CLEARED | selected books whose author **and translation** are cleared for Portugal/EU | https://www.gutenberg.org/policy/permission | US PD is insufficient; work-level EU rights + trademark terms | S2 | one-time + legal review changes | `RIGHTS_CHECK_REQUIRED` |
+| PKG-DEBIAN-RESTORE | installer ISOs + signed metadata + required `main` binary/source packages | https://www.debian.org/mirror/ | DFSG; per-package copyright; verify Release signatures | S1–S3 | security/release cadence; freeze known-good restore set | `DOWNLOAD_CANDIDATE` |
+| PKG-RFC | current RFC corpus plus status/obsoletes relations | https://www.rfc-editor.org/series/rfc-download/ | IETF Trust legal provisions | S1 | ежеквартально | `DOWNLOAD_CANDIDATE` |
+| PKG-OCR-STACK | Tika + Tesseract RU/PT/EN models + OCRmyPDF + dependencies | https://tika.apache.org/ ; https://tesseract-ocr.github.io/tessdoc/ ; https://ocrmypdf.readthedocs.io/ | Apache-2.0/MPL-2.0 plus dependency/model licenses | S0–S1 | ежегодно / security release | `DOWNLOAD_CANDIDATE` |
+| PKG-PUBMED-INDEX | PubMed annual baseline + daily-update history | https://pubmed.ncbi.nlm.nih.gov/download/ | discovery metadata; abstracts may be copyrighted; stale-data notice | S3 | annual baseline + daily/weekly ingestion | `METADATA_CANDIDATE` |
+| PKG-PMC-OA-LICENSED | only rights-cleared PMC OA articles with stored license evidence | https://pmc.ncbi.nlm.nih.gov/tools/openftlist/ | per-article; OA subset is not one blanket CC corpus | S3–S4 | monthly/quarterly | `RIGHTS_CHECK_REQUIRED` |
+| PKG-CROSSREF-META | selected or bulk bibliographic metadata | https://www.crossref.org/documentation/retrieve-metadata/ | bibliographic facts generally unrestricted/CC0; abstracts may differ | S3–S4 | monthly/annual snapshot | `METADATA_CANDIDATE` |
+| PKG-OPENALEX | one complete snapshot format + manifests | https://help.openalex.org/access/snapshot/ | metadata CC0; no blanket rights to linked full text | S3–S4 | quarterly | `METADATA_CANDIDATE` |
+| PKG-DOAJ-META | article/journal metadata dump/export | https://doaj.org/docs/public-data-dump/ | article metadata CC0; dump access/terms capture; no blanket article-content license | S3 | monthly/quarterly | `METADATA_CANDIDATE` |
+| PKG-ARXIV-BULK | selected subjects or full requester-pays PDF/source corpus | https://info.arxiv.org/help/bulk_data_s3.html | per-submission license; default license does not grant third-party redistribution | S3–S4 | monthly | `RIGHTS_CHECK_REQUIRED / NO_REDISTRIBUTION_DEFAULT` |
+| PKG-SWH-GRAPH | selected/full Software Heritage graph dataset + reader/toolchain | https://docs.softwareheritage.org/user/datasets/howto/use.html | per-dataset SPDX/bulk terms; underlying source licenses preserved; graph/content distinction | S4 | annual/current release | `RIGHTS_AND_CAPACITY_REVIEW_REQUIRED` |
+
+Размеры в этой очереди относятся к одному corpus copy. Закупочная ёмкость должна умножать их на число независимых копий и добавлять headroom, snapshots, staging и restore workspace по формуле раздела 9.
+
+## 6. Юридическая модель распространения
+
+Каждому asset назначается один из классов:
+
+| Код | Значение |
+|---|---|
+| `OPEN_REDISTRIBUTABLE` | можно копировать группе с соблюдением attribution/share-alike/notice |
+| `OPEN_NONCOMMERCIAL` | можно делиться только в пределах NC-условий; коммерческий bundle запрещён |
+| `PUBLIC_DOMAIN_JURISDICTION_CHECKED` | PD проверен именно для Portugal/EU и конкретного перевода |
+| `PRIVATE_CACHE_ONLY` | локальное воспроизведение именно в household scope уже имеет документированное разрешение/правовое основание; перераспределение не утверждено |
+| `PURCHASED_LICENSE_ONLY` | доступ только лицензиатам; bundle содержит metadata/entitlement, не общий файл |
+| `METADATA_ONLY` | можно хранить индекс/описание, но не full text |
+| `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED` | неизвестно даже право создать локальную копию; хранить URL/metadata, но `DO_NOT_INGEST` payload |
+| `RIGHTS_UNKNOWN_HOLD` | остаётся в карантине, не печатается и не распространяется |
+
+Обязательные поля прав:
+
+```text
+rights_status
+local_reproduction_basis
+local_reproduction_permission_asset_id
+license_id
+license_url
+license_text_local_path
+license_checked_at
+copyright_jurisdiction
+redistribution_class
+commercial_use_state
+translation_allowed
+adaptation_allowed
+print_allowed
+attribution_text
+share_alike_requirement
+third_party_exclusions
+trademark_exclusions
+personal_data_state
+rights_reviewer
+rights_review_due
+```
+
+Наличие открытой лицензии у сайта не гарантирует такую же лицензию у встроенной фотографии, таблицы, карты, видео, стандарта или статьи. Лицензия ZIM-reader не является лицензией ZIM-content.
+
+`PRIVATE_CACHE_ONLY` — результат положительного rights review, а не безопасный статус по умолчанию для `all rights reserved`. Если издатель прямо запрещает reproduction без письменного разрешения, как условия Infomed, запись остаётся `LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED / DO_NOT_INGEST`, пока разрешение или конкретное применимое правовое основание не сохранено как evidence. «Доступно бесплатно в браузере» не означает «разрешено скачать в архив».
+
+## 7. Жизненный цикл объекта
+
+```text
+DISCOVERED
+  → RIGHTS_TRIAGED
+  → DOWNLOAD_CANDIDATE
+  → DOWNLOADED_TO_QUARANTINE
+  → MALWARE_AND_FORMAT_CHECKED
+  → HASHED_AND_PROVENANCE_CAPTURED
+  → OFFLINE_OPENED
+  → METADATA_COMPLETE
+  → CONTENT_REVIEWED
+  → LOCAL_APPLICABILITY_REVIEWED
+  → TRANSLATION_REVIEWED (если есть)
+  → PROFESSIONAL_REVIEWED (если требуется)
+  → RELEASED_REFERENCE
+  → RELEASED_OPERATIONAL (только отдельные карточки/gates)
+```
+
+Боковые состояния:
+
+```text
+RIGHTS_UNKNOWN_HOLD
+LOCAL_REPRODUCTION_RIGHTS_UNVERIFIED
+DO_NOT_INGEST
+TECHNICALLY_BROKEN
+QUARANTINED
+SUPERSEDED
+REVOKED
+REJECTED
+```
+
+`DOWNLOAD_CANDIDATE`, `DOWNLOADED_TO_QUARANTINE`, `LINK_VERIFIED` и `OFFLINE_OPENED` никогда не должны вычисляться как `RELEASED_OPERATIONAL`.
+
+## 8. Файловый manifest
+
+Предлагаемый минимум:
+
+```text
+asset_id
+collection_id
+source_id
+title
+edition
+issued_at
+retrieved_at
+issuer
+canonical_url
+final_url
+download_url
+language
+jurisdiction
+audience
+topic_codes
+risk_codes
+local_filename
+relative_path
+media_type
+format_version
+format_puid
+format_identification_tool
+format_identification_tool_version
+format_signature_file_version
+byte_size
+publisher_checksum_algorithm
+publisher_checksum
+publisher_signature_url
+publisher_signing_key_fingerprint
+publisher_signature_state
+sha256
+sha512
+bag_id
+bag_manifest_path
+rights_status
+local_reproduction_basis
+local_reproduction_permission_asset_id
+license_id
+license_url
+redistribution_class
+attribution_text
+third_party_exclusions
+download_state
+malware_scan_tool
+malware_scan_version
+malware_scan_at
+offline_open_state
+offline_opened_at
+reader_id
+reader_version
+reader_platform
+content_review_state
+content_reviewer
+content_reviewed_at
+local_applicability_state
+translation_state
+professional_review_state
+operational_release_state
+release_id
+release_digest
+supersedes
+superseded_by
+errata_asset_id
+review_due
+normalization_state
+normalized_asset_id
+premis_object_id
+premis_event_log_path
+preservation_agent_id
+ocr_state
+ocr_language_models
+ocr_tool_version
+privacy_class
+retention_class
+notes
+```
+
+Коллекционный manifest не заменяет per-file manifest. Например, один PDF может иметь лицензию WHO, а встроенная фотография — third party; один Wikimedia ZIM содержит media с разными лицензиями и должен сохранять внутренний attribution mechanism.
+
+## 9. Уровни хранения
+
+Размеры — capacity planning, не обещание точного будущего объёма.
+
+| Уровень | Примерный corpus | Что включает | Для кого |
+|---|---:|---|---|
+| S0 Red Core | 0.5–4 GB + печать | I0/I1, планы, карты, контакты, manuals shutdown | каждый N |
+| S1 Household Essential | 32–128 GB | S0 + medical/public health, local PT/EU, mini/nopic Wikimedia, языки, manuals | минимальный N1 |
+| S2 Knowledge Core | 0.5–2 TB | полные RU/PT/EN Wikipedia, dictionaries, textbooks, culture, maps, software | рекомендуемый household |
+| S3 Deep Technical | 4–16 TB | OA science selection, agriculture, engineering, large maps, source repos, media | N2–7 / технический хранитель |
+| S4 Curated Deep Archive | 20–100+ TB и открытый верхний предел | широкие dumps, большие video/audio, scholarly metadata/full text, software/history selections | только при ресурсах и кураторе; не claim «зеркало цивилизации» |
+
+Проверочные size anchors на дату исследования, до репликации:
+
+- OpenAlex snapshot: примерно 750 GB compressed JSONL или 780 GB Parquet на June 2026; это два альтернативных полных формата, обычно нужен один;
+- arXiv complete PDF+source corpus: около 9.2 TB на April 2025 с заявленным ростом около 100 GB/month; requester-pays и per-item rights;
+- Software Heritage example compressed graph release: около 14 TB; это graph dataset, а не автоматически все file contents и не blanket permission на использование каждого проекта;
+- поэтому S4 имеет открытый верхний предел и должен планироваться package-by-package, а не маркетинговым названием.
+
+Формула физической ёмкости:
+
+```text
+required_raw_capacity ≈ logical_corpus × 1.30 free/headroom × number_of_independent_copies
+```
+
+Примеры:
+
+- 2 TB логического корпуса при трёх копиях: ориентир 7.8 TB суммарной физической ёмкости;
+- 12 TB: ориентир 46.8 TB;
+- 50 TB: ориентир 195 TB.
+
+Это не включает version history, паритетные файлы, staging/quarantine и временное место миграции. Для миграции большого корпуса обычно временно нужно место и для старой, и для новой копии.
+
+Практическая раскладка:
+
+- N1: S0 + S1 на мобильном/SSD, S2 на основном SSD/HDD, удалённая копия у доверенного лица;
+- N2–4: два независимых reader devices, основной S2 и холодная S2, S3 по необходимости;
+- N5–7: локальный read-only server, два client types, два custodians, внешний/off-site S2/S3;
+- S4 не должен ухудшать обслуживание S0–S2. Если невозможно ежегодно восстановить S4, это не готовый архив.
+- Даже 100 TB — лишь curated selection: Wikimedia Commons media, arXiv, Software Heritage и другие большие корпуса по отдельности быстро поглощают многие TB. Название tier не является доказательством полноты.
+
+## 10. Каденция обновления
+
+| Класс | Плановая проверка | Триггер немедленной проверки |
+|---|---|---|
+| 112/SNS/CIAV, household contacts | ежемесячно и перед поездкой | смена номера/места/участника |
+| лекарства/назначения/FI/RCM | ежемесячно | новый рецепт, recall, смена препарата |
+| medical action cards | ежеквартально | новая guideline/erratum, изменение training |
+| DGS/INFARMED/ECDC/WHO public health | ежеквартально | outbreak/официальное обновление |
+| право PT/EU | ежеквартально | перед юридическим/финансовым действием |
+| dynamic hazards/alerts | event snapshot | новое событие; после valid_until не current |
+| OSM/local routes/sites | ежеквартально | стройка, пожар, наводнение, закрытие дороги |
+| CAOP/planning maps | ежегодно | новая официальная редакция |
+| manufacturer manual | при приобретении | firmware, recall, ремонт, замена модели |
+| software/security tools | ежемесячно/ежеквартально | CVE, EOL, major format change |
+| Wikimedia ZIM | каждые 6–12 месяцев | критическое исправление/новый language need |
+| OpenAlex/DOAJ/Crossref metadata | квартал/годовой snapshot | schema/license/access-model change |
+| arXiv/PMC/Software Heritage deep subsets | месяц/год по package | license/takedown/new release/capacity |
+| учебники | 1–3 года | curriculum/license/edition change |
+| культура/public domain | 3–5 лет | новая подборка/права |
+| семейный приватный архив | ежеквартально | рождение, смерть, переезд, документ, доверенность |
+| checksums critical set | ежемесячно | после записи/переноса/ошибки |
+| checksum full corpus | ежегодно | storage alert |
+| full restore | ежегодно | новая платформа/носитель/хранитель |
+| media migration | максимум 5 лет | SMART/error/EOL/interface risk |
+| format audit | максимум 10 лет | reader EOL/spec change |
+| successor handoff | каждые 5 лет | недееспособность, смерть, изменение состава |
+
+Обновление не стирает прошлую версию. Новая версия получает новый `asset_id` и digest; старая переходит в `SUPERSEDED` и исчезает из оперативной выдачи.
+
+## 11. Поиск и индексирование
+
+### 11.1. Три независимых способа найти материал
+
+1. ручная файловая навигация и бумажный индекс;
+2. статический `START_HERE.html` + JSON/CSV catalog;
+3. полнотекстовый локальный поиск.
+
+Если SQLite, Java, Kiwix или JavaScript не запускаются, первые два способа должны продолжать работать.
+
+### 11.2. Стек
+
+- Kiwix/`kiwix-serve` для ZIM;
+- SQLite FTS5 для собственного trilingual catalog;
+- Apache Tika для извлечения текста/metadata из множества форматов;
+- Tesseract/OCRmyPDF для scanned PDFs;
+- Xapian/Recoll как опциональный desktop search;
+- Calibre/OPDS как удобная витрина EPUB/PDF, но не единственный catalog;
+- статический HTML без CDN, external JS/fonts и login.
+
+Индекс является воспроизводимым derivative. Его можно удалить и собрать заново из manifest + payload. Нельзя хранить единственный текст только внутри проприетарного search index.
+
+### 11.3. Трёхъязычный поиск
+
+Нужен собственный vocabulary:
+
+```text
+concept_id
+label_ru
+label_pt
+label_en
+synonyms_ru
+synonyms_pt
+synonyms_en
+abbreviations
+misspellings
+scenario_ids
+topic_codes
+danger_level
+```
+
+Пример: `угарный газ / monóxido de carbono / carbon monoxide / CO`. Перевод не должен подменять официальный исходный документ; result показывает language и translation status.
+
+### 11.4. Безопасность выдачи
+
+По умолчанию:
+
+- оперативный search scope видит только `RELEASED_OPERATIONAL`;
+- обычный reference search видит `RELEASED_REFERENCE`, но маркирует stale/jurisdiction/audience;
+- deep search требует явного переключения;
+- `QUARANTINED`, `RIGHTS_UNKNOWN_HOLD`, `SUPERSEDED`, `REVOKED` скрыты;
+- медицинские/электрические/газовые/CBRN результаты показывают role/gate, а не превращаются в action;
+- AI-generated summary никогда не считается source-of-record без ссылки на конкретную страницу/section/version.
+
+## 12. Дедупликация, hashes и подписи
+
+### 12.1. Дедупликация
+
+- exact-byte duplicate определяется SHA-256;
+- один payload может иметь несколько catalog records/collections;
+- одинаковый title с другой edition, языком, переводом, errata или pagination не сливается;
+- нормализованный PDF, OCR text, thumbnail и translation — отдельные assets с `derived_from`;
+- filename не является идентификатором.
+
+### 12.2. Integrity
+
+- SHA-256 как текущий основной hash;
+- SHA-512 как дополнительный архивный hash;
+- publisher checksum/signature хранить отдельно, не заменять локальным hash;
+- на каждую release — BagIt package по RFC 8493: https://www.rfc-editor.org/info/rfc8493/ ;
+- manifests и tag manifests проверяются перед и после переноса;
+- filesystem scrub/SMART полезны, но не заменяют end-to-end file hash;
+- паритетные файлы могут помогать восстановлению повреждённых блоков, но не доказывают источник или подлинность.
+
+### 12.3. Подписи и столетняя проверяемость
+
+- проверять detached signatures издателя, когда они есть;
+- хранить signing key, fingerprint, chain/context, verification tool и timestamp evidence;
+- подписывать собственный release manifest как минимум двумя независимыми custodians;
+- каждые 5–10 лет повторно опечатывать release современным алгоритмом, сохраняя старые подписи;
+- hash/signature agility обязательна: алгоритм может устареть раньше содержания;
+- не утверждать, что сегодняшняя подпись будет сама по себе криптографически достаточна через 100 лет.
+
+## 13. OCR
+
+Порядок:
+
+1. сохранить неизменный оригинал и hash;
+2. определить born-digital или scan;
+3. для scan создать OCR derivative;
+4. языки `rus+por+eng` плюс orientation/script detection;
+5. хранить searchable PDF/A, UTF-8 plain text и при необходимости ALTO/hOCR;
+6. записать tool/version/language model/parameters;
+7. проверить page count, ориентацию, crop, таблицы, формулы и смешанные алфавиты;
+8. для I0/I1 и юридически/медицински критичных документов вручную сверить 100% используемых фрагментов;
+9. никогда не объявлять OCR-текст аутентичным текстом закона, рецепта или инструкции при расхождении с оригиналом.
+
+Tesseract официально поддерживает 100+ языков и доступен под Apache-2.0: https://tesseract-ocr.github.io/tessdoc/. OCRmyPDF обычно добавляет текстовый слой к исходной странице и может создавать PDF/A: https://ocrmypdf.readthedocs.io/.
+
+## 14. Форматы и миграция
+
+Library of Congress Recommended Formats Statement: https://www.loc.gov/preservation/resources/rfs/ . Он обновляется, поэтому текущая таблица тоже должна пересматриваться.
+
+| Тип | Храним оригинал | Нормализованная копия | Извлечение/sidecar |
+|---|---|---|---|
+| текст | да | UTF-8 TXT/Markdown, PDF/A | metadata JSON |
+| книга | EPUB/PDF | EPUB 3 + PDF/A при возможности | TXT/HTML |
+| scanned doc | original TIFF/PDF/JPEG | searchable PDF/A | TXT + ALTO/hOCR |
+| office doc | ODF/OOXML original | PDF/A + ODF | CSV/TXT where meaningful |
+| таблица | XLSX/ODS original | ODS + per-sheet CSV | schema/data dictionary |
+| изображение | original | TIFF/PNG для master; JPEG derivative | EXIF/XMP JSON |
+| аудио | original | FLAC lossless; WAV fallback | transcript UTF-8 |
+| видео | original | widely supported MP4 derivative | captions/transcript |
+| web | WARC/original capture | static HTML | extracted TXT + link map |
+| карта | original GIS | GeoPackage + GeoJSON + GeoTIFF | PDF/PNG print export |
+| database | original | CSV/JSON/SQL dump + schema | data dictionary |
+| software | release binary + source | VM/container optionally | SBOM, build docs, licenses |
+| ZIM | exact ZIM | новый ZIM только как derivative | OPDS entry, zimcheck report |
+
+### 14.1. Formal preservation metadata и validators
+
+BagIt и checksums доказывают целостность пакета, но не идентифицируют формат и не описывают историю его преобразований. Для столетнего слоя нужны:
+
+- PREMIS 3.0 как модель `Object / Event / Agent / Rights / Relationship`: https://www.loc.gov/standards/premis/ ;
+- PRONOM PUID и локальный snapshot registry/signature files: https://www.nationalarchives.gov.uk/pronom/ ;
+- DROID для batch format identification; фиксировать tool version и signature-file version: https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/ ;
+- veraPDF report для каждого PDF/A derivative: https://verapdf.org/software/ ;
+- EPUBCheck report для EPUB: https://www.w3.org/publishing/epubcheck/ ;
+- `zimcheck` плюс выборочное открытие/поиск для ZIM;
+- WARC capture по IIPC/ISO WARC specification и сохранённый offline replay stack: https://iipc.github.io/warc-specifications/ .
+
+PREMIS event записывается как минимум для ingest, malware scan, fixity check, normalization, OCR, migration, validation, replication, restore и authorized deletion. Event связывает исходный и производный object, agent/tool/version, дату, outcome и evidence asset. Один новый hash без такого lineage не доказывает корректную миграцию.
+
+Для WARC pass означает не только открывающийся контейнер: на чистом отключённом от сети устройстве воспроизводятся контрольные URL, текст, изображения и внутренние переходы; сохраняются replay-tool source/binary/config, индекс, screenshots и список ожидаемых внешних дыр. JavaScript/service-worker/account-dependent web capture не допускается как единственная critical copy.
+
+Правила миграции:
+
+- original bitstream сохраняется;
+- новая версия получает новый hash и `derived_from`;
+- фиксируются tool, version, command/options, operator и date;
+- сравниваются page/frame/record counts;
+- проводится визуальная/семантическая выборка;
+- reader test проводится минимум на двух независимых платформах;
+- эмуляция допустима как fallback, но не как единственный способ доступа;
+- DRM-dependent и account-dependent formats не допускаются в critical corpus;
+- каждые 10 лет проверяется форматная стратегия; носители мигрируют не реже чем каждые 5 лет.
+
+## 15. Бумажное ядро
+
+Цель — не распечатать интернет, а обеспечить доступ при полном отказе электроники.
+
+Ориентир: 100–300 страниц master set плюс отдельные карты. Состав:
+
+1. `START_HERE`, владельцы, дата, release digest;
+2. 112, SNS 24, CIAV и локальные службы;
+3. адрес/координаты и как объяснить подъезд;
+4. household plan, PACE, встречи, accountability;
+5. только выпущенные first aid/action cards;
+6. actual medication/allergy/medical-device continuity sheets;
+7. пожар/CO/газ/электричество/water shutoff;
+8. drinking water, sanitation и food safety;
+9. evacuation/shelter-in-place decision cards;
+10. дом/район/муниципалитет, routes и hazards maps;
+11. document/access/recovery procedure без открытых master passwords;
+12. critical inventory и maintenance calendar;
+13. RU/PT/EN phrase sheets;
+14. инструкции открытия цифрового корпуса;
+15. лист изменений и superseded list.
+
+Требования:
+
+- крупный шрифт, grayscale-safe, без зависимости от QR;
+- topic/version/date на каждой странице;
+- waterproof field copy и защищённый master;
+- минимум две географически/пожарно независимые копии;
+- переиздание ежегодно и при critical change;
+- устаревшие чувствительные страницы уничтожаются контролируемо после подтверждения новой копии.
+
+## 16. Air-gapped restore
+
+### 16.1. Состав restore kit
+
+- printed restore runbook;
+- bootable/install media минимум для одной свободной поддерживаемой ОС;
+- offline packages/repository;
+- Kiwix Reader и `kiwix-serve` для x86_64 и ARM64;
+- browser/EPUB/PDF/image/audio/video readers;
+- QGIS project/installer и проверенный end-user offline navigation app с address/POI index, routing graph, route fixtures и всеми data/style/font licenses;
+- Tesseract RU/PT/EN и OCR tools;
+- manifest/hash/signature/BagIt validation tools;
+- DROID + pinned PRONOM signatures, PREMIS schema/examples, veraPDF, EPUBCheck, `zimcheck` и WARC replay tool;
+- source archives и build instructions критических readers;
+- hardware adapters/cables и power budget;
+- тестовый набор файлов каждого формата;
+- private-vault recovery procedure и отдельные ключи;
+- clean replacement media.
+
+### 16.2. Процедура
+
+1. выбрать физически отключённую проверенную копию;
+2. загрузить чистое устройство без подключения к интернету;
+3. проверить release manifest и подписи;
+4. монтировать knowledge payload read-only;
+5. открыть START_HERE TXT/HTML;
+6. установить/запустить reader из локального kit;
+7. открыть ZIM, PDF, EPUB, GeoPackage и private test vault;
+8. найти контрольные запросы на RU/PT/EN;
+9. восстановить один заранее неизвестный документ по бумажному индексу;
+10. записать RTO, ошибки, missing dependencies и новый test evidence;
+11. не объявлять copy working, пока тест не завершён.
+
+### 16.3. Malware boundary
+
+- download попадает сначала в quarantine/staging;
+- документы с macros/scripts не исполняются;
+- web captures открываются в ограниченном/static режиме;
+- антивирус — дополнительный signal, не доказательство безопасности;
+- originals и normalized safe derivatives разделены;
+- public reader server работает read-only без write access к archival master;
+- постоянно подключённый NAS не считается air gap;
+- ransomware drill проверяет восстановление из физически отключённой копии.
+
+## 17. Столетний цикл
+
+| Период | Обязательное действие |
+|---|---|
+| при каждом ingest | права, quarantine, hashes, offline-open, metadata |
+| ежемесячно | critical contacts/meds, critical checksum, update queue |
+| ежеквартально | sample restore, dynamic/local content, printed deltas |
+| ежегодно | полный restore, full hash sweep, legal/medical/map refresh, print refresh |
+| каждые 3 года | hardware/media condition review, reader/platform matrix |
+| максимум 5 лет | миграция носителей; successor restore; key rotation review |
+| максимум 10 лет | format migration audit; криптографическая re-seal; clean-room rebuild |
+| каждые 20–25 лет | поколенческая передача custody, новая governance charter, rights/jurisdiction audit |
+| 50/75/100 лет | не отдельное ожидание, а контрольная точка доказанной цепочки ежегодных/пятилетних действий |
+
+Ни один этап не должен зависеть от памяти одного человека. Преемник получает:
+
+- список полномочий и обязанностей;
+- physical map копий;
+- sealed key procedure;
+- список ежегодных задач;
+- перечень источников и договоров/лицензий;
+- упражнение «восстановить с нуля»;
+- право отказаться и назначить следующего хранителя по зафиксированной процедуре.
+
+## 18. Тесты и критерии приёмки
+
+| Тест | Период | Pass condition |
+|---|---|---|
+| manifest completeness | ingest | обязательные поля не пусты; asset id уникален |
+| hash verification | ingest/month/year | 100% выбранного scope совпадает |
+| publisher signature | ingest | valid либо явно `NOT_AVAILABLE`, не молчаливый pass |
+| license audit | ingest/year | per-item rights и redistribution class зафиксированы |
+| offline open | ingest/year | файл открывается после reboot в airplane mode без login |
+| trilingual search | quarter | контрольные RU/PT/EN термины находят ожидаемые assets |
+| action isolation | every release | unreleased/superseded/quarantine не видны в operational scope |
+| ZIM | ingest/year | `zimcheck`/reader test и random articles pass |
+| PDF/OCR | ingest | page count/visual sample/text extraction pass |
+| format identification | ingest/migration | DROID/PUID/signature version сохранены; unknown/conflict не проходит молча |
+| PDF/A/EPUB conformance | ingest/migration | veraPDF/EPUBCheck reports сохранены; ошибки dispositioned |
+| GIS | ingest/year | layers/style/CRS/legend открываются; attribution видна |
+| offline navigation | map release/year | address+POI search и пеший/авто route fixtures проходят в airplane mode на target device |
+| WARC replay | ingest/year | контрольные URL/content/assets воспроизводятся clean/offline; внешние дыры перечислены |
+| print | year | все critical topics, readable grayscale, correct revision |
+| full restore | year | новый/чистый device восстанавливает S0–S2 в заданный RTO |
+| independent copy | year | каждая copy отдельно восстанавливаема |
+| ransomware | year | master survives infected working system |
+| loss-of-custodian | 5 years | successor без помощи автора выполняет restore |
+| format migration | 10 years | original и derivative связаны; counts/visual/semantic tests pass |
+| power-limited access | year | reader работает на заявленном energy budget |
+| oldest/newest sample | year | открываются oldest retained и newest released assets |
+
+Минимальный release gate для справочного документа:
+
+```text
+rights_state acceptable
+AND bytes verified
+AND offline_opened
+AND metadata_complete
+AND content_reviewed for intended audience
+AND jurisdiction/currentness clearly labelled
+```
+
+Минимальный release gate для action card:
+
+```text
+reference release gate
+AND local applicability reviewed
+AND translation reviewed where used
+AND professional review completed where required
+AND role/equipment/protocol gates ALLOW
+AND immutable release digest recorded
+```
+
+## 19. Приоритетная сборка
+
+### Фаза 1 — 0–30 дней
+
+- создать файловый manifest и rights ledger;
+- собрать S0 Red Core;
+- скачать Kiwix readers для двух платформ и 3-language mini encyclopedias/dictionaries;
+- сохранить точные manuals имеющегося оборудования;
+- собрать official Portugal contacts/maps/law/health candidate set;
+- создать три копии и выполнить первое clean restore;
+- напечатать START_HERE и red binder.
+
+### Фаза 2 — 1–3 месяца
+
+- расширить до S1 32–128 GB;
+- добавить rights-cleared WHO; для DGS/INFARMED — current metadata/live links и только письменно разрешённые/иначе законно воспроизводимые payloads; затем вода/пища/санитария;
+- OSM Portugal/Iberia offline data и printed maps;
+- school/language core RU/PT/EN;
+- Kolibri или эквивалентный offline learning server;
+- Tika/Tesseract/OCR pipeline;
+- monthly/quarterly update job с human release gate.
+
+### Фаза 3 — 3–12 месяцев
+
+- S2 0.5–2 TB;
+- полные Wikipedia RU/PT/EN, Wiktionary, Wikibooks/Wikisource selection;
+- OpenStax/MIT OCW/PhET selected curriculum;
+- agriculture/repair/engineering/livelihood modules;
+- Debian restore repository и source/build kit;
+- annual restore и successor drill.
+
+### Фаза 4 — 1–5 лет
+
+- S3 только после доказанного обслуживания S0–S2;
+- curated OA science, standards, broad cultural fund;
+- off-site geographic diversification;
+- replacement hardware matrix;
+- первая полная media migration до пятого года.
+
+### Фаза 5 — постоянно до 100 лет
+
+- непрерывные reviews;
+- format/media/key migrations;
+- поколенческая передача;
+- новые языки/юрисдикции по фактической группе;
+- сохранение истории без возврата superseded в operational search.
+
+## 20. Что не следует делать
+
+- не покупать один «100-year drive» и считать задачу решённой;
+- не смешивать приватные документы с публичной Kiwix-библиотекой;
+- не включать весь интернет в один оперативный поиск;
+- не зеркалировать `tile.openstreetmap.org` для offline use;
+- не считать `free to read` равным `free to redistribute`;
+- не считать public domain in USA равным public domain in Portugal;
+- не ingest/печатать/распространять ISO/EN, manuals, DGS, INFARMED или иной all-rights payload за пределами документированного разрешения/правового основания;
+- не заменять оригинал OCR-текстом или переводом;
+- не использовать Wikipedia/PMC/форум как action card;
+- не хранить единственный recovery key внутри зашифрованного архива;
+- не считать RAID, sync folder и постоянно подключённый NAS независимыми backup copies;
+- не наращивать S4, пока ежегодный restore S0–S2 не проходит;
+- не полагаться на Docker/VM как единственную форму сохранения программы;
+- не удалять старую версию до проверки новой и записи migration evidence.
+
+## 21. Источники, использованные для проектирования
+
+Первичные/официальные страницы, проверенные в ходе исследования:
+
+- Kiwix: https://get.kiwix.org/en/ ; https://library.kiwix.org/ ; https://get.kiwix.org/en/faq/
+- Wikimedia terms/dumps: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use ; https://dumps.wikimedia.org/ ; https://meta.wikimedia.org/wiki/Data_dumps/What%27s_available_for_download/en
+- OpenStreetMap: https://www.openstreetmap.org/copyright ; https://operations.osmfoundation.org/policies/tiles/
+- QGIS/Organic Maps: https://qgis.org/ ; https://github.com/organicmaps/organicmaps
+- Project Gutenberg: https://www.gutenberg.org/policy/permission ; https://www.gutenberg.org/policy/license
+- Internet Archive developer/terms: https://archive.org/developers/index.html ; https://archive.org/about/terms
+- WHO rights: https://www.who.int/about/policies/publishing/copyright
+- CDC rights: https://www.cdc.gov/other/agencymaterials.html
+- ECDC: https://www.ecdc.europa.eu/en/publications-data ; https://www.ecdc.europa.eu/en/ecdc-intellectual-property-notices
+- EU reuse: https://commission.europa.eu/legal-notice_en ; https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en
+- Portugal open data: https://dados.gov.pt/pt/termos-de-utilizacao
+- Library of Congress formats: https://www.loc.gov/preservation/resources/rfs/
+- NDSA Levels: https://www.ndsa.org/publications/levels-of-digital-preservation/
+- BagIt RFC 8493: https://www.rfc-editor.org/info/rfc8493/
+- Tesseract: https://tesseract-ocr.github.io/tessdoc/
+- Apache Tika: https://tika.apache.org/
+- FAO: https://www.fao.org/publications/about-fao-publishing/permissions/
+- NLM/PubMed: https://pubmed.ncbi.nlm.nih.gov/download/ ; https://www.nlm.nih.gov/databases/download.html
+- PMC/Europe PMC: https://pmc.ncbi.nlm.nih.gov/about/userguide/ ; https://europepmc.org/developers
+- HSE rights: https://www.hse.gov.uk/help/copyright.htm
+- NIST rights: https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications
+- RFC bulk: https://www.rfc-editor.org/series/rfc-download/
+- Debian: https://www.debian.org/distrib/packages ; https://snapshot.debian.org/
+- MIT OCW: https://ocw.mit.edu/pages/privacy-and-terms-of-use/
+- OpenStax: https://help.openstax.org/s/article/Licensing-information-of-OpenStax-textbooks
+- PhET: https://phet.colorado.edu/en/licensing
+- Kolibri: https://learningequality.org/kolibri/about-kolibri/ ; https://kolibri.readthedocs.io/en/latest/manage/resources.html
+- Natural Earth: https://www.naturalearthdata.com/about/terms-of-use/
+- Europeana: https://www.europeana.eu/en/rights/europeana-data-sources
+- Crossref: https://www.crossref.org/documentation/retrieve-metadata/
+- OpenAlex/DOAJ/arXiv/Software Heritage: https://help.openalex.org/access/snapshot/ ; https://doaj.org/docs/public-data-dump/ ; https://info.arxiv.org/help/bulk_data_s3.html ; https://docs.softwareheritage.org/user/datasets/howto/use.html
+- PREMIS/PRONOM/DROID: https://www.loc.gov/standards/premis/ ; https://www.nationalarchives.gov.uk/pronom/ ; https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/
+- WARC/validators: https://iipc.github.io/warc-specifications/ ; https://verapdf.org/software/ ; https://www.w3.org/publishing/epubcheck/
+- Infomed terms: https://extranet.infarmed.pt/INFOMED-fo/guia-condicoes-utilizacao.xhtml
+
+## 22. Граница доказанности этого исследования
+
+Выполнено:
+
+- прочитан текущий информационный контур;
+- проверена структура текущего source manifest;
+- проверены официальные страницы источников, лицензий, bulk/offline mechanisms и ограничений;
+- выполнена автоматическая HTTP-проверка 126 уникальных URL после редакции: реальных `404` не осталось; LibriVox периодически не ответил curl, а CDC/IFRC/Library of Congress/USACE/Natural Earth вернули anti-bot `403/406`, поэтому такой transport check не считается content/rights review;
+- получены текущие byte lengths основных Kiwix Wikipedia/Wiktionary RU/PT/EN из официального OPDS catalog;
+- спроектированы storage tiers, workflow, manifest, search, OCR, migration, print, restore и tests.
+
+Не выполнено:
+
+- ни один большой corpus фактически не скачан;
+- ни один Kiwix ZIM не прошёл локальный hash/zimcheck/offline test;
+- права каждого отдельного документа/изображения/перевода не проверены;
+- S0–S4 не собраны физически;
+- professional content review не проведён;
+- legal advice по частному копированию/redistribution в Portugal не получен;
+- clean-room restore реального корпуса не выполнен;
+- storage estimates не являются закупочной спецификацией.
+
+Следовательно, результат — полный проект производства и обслуживания офлайн-корпуса, а не заявление о том, что столетняя библиотека уже существует.

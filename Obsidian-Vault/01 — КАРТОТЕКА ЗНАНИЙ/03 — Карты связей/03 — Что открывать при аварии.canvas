@@ -1,0 +1,165 @@
+{
+  "edges": [
+    {
+      "color": "#D1495B",
+      "fromNode": "a34f2c77ffd1009a",
+      "fromSide": "right",
+      "id": "69f50c5bae32594a",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "223176a4987994c4",
+      "fromSide": "right",
+      "id": "74cd464bde4a1f72",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "959bb3168bfff991",
+      "fromSide": "right",
+      "id": "106093140b069d08",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "a37bc35ede1655c1",
+      "fromSide": "right",
+      "id": "7ad03d69abf0e3ae",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "2c3c4b89dbaf355d",
+      "fromSide": "right",
+      "id": "3ae095e7ecb0a547",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "#2A9D8F",
+      "height": 390,
+      "id": "5e85ac790952f045",
+      "label": "Жизнеобеспечение",
+      "type": "group",
+      "width": 520,
+      "x": 600,
+      "y": 0
+    },
+    {
+      "color": "#E76F51",
+      "height": 390,
+      "id": "68cff50eed608dcf",
+      "label": "Здоровье",
+      "type": "group",
+      "width": 520,
+      "x": 1200,
+      "y": 0
+    },
+    {
+      "color": "#6A994E",
+      "height": 745,
+      "id": "85ea198aea249c38",
+      "label": "Питание",
+      "type": "group",
+      "width": 520,
+      "x": 1800,
+      "y": 0
+    },
+    {
+      "color": "#457B9D",
+      "height": 390,
+      "id": "726a186a89865d72",
+      "label": "Место",
+      "type": "group",
+      "width": 520,
+      "x": 2400,
+      "y": 0
+    },
+    {
+      "height": 230,
+      "id": "408b35f096bbbb1a",
+      "text": "# Что открывать при аварии\n\nКрасная линия ведёт от области происшествия к медицинскому порядку реагирования. Карта не заменяет экстренную службу или обучение.",
+      "type": "text",
+      "width": 1050,
+      "x": 0,
+      "y": -240
+    },
+    {
+      "color": "#2A9D8F",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/03 — Туалет, гигиена и отходы.md",
+      "height": 170,
+      "id": "a34f2c77ffd1009a",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 90
+    },
+    {
+      "color": "#E76F51",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/06 — Медицинская помощь и аптечки.md",
+      "height": 170,
+      "id": "9b76da88d526e6c1",
+      "type": "file",
+      "width": 420,
+      "x": 1250,
+      "y": 90
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/09 — Безопасное приготовление и хранение пищи.md",
+      "height": 170,
+      "id": "223176a4987994c4",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 90
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/11 — Дикорастущие растения и лекарственные травы.md",
+      "height": 170,
+      "id": "959bb3168bfff991",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 285
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/12 — Грибы и опасные двойники.md",
+      "height": 170,
+      "id": "a37bc35ede1655c1",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 480
+    },
+    {
+      "color": "#457B9D",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/14 — Плоты, лодки и береговая безопасность.md",
+      "height": 170,
+      "id": "2c3c4b89dbaf355d",
+      "type": "file",
+      "width": 420,
+      "x": 2450,
+      "y": 90
+    }
+  ]
+}

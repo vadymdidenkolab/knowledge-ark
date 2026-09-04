@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автономный комплект v0.5-draft — START HERE</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f7f4ed; --fg:#17201c; --muted:#52605a; --card:#fffdf7; --line:#c9d0ca; --accent:#176b55; --warn:#8a3c12; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#111815; --fg:#eef6f1; --muted:#a8b8b0; --card:#18231e; --line:#415149; --accent:#65d3ae; --warn:#ffb07d; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:36px 0 64px; }
+    h1 { font-size:clamp(2rem,5vw,4.6rem); line-height:.96; margin:0 0 12px; max-width:13ch; letter-spacing:-.04em; }
+    h2 { font-size:1.25rem; margin:0 0 12px; }
+    p { max-width:78ch; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.92em; }
+    .eyebrow { color:var(--accent); font-weight:800; letter-spacing:.11em; text-transform:uppercase; font-size:.78rem; }
+    .lead { font-size:1.15rem; color:var(--muted); max-width:64ch; }
+    .alert { border:2px solid var(--warn); border-radius:14px; padding:16px 18px; margin:26px 0; background:var(--card); }
+    .alert strong { color:var(--warn); }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:24px 0; }
+    .stat { border:1px solid var(--line); border-radius:12px; padding:14px; background:var(--card); }
+    .stat b { display:block; font-size:1.6rem; }
+    .toolbar { position:sticky; top:0; z-index:3; padding:10px 0; background:color-mix(in srgb,var(--bg) 92%,transparent); backdrop-filter:blur(8px); }
+    input { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); font:inherit; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; }
+    .card { border:1px solid var(--line); border-radius:14px; padding:16px; background:var(--card); }
+    .card p { color:var(--muted); margin:.4rem 0 .8rem; }
+    .card ul { padding-left:1.15rem; margin:.4rem 0 0; }
+    .card li { margin:.35rem 0; }
+    .wide { grid-column:1/-1; }
+    .step { display:grid; grid-template-columns:2.1rem 1fr; gap:10px; align-items:start; margin:.7rem 0; }
+    .step span { display:grid; place-items:center; width:2rem; height:2rem; border-radius:50%; background:var(--accent); color:var(--bg); font-weight:800; }
+    .hidden { display:none !important; }
+    footer { margin-top:36px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); }
+    @media (max-width:480px) { main { width:min(100% - 20px,1120px); padding-top:24px; } .stats { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Live worktree v0.5-draft · baseline 2026-08-29 · remediation 2026-09-04 · Portugal/EU</div>
+  <h1>Жизнь и знания: от минут до 100 лет</h1>
+  <p class="lead">Вход в систему для одного человека или оперативной ячейки до семи участников. E5 означает передачу возможностей, прав и знаний через поколения — не столетний склад.</p>
+
+  <div class="alert" role="alert">
+    <strong>Это ещё не персональный рабочий комплект и не выпуск.</strong> <code>offline-corpus-manifest.csv</code> хранит исторический реестр 79 кандидатов на получение. Отдельно в <code>offline-library/</code> фактически сохранено 45 офлайн-файлов с локальными путями и контрольными данными; это <strong>не 45 готовых инструкций</strong>. Из 259 записей научных пакетов 257 внешне приобретаемых или пока не выбранных кандидатов имеют статус NOT_DOWNLOADED, два локально создаваемых пакета доказательств — NOT_CREATED; все 259 остаются NOT_REVIEWED/NOT_TESTED. 239 проектов не выполнялись, 73 прибора не инвентаризированы. Выпущенных пакетов действий: 0; разрешений ALLOW: 0. Адресные карты, фактическое имущество, люди и медицинские карточки действий не подтверждены. При угрозе жизни в Португалии — <strong>112</strong>. Базовые контакты: SNS 24 — 808 24 24 24; CIAV — 800 250 250; 144 — социальная чрезвычайная помощь. Контакты перепроверить перед выпуском печатного ядра.
+  </div>
+
+  <section class="card wide" style="border:2px solid var(--accent)">
+    <h2>Семенной фонд · модуль A · 7 человек</h2>
+    <p><strong>Старая корзина из 22 маленьких пачек забракована.</strong> Проверено: выбранные сорта заявлены производителем как открытоопыляемые, F1 среди них не обнаружено. Это только стартовый овощной модуль, не полная автономия. Рабочий расчёт — около 6,199 кг в основном фонде и такой же offsite-дубликат, всего около 12,398 кг до округления реальных фасовок.</p>
+    <p><a href="SEED_BANK_ORDER_RU.html"><strong>Открыть модуль A: причины выбора, сроки хранения и количественный расчёт →</strong></a></p>
+    <p><a href="SEED_CALORIE_LAYER_RU.html"><strong>Открыть отдельный калорийный слой: земля, вода, зерновые, бобовые, масличные и живой посадочный фонд →</strong></a></p>
+  </section>
+
+  <div class="stats" aria-label="Масштаб live worktree v0.5-draft">
+    <div class="stat"><b>E0–E5</b><span>минуты → 100 лет</span></div>
+    <div class="stat"><b>N=1–7</b><span>оперативная ячейка</span></div>
+    <div class="stat"><b>133</b><span>scenario index rows</span></div>
+    <div class="stat"><b>79</b><span>backlog candidates</span></div>
+    <div class="stat"><b>36</b><span>local payload; не action-cards</span></div>
+    <div class="stat"><b>32</b><span>century capabilities</span></div>
+    <div class="stat"><b>239</b><span>science domains/projects</span></div>
+    <div class="stat"><b>259</b><span>science candidates</span></div>
+  </div>
+
+  <section class="card wide">
+    <h2>Первый проход</h2>
+    <div class="step"><span>1</span><div><a href="22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md">Прочитать аудит полной изоляции</a>: исходный baseline и датированный post-baseline remediation.</div></div>
+    <div class="step"><span>2</span><div><a href="24_MASTER_CATALOG_STATUS_RU.md">Открыть мастер-статус</a>: фактическое состояние, домены, P0–P4, SL0–SL6 и очередь.</div></div>
+    <div class="step"><span>3</span><div><a href="23_TECHNOLOGY_DEPENDENCY_TREE_RU.md">Открыть дерево технологических зависимостей</a>: узлы, типы рёбер, prerequisites, readiness и safety gates.</div></div>
+    <div class="step"><span>4</span><div><a href="Obsidian-Vault/00%20%E2%80%94%20%D0%9D%D0%90%D0%A7%D0%90%D0%A2%D0%AC.md">Открыть Obsidian Vault</a>: выбрать понятный маршрут по ситуации; каталог не равен выпущенной инструкции.</div></div>
+    <div class="step"><span>5</span><div><a href="12_QA_AND_LIMITS_RU.md">Прочитать доказанность и ограничения</a>, затем выполнить <code>python3 validate_worktree.py</code> из корня.</div></div>
+    <div class="step"><span>6</span><div><a href="02_PERSONALIZATION_RU.md">Заполнить профиль</a> и <a href="inventory-template.csv">провести физическую инвентаризацию</a>.</div></div>
+    <div class="step"><span>7</span><div><a href="13_MAPS_GEODATA_NAVIGATION_RU.md">Собрать адресный map pack</a> и проверить маршруты в поле.</div></div>
+    <div class="step"><span>8</span><div><a href="14_GROUP_1_TO_7_OPERATIONS_RU.md">Назначить реальную ячейку 1–7</a> и внешние резервные связи.</div></div>
+    <div class="step"><span>9</span><div><a href="15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md">Выбрать применимые сценарии</a>; индекс не равен готовым инструкциям.</div></div>
+    <div class="step"><span>10</span><div><a href="20_PRACTICAL_SCIENCE_PRESERVATION_RU.md">Открыть контур практической науки</a>, затем начать с вкладки Safety Gates в XLSX; проекты пока только design backlog.</div></div>
+  </section>
+
+  <section class="card wide">
+    <h2>Проверка live worktree v0.5-draft</h2>
+    <p>Из текущего каталога выполнить <code>python3 validate_worktree.py</code>. Результат проверяет структуру и целостность учтённых payload, но не подтверждает физическое наличие, медицинский допуск, обученность, адресные карты или готовность к полной изоляции. Актуальные численные итоги технологического графа смотреть в выводе валидатора и CSV-реестрах.</p>
+  </section>
+
+  <section class="card wide">
+    <h2>Проверка замороженного официального архива v0.4</h2>
+    <p>Эти команды относятся только к исходному неизменённому архиву <code>v0.4</code>, а не к live worktree. Сначала из каталога с ZIP и sidecar выполнить <code>shasum -a 256 -c autonomous-life-kit-v0.4.sha256</code>. После распаковки перейти в распакованный <code>autonomous-life-kit</code> и выполнить <code>python3 offline_library.py verify . ../autonomous-life-kit-v0.4.seed-lock.csv</code>, затем <code>python3 validate_release.py</code>. Не создавайте release lock заново: для изменяемой личной библиотеки нужен отдельный lock с другим именем.</p>
+  </section>
+
+  <div class="toolbar"><label for="filter">Поиск по этому стартовому экрану</label><input id="filter" type="search" placeholder="например: вода, архив, медицина, карты" autocomplete="off"></div>
+
+  <div id="cards" class="grid">
+    <section class="card" data-search="основа blueprint архитектура персонализация инвентарь roadmap coverage">
+      <h2>Основной каркас</h2>
+      <ul>
+        <li><a href="README.md">README</a></li>
+        <li><a href="22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md">Аудит полной изоляции</a></li>
+        <li><a href="23_TECHNOLOGY_DEPENDENCY_TREE_RU.md">Дерево технологических зависимостей</a></li>
+        <li><a href="24_MASTER_CATALOG_STATUS_RU.md">Мастер-статус каталога</a></li>
+        <li><a href="known-gap-register.csv">32 открытых разрыва</a></li>
+        <li><a href="Obsidian-Vault/00%20%E2%80%94%20%D0%9D%D0%90%D0%A7%D0%90%D0%A2%D0%AC.md">Obsidian Vault · НАЧАТЬ</a></li>
+        <li><a href="01_MASTER_BLUEPRINT_RU.md">Master blueprint</a></li>
+        <li><a href="02_PERSONALIZATION_RU.md">Персонализация</a></li>
+        <li><a href="03_INVENTORY_SCHEMA_RU.md">Схема инвентаря</a></li>
+        <li><a href="05_BUILD_ROADMAP_RU.md">Roadmap</a></li>
+        <li><a href="06_COVERAGE_MATRIX_RU.md">Матрица полноты</a></li>
+      </ul>
+    </section>
+
+    <section class="card" data-search="медицина аптечка первая помощь лекарства health kit">
+      <h2>Медицина и аптечка</h2>
+      <p>Самопомощь, first aid, professional gates и физические модули разделены.</p>
+      <ul>
+        <li><a href="08_MEDICAL_KNOWLEDGE_CONTOUR_RU.md">Медицинский контур</a></li>
+        <li><a href="09_MEDICAL_SOURCE_CATALOG_RU.md">Каталог источников</a></li>
+        <li><a href="11_FIRST_AID_KIT_BASELINE_RU.md">Baseline аптечки</a></li>
+      </ul>
+    </section>
+
+    <section class="card" data-search="вода пища энергия ремонт shelter fire материальный технический">
+      <h2>Материальные системы</h2>
+      <p>Запасы переходят в измеряемые, ремонтируемые и воспроизводимые функции.</p>
+      <ul><li><a href="07_MATERIAL_TECHNICAL_CONTOUR_RU.md">Материально-технический контур</a></li><li><a href="resource-scaling-template.csv">Масштабирование ресурсов</a></li><li><a href="asset-component-lifecycle-template.csv">Жизненный цикл компонентов</a></li></ul>
+    </section>
+
+    <section class="card" data-search="карты navigation gis routes sites геоданные portugal">
+      <h2>Карты и маршруты</h2>
+      <ul><li><a href="13_MAPS_GEODATA_NAVIGATION_RU.md">Карты/геоданные/навигация</a></li><li><a href="map-register-template.csv">Map register</a></li><li><a href="route-register-template.csv">Route register</a></li><li><a href="site-register-template.csv">Site register</a></li></ul>
+    </section>
+
+    <section class="card" data-search="группа роли cell n1 n7 buddy succession safeguarding">
+      <h2>Люди и операции</h2>
+      <ul><li><a href="14_GROUP_1_TO_7_OPERATIONS_RU.md">Группа 1–7</a></li><li><a href="group-profile-template.csv">Профили N1–N7</a></li><li><a href="group-function-assignment-template.csv">Функции</a></li><li><a href="incident-log-template.csv">Incident log</a></li></ul>
+    </section>
+
+    <section class="card" data-search="сценарии all hazards index cascade decision">
+      <h2>All-hazards</h2>
+      <ul><li><a href="15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md">Индекс А–Я</a></li><li><a href="scenario-register.csv">133 scenarios</a></li><li><a href="cascade-register-template.csv">Каскады</a></li><li><a href="decision-class-register.csv">Классы решений</a></li></ul>
+    </section>
+
+    <section class="card" data-search="100 лет e5 век century поколение institute site stewardship governance law climate">
+      <h2>E5 · 15–100 лет</h2>
+      <ul><li><a href="16_CENTURY_CONTINUITY_RU.md">Столетний контур</a></li><li><a href="18_E5_REGISTERS_AND_GATES_RU.md">Машинная модель и gates</a></li><li><a href="horizon-register.csv">Точный словарь E0–E5</a></li><li><a href="century-capability-register.csv">32 capabilities</a></li><li><a href="century-gate-snapshot-template.csv">E5 gate snapshot</a></li></ul>
+    </section>
+
+    <section class="card" data-search="offline библиотека kiwix wikipedia storage архив restore migration hash search">
+      <h2>Офлайн-библиотека</h2>
+      <p>79 строк исходного реестра — очередь получения. Отдельно локально сохранено 45 офлайн-файлов; локальный файл ещё не равен готовой инструкции.</p>
+      <ul><li><a href="17_OFFLINE_LIBRARY_100Y_RU.md">Архитектура корпуса</a></li><li><a href="19_OFFLINE_CORPUS_RESEARCH_RU.md">Глубокое исследование источников</a></li><li><a href="offline-corpus-manifest.csv">79 backlog candidates</a></li><li><a href="offline-library/README.md">Фактический локальный корпус</a></li><li><a href="offline-library/offline-payload-register.csv">36 local payload records</a></li><li><a href="payload-source-crosswalk.csv">Payload/source crosswalk</a></li><li><a href="offline_library.py">Hash/index/search tool</a></li><li><a href="offline-restore-test-template.csv">Restore test</a></li></ul>
+    </section>
+
+    <section class="card" data-search="dependency graph edges planning service levels crosswalk machine plan prerequisites">
+      <h2>Машинный план зависимостей</h2>
+      <p>Актуальные количества узлов и связей выводит валидатор; обзорный экран намеренно не фиксирует меняющийся count.</p>
+      <ul><li><a href="technology-dependency-register.csv">Technology nodes</a></li><li><a href="technology-dependency-edges.csv">Typed dependency edges</a></li><li><a href="technology-node-planning-register.csv">Node planning</a></li><li><a href="technology-service-level-register.csv">Service levels</a></li><li><a href="capability-crosswalk.csv">Capability crosswalk</a></li><li><a href="payload-source-crosswalk.csv">Payload/source crosswalk</a></li></ul>
+    </section>
+
+    <section class="card" data-search="наука science математика физика химия биология инженерия приборы калибровка опыт project protocol raw data">
+      <h2>Практическая наука</h2>
+      <p>Знание связано с измерением, безопасным протоколом, raw data, uncertainty, evidence и teach-back.</p>
+      <ul><li><a href="20_PRACTICAL_SCIENCE_PRESERVATION_RU.md">Контур сохранения науки</a></li><li><a href="21_PRACTICAL_SCIENCE_SOURCE_RESEARCH_RU.md">Исследование источников</a></li><li><a href="practical-science-preservation-atlas.xlsx">Рабочий XLSX-атлас</a></li><li><a href="practical-science-safety-gates.csv">17 safety gates</a></li><li><a href="practical-science-package-register.csv">259 package records</a></li><li><a href="PRACTICAL_SCIENCE_WORKBOOK_QA.md">QA атласа</a></li></ul>
+    </section>
+
+    <section class="card" data-search="proof qa limits проверка доказательства visualization">
+      <h2>Проверка и границы</h2>
+      <ul><li><a href="12_QA_AND_LIMITS_RU.md">QA и ограничения</a></li><li><a href="validate_worktree.py">Валидатор live v0.5-draft</a></li><li><a href="VISUALIZATION_QA.md">QA схемы</a></li><li><a href="framework-visualization.html">Интерактивная схема</a></li><li><a href="source-manifest.csv">Link catalog</a></li></ul>
+    </section>
+  </div>
+
+  <footer>Статический файл: работает без сети, аккаунта, шрифтов и внешнего JavaScript. Для ручного fallback рядом лежит <a href="START_HERE.txt">START_HERE.txt</a>.</footer>
+</main>
+<script>
+  (function () {
+    const input = document.getElementById('filter');
+    const cards = Array.from(document.querySelectorAll('#cards .card'));
+    function filter() {
+      const q = input.value.trim().toLocaleLowerCase('ru');
+      cards.forEach(card => {
+        const haystack = (card.textContent + ' ' + (card.dataset.search || '')).toLocaleLowerCase('ru');
+        card.classList.toggle('hidden', Boolean(q) && !haystack.includes(q));
+      });
+    }
+    input.addEventListener('input', filter);
+  }());
+</script>
+</body>
+</html>

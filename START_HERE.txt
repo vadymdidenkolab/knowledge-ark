@@ -1,0 +1,133 @@
+АВТОНОМНЫЙ КОМПЛЕКТ ЖИЗНИ И ЗНАНИЙ — LIVE WORKTREE v0.5-draft
+Последний замороженный исторический выпуск: v0.4
+Дата baseline: 2026-08-29
+Дата post-baseline remediation: 2026-09-04
+Локализация baseline: Portugal / EU
+Горизонт: E0–E5, от минут до 100 лет
+Группа: оперативная ячейка N=1–7
+
+ВАЖНО
+Это расширенная архитектура, типизированное дерево зависимостей, Obsidian-каталог,
+шаблоны и небольшой фактически сохранённый офлайн-корпус, а не подтверждённая
+персональная аптечка, не готовый адресный map pack и не выпущенный медицинский протокол.
+79 строк offline-corpus-manifest — исторический acquisition backlog: 76 имеют
+NOT_DOWNLOADED, а DGS, INFARMED и Diário da República — более строгий
+DO_NOT_INGEST до доказанного права локального воспроизведения.
+Отдельно в offline-library фактически сохранено 45 офлайн-файлов с локальными путями,
+размерами и хешами. Это не 45 готовых инструкций: локальный файл ещё требует
+content/audience/safety review, точной привязки раздела и action-gates.
+Из 259 science package records 257 внешне приобретаемых/TBD кандидатов имеют
+NOT_DOWNLOADED, а два локально создаваемых evidence packages — NOT_CREATED;
+все 259 остаются NOT_REVIEWED и NOT_TESTED. 239 проектов не выполнялись, 73 прибора не
+инвентаризированы и не калиброваны.
+Released action packages: 0. ALLOW: 0. Адресные карты и физический inventory
+не подтверждены. Наличие текста не даёт медицинского, юридического или технического допуска.
+
+ПРИ УГРОЗЕ ЖИЗНИ В ПОРТУГАЛИИ: 112
+Baseline-контакты на 2026-08-29:
+- SNS 24: 808 24 24 24
+- CIAV: 800 250 250
+- социальная чрезвычайная помощь: 144
+Перед печатью/выпуском повторно проверить официальные контакты.
+
+НАЧАТЬ
+1. README.md
+2. 24_MASTER_CATALOG_STATUS_RU.md — единый статус, домены и очередь
+3. 22_TOTAL_ISOLATION_READINESS_AUDIT_RU.md — честный аудит и post-baseline remediation
+4. 23_TECHNOLOGY_DEPENDENCY_TREE_RU.md — дерево предпосылок и типы связей
+5. known-gap-register.csv — 32 открытых разрыва
+6. Obsidian-Vault/00 — НАЧАТЬ.md — единственная начальная страница картотеки знаний
+7. 12_QA_AND_LIMITS_RU.md
+8. 02_PERSONALIZATION_RU.md
+9. inventory-template.csv — физически пересчитать имущество
+
+ПРОВЕРИТЬ LIVE WORKTREE v0.5-draft
+python3 validate_worktree.py
+Успешный результат доказывает структуру и целостность учтённых payload,
+но не физическую, медицинскую или операционную готовность.
+
+10. 13_MAPS_GEODATA_NAVIGATION_RU.md — собрать адресный map pack
+11. 14_GROUP_1_TO_7_OPERATIONS_RU.md — назначить реальную ячейку
+12. 15_ALL_HAZARDS_A_TO_Z_INDEX_RU.md — выбрать применимые сценарии
+13. 20_PRACTICAL_SCIENCE_PRESERVATION_RU.md — открыть научный контур
+14. practical-science-preservation-atlas.xlsx — сначала вкладка Safety Gates
+
+МАШИННЫЙ ПЛАН И СВЯЗИ
+- technology-dependency-register.csv — узлы; актуальный count смотреть в валидаторе
+- technology-dependency-edges.csv — REQUIRED/OPTIONAL/ALTERNATIVE/CONDITIONAL/REFERENCE/HAZARD_ONLY
+- technology-node-planning-register.csv — приоритет, readiness и план материализации
+- technology-service-level-register.csv — требуемые функции по уровням сервиса
+- capability-crosswalk.csv — сценарии ↔ технологии ↔ MOC ↔ science
+- payload-source-crosswalk.csv — локальные payload ↔ источники/пакеты
+
+СТОЛЕТНИЙ СЛОЙ
+- 16_CENTURY_CONTINUITY_RU.md
+- 17_OFFLINE_LIBRARY_100Y_RU.md
+- 18_E5_REGISTERS_AND_GATES_RU.md
+- 19_OFFLINE_CORPUS_RESEARCH_RU.md
+- 20_PRACTICAL_SCIENCE_PRESERVATION_RU.md
+- 21_PRACTICAL_SCIENCE_SOURCE_RESEARCH_RU.md
+- horizon-register.csv
+- century-capability-register.csv
+- century-gate-snapshot-template.csv
+
+ОФЛАЙН-КОРПУС
+- offline-corpus-manifest.csv — исторический backlog из 79 кандидатов; это не реестр локальных файлов
+- offline-library/README.md — статус и границы фактически сохранённого корпуса
+- offline-library/offline-payload-register.csv — 45 локальных офлайн-файлов; не 45 готовых инструкций
+- payload-source-crosswalk.csv — provenance-связи и явно отмеченные umbrella/TBD отношения
+- offline-storage-plan-template.csv
+- archive-media-register-template.csv
+- format-migration-register-template.csv
+- offline-restore-test-template.csv
+- knowledge-succession-register-template.csv
+
+ПРАКТИЧЕСКАЯ НАУКА
+- practical-science-preservation-atlas.xlsx — 9 sheets
+- practical-science-domain-register.csv — 239 областей
+- practical-science-package-register.csv — 259 записей: 257 NOT_DOWNLOADED + 2 NOT_CREATED
+- practical-science-project-register.csv — 239 проектов; все DESIGN_ONLY_NOT_EXECUTED
+- practical-science-instrument-register.csv — 73 класса; не инвентаризированы
+- practical-science-safety-gates.csv — 17 обязательных no-go
+- practical-science-learning-paths.csv — 16 учебных траекторий
+- practical-science-protocol-template.csv и practical-science-raw-log-template.csv
+
+ПРОВЕРКА ЗАМОРОЖЕННОГО ОФИЦИАЛЬНОГО ВЫПУСКА v0.4 ПОСЛЕ РАСПАКОВКИ
+Эти команды относятся только к исходному неизменённому архиву v0.4,
+не к live worktree v0.5-draft.
+# из каталога, где лежат ZIP и .sha256:
+shasum -a 256 -c autonomous-life-kit-v0.4.sha256
+# затем из распакованного каталога autonomous-life-kit:
+python3 offline_library.py verify . ../autonomous-life-kit-v0.4.seed-lock.csv
+python3 validate_release.py
+
+ЛОКАЛЬНЫЙ КОНТРОЛЬ И ПОИСК ДЛЯ СОБСТВЕННОЙ ИЗМЕНЯЕМОЙ БИБЛИОТЕКИ
+# не перезаписывайте release seed-lock; создайте отдельный снимок своего дерева:
+python3 offline_library.py inventory MY_RELEASED_LIBRARY --output my-library.seed-lock.csv
+python3 offline_library.py verify MY_RELEASED_LIBRARY my-library.seed-lock.csv
+python3 offline_library.py index MY_RELEASED_LIBRARY offline-index.sqlite
+python3 offline_library.py search offline-index.sqlite "вода пожар 112"
+
+Инструмент не скачивает файлы и не объявляет их безопасными.
+
+СТАТУСЫ, КОТОРЫЕ НЕЛЬЗЯ СМЕШИВАТЬ
+ссылка найдена
+→ права проверены
+→ файл скачан
+→ локальный hash записан
+→ опубликованный checksum совпал или подпись проверена, если upstream evidence существует
+→ поздняя fixity-проверка совпала с ранее записанным local hash
+→ malware scan пройден
+→ офлайн открыт
+→ проиндексирован
+→ содержание проверено
+→ точный раздел связан
+→ перевод/профессиональный review выполнен
+→ role/action gates ALLOW
+→ выпущено
+→ человек обучен
+→ упражнение пройдено
+
+E5 не означает «запас на сто лет». Это целевая, периодически заново доказываемая способность
+заменять, обучать, передавать права и знания, мигрировать носители и
+пересобирать систему после смены людей, техники, законов и площадок.

@@ -1,0 +1,482 @@
+# Максимальная офлайн-библиотека на горизонт 100 лет
+
+## 1. Результат, который должна давать библиотека
+
+Офлайн-библиотека считается рабочей, когда человек без интернета может:
+
+1. за секунды найти критическую карточку;
+2. за минуты открыть полевое руководство;
+3. за часы найти авторитетный первичный материал, его версию и границы;
+4. за дни начать системное обучение;
+5. восстановить каталог на чистом резервном устройстве;
+6. доказать целостность каждого выпущенного файла;
+7. отличить актуальное от устаревшего, локальное от иностранного и бытовое от профессионального;
+8. передать библиотеку человеку, который не участвовал в её сборке.
+
+Текущая версия содержит **схему, каталог кандидатов, статический стартовый экран и инструменты контроля**. Она не притворяется, что десятки терабайт внешних материалов уже скачаны: 76 строк имеют `download_state=NOT_DOWNLOADED`, а DGS, INFARMED и Diário da República — более строгий `DO_NOT_INGEST`, пока не доказано право создать локальную копию. Ни один внешний payload, hash или offline-open не подтверждён.
+
+## 2. Пять уровней корпуса
+
+| Уровень | Рабочий размер | Время доступа | Назначение | Носитель |
+|---|---:|---:|---|---|
+| `L0 RED` | печать + до 1 GB | секунды | 112, адрес, медицина, пожар, вода, эвакуация, контакты | ламинированные карточки, телефон, USB |
+| `L1 FIELD` | 8–64 GB | минуты | полевые руководства, карты региона, manuals точных устройств | телефон/e-reader/USB/SSD |
+| `L2 HOUSEHOLD` | 256 GB–4 TB | минуты–часы | энциклопедии, здоровье, инженерия, образование, право, культура | основной и резервный SSD/HDD |
+| `L3 DEEP` | 8–32 TB | часы–дни | большие ZIM, видео, source code, расширенные карты и научный фонд | отдельный сервер/NAS + offline replica |
+| `L4 COMMUNITY` | 50 TB и более | по каталогу | языки, полные научные/культурные коллекции, региональные зеркала | несколько учреждений/домохозяйств |
+
+Диапазоны — проектные классы, а не обещание точного объёма: размер ZIM, карт и видео меняется. Приоритет определяется не стремлением заполнить диск, а функцией, языком, территорией, авторитетностью, лицензией, энергией чтения и стоимостью проверки.
+
+## 3. Что включать: полный таксономический минимум
+
+### 3.1. Немедленная безопасность
+
+- местные экстренные номера и официальные alert-каналы;
+- BLS/AED/удушье и первая помощь только в актуальной роли/редакции;
+- пожар, CO, газ, электричество, вода, обрушение и CBRN для населения;
+- shelter/evacuation, учёт людей, PACE и передача состояния;
+- красные флаги здоровья и локальная маршрутизация;
+- карточки доступа для детей, инвалидности, языковых барьеров и животных.
+
+### 3.2. Медицина и общественное здоровье
+
+- first aid и population guidance;
+- anatomy, physiology, terminology и обучение;
+- WASH, IPC, питание, материнство/дети/пожилые;
+- chronic disease continuity, mental health, dentistry, rehabilitation;
+- medicines information только от регулятора/официального издателя;
+- профессиональный слой физически и логически отделён; доступ к тексту не разрешает действие.
+
+### 3.3. Вода, пища и сельское хозяйство
+
+- water source protection, treatment, storage, sanitation и лабораторные ограничения;
+- nutrition, food safety и проверенные методы консервирования;
+- soil science, compost, irrigation, seeds, crop rotation, pests и climate adaptation;
+- forestry, wildfire interface, animal husbandry, veterinary public health и welfare;
+- региональные виды и токсичные растения только по авторитетным локальным источникам.
+
+### 3.4. Жильё, инженерия и ремонт
+
+- строительная физика, материалы, вентиляция, влага и дренаж;
+- electrical/mechanical/plumbing fundamentals с competency boundaries;
+- renewable energy, batteries, pumps, motors, controls и ручные альтернативы;
+- metal/wood/textile/leather/bicycle/vehicle repair;
+- measurement, calibration, technical drawing и safety data;
+- точные manuals, firmware, parts lists и схемы каждого имеющегося устройства.
+
+### 3.5. Карты и навигация
+
+- OpenStreetMap/официальная топография в разрешённых форматах;
+- building/local/municipal/regional/national layers;
+- высоты, гидрография, пожары, паводки, побережье, геология, землепользование;
+- hospitals/pharmacies/shelters/water/transport с независимой проверкой статуса;
+- GeoPackage/MBTiles/GeoJSON плюс печатные карты, легенда, CRS, license и date;
+- GPS/compass/manual navigation и преобразование координат.
+
+### 3.6. Право, администрация и экономика
+
+- Portugal/EU/Ukraine primary law и official procedures;
+- документы, residence, healthcare, taxes, social protection, labour, business, property, insurance, inheritance, guardianship и data protection;
+- first-party forms и контакты;
+- accounting, household finance, fraud resistance и contracts;
+- каждое правовое утверждение имеет юрисдикцию и `valid_at/review_due`; офлайн-копия закона быстро устаревает.
+
+### 3.7. Цифровая устойчивость и программное обеспечение
+
+- operating-system installers и recovery media в пределах лицензии;
+- portable readers для PDF/EPUB/ZIM/images/audio/video/GeoPackage;
+- backup, encryption, incident response, password recovery и malware hygiene;
+- исходный код, build instructions, dependencies и лицензии критического свободного ПО;
+- локальная документация языков программирования, databases, networking и electronics;
+- virtual machines/emulation только как дополнительный слой, не вместо открытых файлов.
+
+### 3.8. Образование, язык и культура
+
+- словари и грамматики RU/UK/PT/EN, медицинские/технические фразы;
+- математика, физика, химия, биология, earth science и статистика;
+- literacy, early childhood, school curriculum, teacher resources и assessment;
+- профессиональные учебники и apprenticeship materials;
+- история, гражданские знания, литература, искусство, музыка, игры и семейный архив;
+- локальная культурная память, oral history и контекст происхождения.
+
+## 4. Приоритет отбора одного материала
+
+Материал получает высокий приоритет, если одновременно:
+
+1. закрывает критическую функцию;
+2. является первичным/официальным либо признанным образовательным источником;
+3. применим к языку, территории и аудитории;
+4. имеет понятную лицензию или законное основание личной копии;
+5. доступен без DRM и внешнего аккаунта;
+6. работает в устойчивом формате;
+7. его можно проверить и обновлять;
+8. он не дублирует более качественный источник без полезной причины.
+
+Для динамических данных — законов, медицинских протоколов, контактов, recalls, hazard alerts, цен и статуса учреждений — ценность офлайн-копии не отменяет необходимость перепроверки при возвращении связи.
+
+## 5. Машинный каталог
+
+[offline-corpus-manifest.csv](offline-corpus-manifest.csv) — текущая очередь внешнего корпуса. Фактически реализованные группы полей:
+
+- идентичность: `package_id`, title, publisher, language, jurisdiction;
+- функция: priority tier, category/subcategory, authority class и safety class;
+- происхождение: canonical/acquisition URL, version, retrieved date;
+- права: license expression/URL, review state, redistribution state;
+- байты: local path, byte size, SHA-256 и состояние upstream checksum;
+- проверка: malware scan, offline-open, index, content/section review;
+- жизненный цикл: update class, review due и retention class;
+- приватность и примечания.
+
+В этой версии **нет** отдельных полей `audience`, `supersedes`, upstream checksum value/signature evidence, `release_state` или вычисленного `operational_release_state`. Поэтому CSV является acquisition/review queue, а не готовым operational release catalog. Пустой SHA-256 запрещает утверждение о local fixity; `upstream_checksum_state` без значения/подписи/evidence ref не доказывает аутентичность; официальный домен не означает content review; open license не означает медицинскую пригодность.
+
+## 6. Целевой конвейер приобретения с fail-closed
+
+Следующий автомат состояний — **требование к будущему production catalog**, а не уже реализованная логика `offline-corpus-manifest.csv` или `offline_library.py` v0.4:
+
+```text
+CANDIDATE
+→ LICENSE_CLEARED
+→ DOWNLOAD_AUTHORIZED
+→ DOWNLOADED
+→ LOCAL_HASH_RECORDED
+→ UPSTREAM_CHECKSUM_MATCHED или SIGNATURE_VERIFIED, если upstream evidence существует
+→ MALWARE_SCANNED
+→ OFFLINE_OPENED
+→ INDEXED
+→ CONTENT_REVIEWED
+→ SECTION_GATED (если action-linked)
+→ RELEASED
+```
+
+После выпуска поздние проверки дают отдельное состояние `FIXITY_RECHECK_PASS`; оно означает совпадение с ранее зафиксированным локальным hash, но не заменяет upstream authentication. В production-системе любая ошибка должна помещать пакет в `QUARANTINED`, не в оперативный поиск. Текущий bootstrap tool этого не вычисляет, поэтому физическое разделение `candidate/`, `quarantine/`, `superseded/` и `released/` обязательно. Шаги:
+
+1. открыть canonical page издателя;
+2. проверить юрисдикцию, язык, edition и наличие новой версии/errata;
+3. сохранить лицензию/условия на дату получения;
+4. скачать без обхода DRM, paywall, robots, аутентификации или технических ограничений;
+5. вычислить и записать собственный SHA-256 точных полученных байтов;
+6. отдельно сверить опубликованный checksum или проверить подпись, если upstream evidence существует, сохранив его значение и доказательство;
+7. проверить безопасность средствами чистой платформы;
+8. открыть в авиарежиме на двух разных reader/device paths;
+9. проверить страницы, шрифты, изображения, видео, внутренние ссылки и поиск;
+10. извлечь текст/OCR там, где это разрешено;
+11. назначить аудиторию, safety class, license и review due;
+12. для действия связать точный раздел и все обязательные gates;
+13. скопировать в независимые хранилища;
+14. выпустить только immutable package revision.
+
+Никакого фонового auto-update без журнала: новая версия сначала проходит рядом со старой, а затем явно заменяет оперативную.
+
+## 7. Лицензии и право
+
+### 7.1. Что хранить в доказательстве прав
+
+- точное название правообладателя/издателя;
+- URL условий и локальная копия страницы условий;
+- дата проверки;
+- license identifier и scope: download, personal use, modification, redistribution;
+- attribution text;
+- отдельные ограничения на изображения, карты, логотипы, third-party inserts и database rights;
+- применимая юрисдикция;
+- решение reviewer.
+
+### 7.2. Практические границы
+
+- OpenStreetMap требует атрибуцию и соблюдение ODbL; тайлы конкретного сервера не равны свободному праву на массовое скачивание.
+- Wikimedia dumps и ZIM требуют сохранения применимых лицензий/атрибуции отдельных проектов и материалов.
+- Project Gutenberg ориентируется на статус public domain в США; доступность на их сайте не доказывает право распространения в Португалии/ЕС.
+- OpenStax и другие open-education издатели могут использовать разные лицензии для разных книг; проверяется каждая edition.
+- официальные законы обычно имеют особый режим повторного использования, но personal data, logos, third-party works и условия распространения проверяются отдельно.
+- покупка электронной книги не означает право снять DRM или раздать копию группе.
+- личные документы, медицинские записи и recovery secrets не смешиваются с публичным фондом.
+
+При `license_review_state != CLEARED` пакет может оставаться только приватным кандидатом или не скачиваться — по решению квалифицированного reviewer.
+
+## 8. Источники-кандидаты верхнего уровня
+
+Точные пакеты и статусы находятся в CSV. Базовые экосистемы:
+
+- **Kiwix/OpenZIM:** офлайн ZIM для Wikimedia, Wikivoyage, Wiktionary, Stack Exchange и других разрешённых коллекций; фиксировать точный ZIM, variant `mini/nopic/maxi`, date и SHA-256.
+- **Wikimedia dumps:** первичные project dumps с датой; самостоятельно собранная копия обязана сохранять лицензии и историю происхождения.
+- **OpenStreetMap planet/regions:** данные ODbL; базу и рендеренные тайлы лицензировать/атрибутировать отдельно.
+- **Learning Equality Kolibri:** локальное обучение и content channels; лицензия и язык проверяются на уровне канала/ресурса.
+- **Open educational resources:** OpenStax и другие издатели с per-item license review.
+- **WHO/CDC/Red Cross/ERC/Portuguese authorities:** authoritative safety/health guidance; право на локальную копию, edition, аудитория и локальная применимость проверяются для каждого файла.
+- **FAO/UN agencies:** agriculture, food, water and education; не считать единый логотип универсальной лицензией всех публикаций.
+- **EUR-Lex/Diário da República/data.gov.pt:** первичное право и открытые данные ведутся раздельно; для Diário da República до rights evidence сохраняются URL/metadata, а любой динамический материал обязан иметь snapshot date.
+- **Library of Congress/NDSA/RFC/PRONOM:** форматы, preservation planning, BagIt и format identification.
+- **Software Heritage:** внешняя долговременная избыточность исходного кода; локально сохраняется только критический набор, который реально можно собрать и лицензировать.
+
+## 9. Архитектура хранения: проектное правило 4-3-2-1-1-0
+
+Для `L0/L1` критического набора внутреннее правило проекта:
+
+- **4** проверенные копии;
+- **3** независимых failure domain/типа носителя или устройства;
+- **2** географических места, не попадающих в один пожар/паводок/кражу;
+- **1** физически offline/immutable копия;
+- **1** печатное ядро и бумажный каталог;
+- **0** необъяснённых ошибок после restore-test.
+
+Это проектное усиление, вдохновлённое digital-preservation практиками; не универсальный официальный норматив и не гарантия века. Для большого `L3/L4` корпуса допустима экономически обоснованная схема, но каталог, licenses, hashes и критическое ядро всё равно имеют максимальную избыточность.
+
+### Пример распределения
+
+1. рабочий ноутбук/сервер: индекс и основной корпус;
+2. отключаемый SSD: ежеквартальная синхронизация и чтение выборки;
+3. HDD/tape/optical по бюджету: холодная копия другого технологического класса;
+4. удалённая зашифрованная копия у доверенного лица/в другом учреждении;
+5. печатный RED binder и бумажный каталог пакетов;
+6. облако — дополнительная копия, не обязательный путь доступа.
+
+RAID, snapshots одного массива и синхронизированные разделы одного устройства не считаются независимыми географическими копиями.
+
+## 10. Носители: ни один не «живёт 100 лет» сам по себе
+
+| Носитель | Сильная сторона | Основной риск | Обязательная мера |
+|---|---|---|---|
+| SSD | переносимость, ударостойкость | контроллер, charge retention, внезапный отказ | ежегодное чтение, дублирование, замена по состоянию/циклу |
+| HDD | ёмкость/стоимость | механика, удар, интерфейс, firmware | SMART + полное чтение + другая копия |
+| tape | большой холодный фонд | дорогой drive, поколения, сложность восстановления | два compatible paths, каталог, план миграции |
+| optical | offline/immutable | привод, ёмкость, качество записи/диска | два привода, verify-after-write и периодическое чтение |
+| USB flash | лёгкий field-pack | высокая вариативность и потеря | только транспортная/дополнительная копия |
+| бумага | читается без электричества | огонь, вода, объём, устаревание | защищённое хранение, version/date, переиздание |
+
+Максимальный интервал **migration review и rehearsal** корпуса — пять лет: проверяются readers, интерфейсы, форматы, носители и независимое восстановление. Само преобразование формата выполняется только при доказанном риске или несовместимости, всегда side-by-side с исходными байтами; интервал сокращается при ошибках, конце поддержки интерфейса/reader, recall, физическом повреждении или format risk.
+
+## 11. Форматы и self-description
+
+Предпочитать:
+
+- UTF-8 plain text/Markdown;
+- статический HTML без внешних assets/auth;
+- PDF/A там, где подходит, плюс извлечённый text/OCR и исходник;
+- CSV вместе с data dictionary/schema;
+- PNG/TIFF/JPEG по назначению;
+- WAV/FLAC/Opus и MP4/WebM вместе с transcript и metadata;
+- EPUB плюс PDF/text для книг;
+- GeoPackage/GeoJSON/MBTiles плюс print export;
+- source code в text, release tar/zip, build instructions, dependency lock и license;
+- BagIt-подобный пакет или эквивалент с manifests и payload inventory.
+
+Каждый архив должен сам объяснять:
+
+```text
+что это
+кто издатель
+когда и откуда получено
+какая лицензия
+для кого
+какая юрисдикция
+какие файлы входят
+как проверить hash
+чем открыть
+когда пересмотреть
+что заменяет и чем заменён
+```
+
+DRM, единственная проприетарная база, URL-shortener, QR-only и cloud-only material не подходят как единственный preservation master.
+
+## 12. Readers и восстановление вычислительной среды
+
+Для каждого формата сохранять:
+
+- минимум два независимых reader paths;
+- установщики/portable binaries под реально имеющиеся архитектуры;
+- checksums, версии и лицензии;
+- краткую бумажную инструкцию установки;
+- source code/build recipe критического open-source reader, когда это реалистично;
+- test file, который выявляет сломанные шрифты, цвет, media, links и search;
+- адаптеры/кабели и два устройства чтения.
+
+Виртуальная машина полезна для legacy software, но она сама зависит от hypervisor, firmware, architecture и ключей. Preservation master остаётся в документированном открытом формате.
+
+## 13. Поиск без интернета
+
+Три независимых пути:
+
+1. `START_HERE.html` — статический маршрут по критическим темам;
+2. бумажный каталог `package_id → тема → шкаф/носитель/путь`;
+3. локальный индекс, создаваемый [offline_library.py](offline_library.py).
+
+Инструмент выполняет только локальные операции:
+
+```text
+python3 offline_library.py inventory LIBRARY_ROOT --output seed-lock.csv
+python3 offline_library.py verify LIBRARY_ROOT seed-lock.csv
+python3 offline_library.py index LIBRARY_ROOT offline-index.sqlite
+python3 offline_library.py search offline-index.sqlite "вода пожар 112"
+```
+
+Он не скачивает материалы и не объявляет их безопасными. Текст индексируется для Markdown/TXT/CSV/HTML; для бинарных PDF/EPUB/ZIM/карт требуется отдельный разрешённый extractor/reader, а до этого индекс содержит только имя и metadata.
+
+Текущий bootstrap-инструмент **не интерпретирует release/status-поля**: он индексирует каждый подходящий файл внутри переданного `LIBRARY_ROOT`. Поэтому operational index разрешено строить только из отдельного чистого каталога `released/`; `quarantine/`, `candidate/` и `superseded/` должны находиться в других корнях и получать отдельные редакторские индексы с крупной маркировкой. Автоматический manifest-aware фильтр `CURRENT/RELEASED` остаётся целевой архитектурой, а не свойством `offline_library.py` v0.4.
+
+## 14. Карты как особый корпус
+
+Для каждого map package:
+
+- source и license/attribution;
+- spatial extent;
+- CRS/datum;
+- edition/captured date;
+- live/dynamic validity;
+- layers;
+- tile/data format;
+- reader и style/legend;
+- digital SHA-256;
+- print edition;
+- field verification и route review.
+
+OSM data, hazard map, route и работающий site — разные доказательства. `WMS/WFS/REST` — endpoint получения, не офлайн-копия. Вода на карте не становится питьевой, hospital point — работающим emergency department, а дорога — проходимой после события.
+
+## 15. Приватность и разделение фондов
+
+| Контур | Содержимое | Доступ |
+|---|---|---|
+| PUBLIC | энциклопедии, учебники, manuals, открытые карты | без шифрования для быстрого доступа |
+| HOUSEHOLD | план, контакты, household overlays | ограниченный |
+| PERSONAL | документы, здоровье, страховка | сильное шифрование |
+| SECRETS | пароли, recovery keys, подписи | отдельный минимальный vault |
+| PROFESSIONAL | опасные/клинические/юридические действия | audience label + role/action gates |
+
+Ключ восстановления не хранится только внутри собственного контейнера. Доверенное лицо проходит тест расшифровки; публичная библиотека не должна стать недоступной из-за утери личного ключа.
+
+## 16. Проверки и журналы
+
+Используются:
+
+- [offline-storage-plan-template.csv](offline-storage-plan-template.csv);
+- [archive-media-register-template.csv](archive-media-register-template.csv);
+- [format-migration-register-template.csv](format-migration-register-template.csv);
+- [offline-restore-test-template.csv](offline-restore-test-template.csv);
+- [knowledge-succession-register-template.csv](knowledge-succession-register-template.csv);
+- [offline-corpus-manifest.csv](offline-corpus-manifest.csv).
+
+### Ежеквартальный fixity-test
+
+- весь `L0/L1`;
+- статистически/риск-ориентированная выборка `L2/L3`;
+- один случайный restore из offline-копии;
+- открытие на резервном устройстве;
+- проверка ключей/кабелей;
+- немедленная изоляция несовпавшего файла.
+
+### Ежегодный restore-test
+
+- пустое или очищенное тестовое устройство;
+- только бумажная инструкция и offline media;
+- восстановление `START_HERE`, manifest, readers, index и выбранных пакетов;
+- замер времени и энергии;
+- поиск трёх заранее неизвестных тем другим человеком;
+- проверка цифровых подписей/checksums;
+- запись всех отклонений и повтор после исправления.
+
+### Пятилетняя миграция
+
+- новое поколение носителя/интерфейса;
+- format/reader risk review через PRONOM/издателя;
+- две старые копии сохраняются до hash + offline-open + restore нового поколения;
+- migration log связывает source hash и destination hash;
+- изменение формата никогда не перезаписывает preservation master без истории.
+
+## 17. Состав печатного ядра
+
+Один RED binder не должен пытаться заменить библиотеку. В нём:
+
+- контакты и точный адрес;
+- household medical summaries;
+- BLS/AED/удушье и bleeding cards после актуального review/обучения;
+- пожар/CO/газ/электричество;
+- вода/WASH и stop-критерии химического/радиологического загрязнения;
+- shelter/evacuation и accountability;
+- building/local maps, R1/R2/R3 и точки помощи;
+- инструкции отключения именно дома;
+- regular medicines continuity;
+- PACE и внешний check-in;
+- offline library map, recovery steps и расположение ключей без публикации самих секретов;
+- дата/версия на каждом листе.
+
+Изменённая карточка печатается заново; старая маркируется `SUPERSEDED` и удаляется из оперативной папки.
+
+## 18. Очерёдность наполнения
+
+### Волна 0 — уже в этом комплекте
+
+- архитектура E0–E5;
+- 133-сценарный индекс, включая 16 архитектурных `GEN-*`;
+- карта source candidates;
+- offline corpus manifest;
+- статический `START_HERE`;
+- hash/index/search tool;
+- storage/restore/migration/succession templates.
+
+### Волна 1 — до 8 GB
+
+- критические Portugal/municipal материалы;
+- manuals всех реально имеющихся устройств;
+- essential maps и print exports;
+- public first aid/WASH/fire/evacuation guidance;
+- словари и языковой минимум;
+- portable readers и recovery media.
+
+### Волна 2 — до 256 GB
+
+- выбранные RU/UK/PT/EN ZIM без лишних изображений;
+- school/core STEM и L0/L1 из 259 science candidates после item-level rights review;
+- agriculture/engineering/repair essentials;
+- EU/PT law snapshots и forms;
+- expanded regional maps.
+
+### Волна 3 — 1–4 TB
+
+- крупные Wikimedia/Kiwix packages;
+- полный household education/culture corpus;
+- extended science/technical manuals;
+- offline software documentation/source;
+- video/audio training where text is insufficient.
+
+### Волна 4 — 8–32 TB и community layer
+
+- maxi images/video packages;
+- multiple language and regional mirrors;
+- scientific/cultural depth;
+- distributed replicas and mutual catalog discovery.
+
+Каждая волна выпускается только после восстановления предыдущей; объём не должен опережать способность проверять, питать и мигрировать данные.
+
+## 19. Приёмка «максимум офлайн»
+
+Утверждение допустимо только в форме измеримого снимка:
+
+```text
+manifest_rows_total
+downloaded_rows
+bytes_verified
+license_cleared_rows
+offline_opened_rows
+indexed_rows
+content_reviewed_rows
+released_rows
+languages_covered
+regions_covered
+restore_time
+unresolved_hash_errors
+overdue_dynamic_sources
+```
+
+Фраза «всё скачано» запрещена, пока каждая заявленная строка не имеет локальный путь, размер, SHA-256, license decision и offline-open evidence. Даже после этого корпус остаётся ограниченным выбором, а не всеми знаниями человечества.
+
+## 20. Текущий статус версии 0.4
+
+- сам framework и инструменты доступны офлайн внутри архива;
+- внешний corpus описан как очередь, но **не скачан**;
+- практическая наука разложена на 239 domains, 259 package records, 239 project designs, 73 instrument classes, 17 no-go gates и 16 learning paths;
+- 257 science acquisition candidates остаются `NOT_DOWNLOADED`, два local-authoring evidence packages — `NOT_CREATED`; все 259 имеют `NOT_REVIEWED/NOT_TESTED`, все 239 projects — `DESIGN_ONLY_NOT_EXECUTED` с заблокированным execution gate, все 73 instruments — `CANDIDATE_NOT_INVENTORIED`;
+- XLSX-атлас и восемь CSV доступны офлайн, но это интерфейс/схема, а не внешний научный payload и не доказанная компетентность;
+- персональные/муниципальные материалы не собраны;
+- `START_HERE` является навигационным seed, а не утверждённым emergency binder;
+- full-text index должен быть создан после добавления файлов;
+- ни одна high-risk external publication не получает action status без section review и gates.
+
+Следующая доказуемая цель: собрать и выпустить `L0 RED + L1 FIELD` и первое малое science-ядро S0/S1 с очищенными правами, затем успешно восстановить и повторить его на чистом резервном устройстве другим человеком.

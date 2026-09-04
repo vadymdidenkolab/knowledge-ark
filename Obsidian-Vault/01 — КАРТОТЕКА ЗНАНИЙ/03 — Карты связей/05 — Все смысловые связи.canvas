@@ -1,0 +1,1255 @@
+{
+  "edges": [
+    {
+      "color": "#2A9D8F",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "5e2eae784ca1e96b",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "fa3e2a3cb1ffbdef",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "53caddd7708eee45",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "e34c0e94cdbb2cdb",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "e130ac254d0bdb3b",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d6cf811d92a5fed5",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "508d3544c4d9d748",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d6cf811d92a5fed5",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "335880c0aef5fe26",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "a34f2c77ffd1009a",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "a34f2c77ffd1009a",
+      "fromSide": "right",
+      "id": "69f50c5bae32594a",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "6344650134a7b050",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d593bbb41192dd76",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "d593bbb41192dd76",
+      "fromSide": "right",
+      "id": "13afc7d99c17a61a",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "815907ba82120548",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "7f1e0188ccca37ee",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "fa3e2a3cb1ffbdef",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "fa3e2a3cb1ffbdef",
+      "fromSide": "right",
+      "id": "8fec1fbd5a311cd7",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "8fa8ba1e0d26ae07",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "8729103b9009e063",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "9b76da88d526e6c1",
+      "fromSide": "right",
+      "id": "dff5342423a89ea1",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "8fa8ba1e0d26ae07",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9b76da88d526e6c1",
+      "fromSide": "right",
+      "id": "393d1f52122e25af",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "c8eacdb7306cbf9f",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "c8eacdb7306cbf9f",
+      "fromSide": "right",
+      "id": "8f1c8a1885263802",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "4cdd5f78258e0e29",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "ee60718ffa85a4c6",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "fdf44e8aebbffea1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "223176a4987994c4",
+      "fromSide": "right",
+      "id": "1e6b8fcf08f3548d",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "fdf44e8aebbffea1",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "fdf44e8aebbffea1",
+      "fromSide": "right",
+      "id": "8f59bba0a157cda2",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "366b412957503522",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "b1b1caa419e29104",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "223176a4987994c4",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "a34f2c77ffd1009a",
+      "fromSide": "right",
+      "id": "b0f235e043d0f8b8",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "223176a4987994c4",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "223176a4987994c4",
+      "fromSide": "right",
+      "id": "74cd464bde4a1f72",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "b7a4060ae2c8b779",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "366b412957503522",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "b05798e813631bc7",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "366b412957503522",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "4a0b058efd1b85a7",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "959bb3168bfff991",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "cf10bd2727640360",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "959bb3168bfff991",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "959bb3168bfff991",
+      "fromSide": "right",
+      "id": "106093140b069d08",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "aeae6e9990e00a64",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "a37bc35ede1655c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "a3969981767c6aaa",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "a37bc35ede1655c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "a37bc35ede1655c1",
+      "fromSide": "right",
+      "id": "7ad03d69abf0e3ae",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "8e3c4a0ad59ab0ce",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "1938c4d54bc51cc8",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "223176a4987994c4",
+      "fromSide": "right",
+      "id": "1f405078eeaed932",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "1938c4d54bc51cc8",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "00485be09a7de753",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "2c3c4b89dbaf355d",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "fa3e2a3cb1ffbdef",
+      "fromSide": "right",
+      "id": "ddda246226ce7ad6",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "2c3c4b89dbaf355d",
+      "toSide": "left"
+    },
+    {
+      "color": "#D1495B",
+      "fromNode": "2c3c4b89dbaf355d",
+      "fromSide": "right",
+      "id": "3ae095e7ecb0a547",
+      "label": "при аварии",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "efdd37f8b442f873",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "ba5e479072e6d91a",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "eb3fb93ddd1b85a5",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "ba5e479072e6d91a",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "a34f2c77ffd1009a",
+      "fromSide": "right",
+      "id": "3142ab988346a0fd",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "ba5e479072e6d91a",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d593bbb41192dd76",
+      "fromSide": "right",
+      "id": "3372dd1b85434d31",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "e5c400e896f0f10d",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "30489a069c4c7a42",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "e5c400e896f0f10d",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "e5c400e896f0f10d",
+      "fromSide": "right",
+      "id": "82a2ab74575a118f",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "4cdd5f78258e0e29",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d593bbb41192dd76",
+      "fromSide": "right",
+      "id": "58d9a6a882ff3d43",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d9dc114ca317fa05",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "7bf964ff29854515",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d9dc114ca317fa05",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "d1c694e990b60214",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "708d283047d233f9",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "84034591407c86c2",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "708d283047d233f9",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "c059ca9f7834fcc9",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "8fa8ba1e0d26ae07",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "0345e775e5eec6ae",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "223176a4987994c4",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "d0c93902843ee460",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "815907ba82120548",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "815907ba82120548",
+      "fromSide": "right",
+      "id": "94be4a8f5db87f98",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "100ff8a039b53447",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "ce3fc6520e0a98c2",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "100ff8a039b53447",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "100ff8a039b53447",
+      "fromSide": "right",
+      "id": "6f1be87d4c0653a0",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "4a040352c97d657c",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "100ff8a039b53447",
+      "fromSide": "right",
+      "id": "a25df09d33bd5ea8",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "708d283047d233f9",
+      "fromSide": "right",
+      "id": "53ab32e262277018",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4a040352c97d657c",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "815907ba82120548",
+      "fromSide": "right",
+      "id": "681c70605a890b4e",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4a040352c97d657c",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "4a040352c97d657c",
+      "fromSide": "right",
+      "id": "937385368a668e65",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "d1e949c28e9b0b71",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "100ff8a039b53447",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "b00efa49dcd85083",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "31b63fcf668c3964",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "dd179b0c30a7860a",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "9b76da88d526e6c1",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "c2fa0aba9f9a2a44",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "adf8a734588fce40",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "fa3e2a3cb1ffbdef",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "f444999d53525431",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "6b59f579cf0d73a8",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "ec6cac4123fb6256",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "4a040352c97d657c",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "f7cbcee9803830b6",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "8fa8ba1e0d26ae07",
+      "toSide": "left"
+    },
+    {
+      "color": "#2A9D8F",
+      "fromNode": "8fa8ba1e0d26ae07",
+      "fromSide": "right",
+      "id": "ed2aaa0605042b70",
+      "label": "следующий шаг",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "8fa8ba1e0d26ae07",
+      "fromSide": "right",
+      "id": "2eaac4dfe71846d4",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "f0fd57c36353aa91",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "12727b141ccb9678",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "708d283047d233f9",
+      "fromSide": "right",
+      "id": "c0e3f54b58b51dfd",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "815907ba82120548",
+      "fromSide": "right",
+      "id": "7dc742aa84c86bc8",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "9876f31fb08c6cd5",
+      "fromSide": "right",
+      "id": "283891a287149f24",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "31b63fcf668c3964",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "8ec814a5b3b806df",
+      "fromSide": "right",
+      "id": "a8b704598f73f559",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "31b63fcf668c3964",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d593bbb41192dd76",
+      "fromSide": "right",
+      "id": "62d8cec674467d7e",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "d6cf811d92a5fed5",
+      "fromSide": "right",
+      "id": "49cacb8180cb1618",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "fdf44e8aebbffea1",
+      "fromSide": "right",
+      "id": "a8f5dda6d6f609db",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "e5c400e896f0f10d",
+      "fromSide": "right",
+      "id": "7538a5ba59b5999a",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "4f0f9f60c52cbf27",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "5fb1d3de0a554557",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "3c1a974b637f4b44",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "c1c0edc2573ffe7d",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "3c1a974b637f4b44",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "3c1a974b637f4b44",
+      "fromSide": "right",
+      "id": "0941a783ac7c6bbb",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "33e9b82a7d8380c3",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "e34c0e94cdbb2cdb",
+      "fromSide": "right",
+      "id": "f6ce2f619b818a7f",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "33e9b82a7d8380c3",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "ed1d139fb67c4abe",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "33e9b82a7d8380c3",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "33e9b82a7d8380c3",
+      "fromSide": "right",
+      "id": "7015af22e0a99531",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "8eee8033728631cd",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "4cdd5f78258e0e29",
+      "fromSide": "right",
+      "id": "5457452196259350",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "8eee8033728631cd",
+      "toSide": "left"
+    },
+    {
+      "color": "#5B6472",
+      "fromNode": "6b59f579cf0d73a8",
+      "fromSide": "right",
+      "id": "7c1f382d74d54ec5",
+      "label": "нужно сначала",
+      "toEnd": "arrow",
+      "toNode": "8eee8033728631cd",
+      "toSide": "left"
+    },
+    {
+      "color": "#3A86FF",
+      "fromNode": "8eee8033728631cd",
+      "fromSide": "right",
+      "id": "cde1edebe4deaf16",
+      "label": "открывает",
+      "toEnd": "arrow",
+      "toNode": "d1fbf65478024705",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "#D1495B",
+      "height": 745,
+      "id": "2d504dc5bc063b10",
+      "label": "Безопасность",
+      "type": "group",
+      "width": 520,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "color": "#2A9D8F",
+      "height": 950,
+      "id": "5e85ac790952f045",
+      "label": "Жизнеобеспечение",
+      "type": "group",
+      "width": 520,
+      "x": 600,
+      "y": 0
+    },
+    {
+      "color": "#E76F51",
+      "height": 540,
+      "id": "68cff50eed608dcf",
+      "label": "Здоровье",
+      "type": "group",
+      "width": 520,
+      "x": 1200,
+      "y": 0
+    },
+    {
+      "color": "#6A994E",
+      "height": 1565,
+      "id": "85ea198aea249c38",
+      "label": "Питание",
+      "type": "group",
+      "width": 520,
+      "x": 1800,
+      "y": 0
+    },
+    {
+      "color": "#457B9D",
+      "height": 540,
+      "id": "726a186a89865d72",
+      "label": "Место",
+      "type": "group",
+      "width": 520,
+      "x": 2400,
+      "y": 0
+    },
+    {
+      "color": "#F4A261",
+      "height": 540,
+      "id": "57d0b857061cceef",
+      "label": "Энергия",
+      "type": "group",
+      "width": 520,
+      "x": 0,
+      "y": 1700
+    },
+    {
+      "color": "#8D6E63",
+      "height": 1155,
+      "id": "641c4ddf98684928",
+      "label": "Мастерская",
+      "type": "group",
+      "width": 520,
+      "x": 600,
+      "y": 1700
+    },
+    {
+      "color": "#7B2CBF",
+      "height": 390,
+      "id": "f31de75768ae5684",
+      "label": "Общество",
+      "type": "group",
+      "width": 520,
+      "x": 1200,
+      "y": 1700
+    },
+    {
+      "color": "#3A86FF",
+      "height": 1155,
+      "id": "cf277d9975f1d8f8",
+      "label": "Знания",
+      "type": "group",
+      "width": 520,
+      "x": 1800,
+      "y": 1700
+    },
+    {
+      "color": "#F6BD60",
+      "height": 390,
+      "id": "f78a87d50f98eeb9",
+      "label": "Готовность",
+      "type": "group",
+      "width": 520,
+      "x": 2400,
+      "y": 1700
+    },
+    {
+      "height": 230,
+      "id": "a01d93e8ece3cd6f",
+      "text": "# Все смысловые связи\n\nПолная аудиторская карта. Она намеренно плотная: для обычной работы лучше открывать три разделённые карты выше. Каждая линия подписана и направлена.",
+      "type": "text",
+      "width": 1050,
+      "x": 0,
+      "y": -240
+    },
+    {
+      "color": "#D1495B",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/01 — Безопасность и выход из опасности.md",
+      "height": 170,
+      "id": "9876f31fb08c6cd5",
+      "type": "file",
+      "width": 420,
+      "x": 50,
+      "y": 90
+    },
+    {
+      "color": "#2A9D8F",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/02 — Вода и водоснабжение.md",
+      "height": 170,
+      "id": "d6cf811d92a5fed5",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 90
+    },
+    {
+      "color": "#2A9D8F",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/03 — Туалет, гигиена и отходы.md",
+      "height": 170,
+      "id": "a34f2c77ffd1009a",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 285
+    },
+    {
+      "color": "#2A9D8F",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/04 — Жильё, тепло и пожар.md",
+      "height": 170,
+      "id": "d593bbb41192dd76",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 480
+    },
+    {
+      "color": "#D1495B",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/05 — Связь, карты и транспорт.md",
+      "height": 170,
+      "id": "fa3e2a3cb1ffbdef",
+      "type": "file",
+      "width": 420,
+      "x": 50,
+      "y": 285
+    },
+    {
+      "color": "#E76F51",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/06 — Медицинская помощь и аптечки.md",
+      "height": 170,
+      "id": "9b76da88d526e6c1",
+      "type": "file",
+      "width": 420,
+      "x": 1250,
+      "y": 90
+    },
+    {
+      "color": "#E76F51",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/07 — Лекарства и непрерывность ухода.md",
+      "height": 170,
+      "id": "c8eacdb7306cbf9f",
+      "type": "file",
+      "width": 420,
+      "x": 1250,
+      "y": 285
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/08 — Запас пищи и рацион.md",
+      "height": 170,
+      "id": "fdf44e8aebbffea1",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 90
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/09 — Безопасное приготовление и хранение пищи.md",
+      "height": 170,
+      "id": "223176a4987994c4",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 285
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/10 — Семенной фонд, почва и выращивание.md",
+      "height": 170,
+      "id": "366b412957503522",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 480
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/11 — Дикорастущие растения и лекарственные травы.md",
+      "height": 170,
+      "id": "959bb3168bfff991",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 675
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/12 — Грибы и опасные двойники.md",
+      "height": 170,
+      "id": "a37bc35ede1655c1",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 870
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/13 — Рыболовство и водная пища.md",
+      "height": 170,
+      "id": "1938c4d54bc51cc8",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 1065
+    },
+    {
+      "color": "#457B9D",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/14 — Плоты, лодки и береговая безопасность.md",
+      "height": 170,
+      "id": "2c3c4b89dbaf355d",
+      "type": "file",
+      "width": 420,
+      "x": 2450,
+      "y": 90
+    },
+    {
+      "color": "#6A994E",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/15 — Животные и ветеринарная помощь.md",
+      "height": 170,
+      "id": "ba5e479072e6d91a",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 1260
+    },
+    {
+      "color": "#F4A261",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/16 — Энергия и резервное питание.md",
+      "height": 170,
+      "id": "e5c400e896f0f10d",
+      "type": "file",
+      "width": 420,
+      "x": 50,
+      "y": 1790
+    },
+    {
+      "color": "#F4A261",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/17 — Топливо, тепло и безопасное хранение.md",
+      "height": 170,
+      "id": "d9dc114ca317fa05",
+      "type": "file",
+      "width": 420,
+      "x": 50,
+      "y": 1985
+    },
+    {
+      "color": "#8D6E63",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/18 — Инструменты и мастерская.md",
+      "height": 170,
+      "id": "708d283047d233f9",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 1790
+    },
+    {
+      "color": "#8D6E63",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/19 — Измерения, единицы и эталоны.md",
+      "height": 170,
+      "id": "6b59f579cf0d73a8",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 1985
+    },
+    {
+      "color": "#8D6E63",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/20 — Материалы, строительство и чертежи.md",
+      "height": 170,
+      "id": "815907ba82120548",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 2180
+    },
+    {
+      "color": "#8D6E63",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/21 — Одежда, обувь и текстиль.md",
+      "height": 170,
+      "id": "100ff8a039b53447",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 2375
+    },
+    {
+      "color": "#8D6E63",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/22 — Ремёсла и бытовой ремонт.md",
+      "height": 170,
+      "id": "4a040352c97d657c",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 2570
+    },
+    {
+      "color": "#7B2CBF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/23 — Люди, роли, смены и решения.md",
+      "height": 170,
+      "id": "e34c0e94cdbb2cdb",
+      "type": "file",
+      "width": 420,
+      "x": 1250,
+      "y": 1790
+    },
+    {
+      "color": "#457B9D",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/24 — Португалия — службы, право и климат.md",
+      "height": 170,
+      "id": "8ec814a5b3b806df",
+      "type": "file",
+      "width": 420,
+      "x": 2450,
+      "y": 285
+    },
+    {
+      "color": "#3A86FF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/25 — Офлайн-знания, архив и обучение.md",
+      "height": 170,
+      "id": "4cdd5f78258e0e29",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 1790
+    },
+    {
+      "color": "#F6BD60",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/26 — Реальная готовность — имущество, навыки и испытания.md",
+      "height": 170,
+      "id": "8fa8ba1e0d26ae07",
+      "type": "file",
+      "width": 420,
+      "x": 2450,
+      "y": 1790
+    },
+    {
+      "color": "#3A86FF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/27 — Цепочка восстановления технологий.md",
+      "height": 170,
+      "id": "d1fbf65478024705",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 1985
+    },
+    {
+      "color": "#D1495B",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/28 — Охота, наблюдение и ненасильственная защита.md",
+      "height": 170,
+      "id": "31b63fcf668c3964",
+      "type": "file",
+      "width": 420,
+      "x": 50,
+      "y": 480
+    },
+    {
+      "color": "#2A9D8F",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/29 — Подготовка к зиме и зимний цикл.md",
+      "height": 170,
+      "id": "4f0f9f60c52cbf27",
+      "type": "file",
+      "width": 420,
+      "x": 650,
+      "y": 675
+    },
+    {
+      "color": "#3A86FF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/30 — Раннее развитие и дошкольное образование.md",
+      "height": 170,
+      "id": "3c1a974b637f4b44",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 2180
+    },
+    {
+      "color": "#3A86FF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/31 — Школьное образование 6–18 лет, оценивание и инклюзия.md",
+      "height": 170,
+      "id": "33e9b82a7d8380c3",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 2375
+    },
+    {
+      "color": "#3A86FF",
+      "file": "01 — КАРТОТЕКА ЗНАНИЙ/02 — Темы/32 — Профессиональное и университетское образование.md",
+      "height": 170,
+      "id": "8eee8033728631cd",
+      "type": "file",
+      "width": 420,
+      "x": 1850,
+      "y": 2570
+    }
+  ]
+}

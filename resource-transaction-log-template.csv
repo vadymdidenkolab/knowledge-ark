@@ -1,0 +1,3 @@
+"event_id","transaction_id","timestamp_utc","resource_id","transaction_type","quantity","unit","from_location","to_location","assigned_person_or_subgroup","approved_by_person_id","balance_after","balance_evidence_method","contamination_or_damage_state","privacy_class","created_by","notes"
+"EVT-YYYYMMDD-001","RTX-0001","","RES-WAT-STORED","COUNT_BASELINE","","L","TBD","TBD","MAIN","P04","","NOT_COUNTED","UNKNOWN","HOUSEHOLD","","Шаблон; не фактический остаток"
+"EVT-YYYYMMDD-001","RTX-0002","","RES-MED-PERSONAL","ASSIGN_PERSONAL","","PERSON_PLAN","TBD","ON_PERSON","P01","P03","","NOT_VERIFIED","UNKNOWN","RESTRICTED","","Индивидуальные лекарства не становятся общим пулом"

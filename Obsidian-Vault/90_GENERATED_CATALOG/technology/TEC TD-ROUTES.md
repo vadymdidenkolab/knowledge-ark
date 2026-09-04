@@ -1,0 +1,105 @@
+---
+id: "TD-ROUTES"
+kind: "technology"
+title: "Маршруты A/B/C и точки решения"
+priority_tier: "P1_ORANGE"
+priority_state: PROVISIONAL_AUTO_REVIEW_REQUIRED
+audience: "LAY_OR_TRAINED_AS_NOTED"
+safety_class: "S1_LOW_RISK_HOUSEHOLD"
+execution_gate: "DENY"
+status: "MISSING"
+backend_provenance: INTERNAL_MANIFEST_ONLY
+generated_on: "2026-09-04"
+generated: true
+instruction_state: CATALOG_ONLY_NOT_EXECUTABLE
+---
+
+# Маршруты A/B/C и точки решения
+
+> [!warning] Каталожная карточка
+> Это место в карте знаний. Оно не доказывает наличие вещи, проверенный метод, квалификацию или разрешение выполнять работу.
+
+## Краткий статус
+
+- **ID:** `TD-ROUTES`
+- **Статус:** `MISSING`
+- **Приоритет:** `P1_ORANGE`
+- **Аудитория:** `LAY_OR_TRAINED_AS_NOTED`
+- **Класс безопасности:** `S1_LOW_RISK_HOUSEHOLD`
+- **Допуск:** `DENY`
+
+<details>
+<summary>Технические данные backend (для аудита)</summary>
+
+<!-- backend-source: technology-dependency-register.csv -->
+- **node_id:** TD-ROUTES
+- **parent_id:** [[TEC TD-MAPS-COMMS|TD-MAPS-COMMS]]
+- **domain:** MAPS_COMMS
+- **node_type:** TEST
+- **title_ru:** Маршруты A/B/C и точки решения
+- **outcome:** Reach safe destinations despite one blocked route
+- **safety_class:** S1_LOW_RISK_HOUSEHOLD
+- **execution_policy:** HOUSEHOLD_S1_AFTER_GATE
+- **prerequisite_node_ids:** [[TEC TD-MAPS|TD-MAPS]], [[TEC TD-BASE-TRAINING|TD-BASE-TRAINING]]
+- **source_package_ids:** не заполнено
+- **materials_tools_state:** NO_FIELD_ROUTES
+- **instrument_ids:** [[INS INS-011|INS-011]], [[INS INS-061|INS-061]], [[INS INS-062|INS-062]]
+- **measurement_acceptance:** Desk; field; load and timed drills pass; chokepoints and no-go criteria recorded
+- **calibration_reference:** Independent GNSS/compass/map cross-check
+- **drawings_bom_state:** MISSING_ROUTE_CARDS
+- **localization_state:** HOUSEHOLD_AND_ACCESSIBILITY_REQUIRED
+- **waste_storage:** Not applicable
+- **stop_conditions:** Official closure; fire; flood; structural damage; violence; medical limit
+- **maintenance_spares:** Seasonal and after event
+- **successor_proof:** Преемник completes alternate route with required load
+- **evidence_required:** GPX or geometry; paper card; times; field log
+- **evidence_state:** MISSING
+- **capability_status:** MISSING
+- **release_gate:** DENY
+- **notes:** No route tested
+- **release_version:** 0.5-draft
+
+</details>
+
+<details>
+<summary>Служебные поля планирования</summary>
+
+- **priority_tier:** P1_ORANGE
+- **priority_horizon:** 3_TO_14_DAYS
+- **earliest_service_level:** SL2
+- **life_criticality:** DEFERRED_WITHIN_STATED_HORIZON
+- **build_sequence_tier:** P1_ORANGE
+- **acquisition_priority:** P1_ORANGE
+- **knowledge_priority:** P1_ORANGE
+- **safety_lane:** S1_LOW_RISK_HOUSEHOLD
+- **group_size_scope:** N1|N2|N3_TO_N7
+- **capacity_model:** PEOPLE_CHANNELS_COVERAGE_CHECKIN_AND_ROUTE_TIME
+- **capacity_value:** TBD_PERSON_AND_SITE_PROFILE
+- **capacity_unit:** TBD_BY_CAPABILITY
+- **labor_hours:** TBD
+- **failure_domain:** TBD_SITE_AND_IMPLEMENTATION
+- **redundancy_target:** TWO_PATHS_OR_EXPLICIT_RESIDUAL_RISK
+- **owner_role:** UNASSIGNED
+- **backup_role:** UNASSIGNED
+- **drill_id:** NOT_ASSIGNED
+- **next_due:** TBD
+- **human_review_state:** PROVISIONAL_AUTO_REVIEW_REQUIRED
+- **release_gate:** DENY
+- **release_version:** 0.5-draft
+
+</details>
+
+<details>
+<summary>Типизированные зависимости</summary>
+
+| Роль | Узел | Service level | Условие / группа |
+|---|---|---|---|
+| REQUIRED | [[TEC TD-MAPS|TD-MAPS]] | SL2 | — |
+| REQUIRED | [[TEC TD-BASE-TRAINING|TD-BASE-TRAINING]] | SL3 | — |
+
+</details>
+
+## Связи и наполнение
+
+- Добавлять проверенные постоянные заметки рядом, не редактируя generated-карточку.
+- До инструкции нужны точный источник, локальная применимость, safety review и доказательные критерии.

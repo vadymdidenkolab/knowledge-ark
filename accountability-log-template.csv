@@ -1,0 +1,5 @@
+"event_id","accountability_entry_id","timestamp_utc","person_id","subgroup_id","accountability_status","site_id","route_id","buddy_assignment_id","observation_method","observed_by_person_id","last_confirmed_contact","next_check_due","missing_person_escalation_state","privacy_class","created_by","notes","group_profile_id","composition_snapshot_id","composition_gate_state"
+"EVT-YYYYMMDD-001","ACC-0001","","P01","MAIN","NOT_ACTIVATED","","","BUD-01","TBD","P02","","","NOT_STARTED","RESTRICTED","","Шаблон; не реальная отметка присутствия","TBD","TBD","NOT_VERIFIED"
+"EVT-YYYYMMDD-001","ACC-0002","","P02","MAIN","NOT_ACTIVATED","","","BUD-01","TBD","P01","","","NOT_STARTED","RESTRICTED","","Шаблон","TBD","TBD","NOT_VERIFIED"
+"EVT-YYYYMMDD-001","ACC-0003","","P03","MAIN","NOT_ACTIVATED","","","BUD-02","TBD","P04","","","NOT_STARTED","RESTRICTED","","Шаблон","TBD","TBD","NOT_VERIFIED"
+"EVT-YYYYMMDD-001","ACC-0004","","P04","MAIN","NOT_ACTIVATED","","","BUD-02","TBD","P03","","","NOT_STARTED","RESTRICTED","","Шаблон","TBD","TBD","NOT_VERIFIED"

@@ -1,0 +1,31 @@
+{
+  "generated_files": [
+    "01 — Что нужно сначала.canvas",
+    "02 — Следующие шаги и возможности.canvas",
+    "03 — Что открывать при аварии.canvas",
+    "04 — Образовательная лестница.canvas",
+    "05 — Все смысловые связи.canvas"
+  ],
+  "generated_sha256": {
+    "01 — Что нужно сначала.canvas": "bea43e6043ff8f1cc487fe2e8f728a3b6e8a3c211afff4d2a252484f379dc662",
+    "02 — Следующие шаги и возможности.canvas": "65664ed6aefafc3b26125bb7812767247348663ca6d42ebc2c43107afda7733f",
+    "03 — Что открывать при аварии.canvas": "67aa0e07f2c21d2f6ca7b4c20f0853cc6cec9dc53b9274dc850ef7ed43410c14",
+    "04 — Образовательная лестница.canvas": "085c818210970dcde2328ef16b333bda6b18f171f7f9f7744c9bb37522d96e88",
+    "05 — Все смысловые связи.canvas": "deba00b49c7a059049a2c1c69afa1c3d836eea7387b475d6d7f9886a13e97776"
+  },
+  "generator": "build_obsidian_semantic_canvas.py",
+  "hash_mode": "canonical-json",
+  "proof_boundary": "Карта связей, не доказательство готовности или верности процедур.",
+  "relation_counts": {
+    "нужно до": 53,
+    "открывает": 15,
+    "при аварии": 5,
+    "следующий шаг": 9
+  },
+  "semantic_edges": 82,
+  "topic_nodes": 32,
+  "version": 2,
+  "visual_direction_rule": {
+    "нужно до": "предпосылка -> зависимая тема"
+  }
+}
